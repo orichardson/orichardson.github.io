@@ -1,0 +1,161 @@
+/*@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);*/
+
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+
+@import url(https://fonts.googleapis.com/css?family=Marck+Script);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+ 
+html {
+    height:100% !important;
+}
+body {
+    position: relative;
+    min-height:100% !important;
+}
+
+.mono {
+    font-family: 'Cutive Mono';
+}
+
+#background-wrapper {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:98%;
+    z-index:-3;
+    padding:0px;
+    margin:0px;
+}
+
+#background {
+    width:100%;
+    height:100%;
+}
+
+#navigation {
+    right:0;
+}
+
+.sticky.stick {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    /*opacity: 1 !important;*/
+}
+
+
+.jumbotron {
+    background-color: rgba(215,215,235, 0.0);
+}
+
+h1.title {
+    padding-left:30px;
+    font-family: 'Righteous';
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Cinzel';
+    font-weight: bolder;
+}
+
+/* Make sure that the navbar doesn't look like shit for phones */
+
+.navbar {
+    width:100%;
+    border-width: 2px;
+    float:right;
+    opacity: 0.9;
+}
+
+.navbar-collapse.collapse{
+  display: block !important;
+}
+
+.navbar-nav>li, .navbar-nav{
+  float: left !important;
+}
+
+.navbar-nav>li>a {
+    outline: 0;
+}
+
+.navbar-nav.navbar-right:last-child{
+  margin-right: -15px !important;
+}
+
+.navbar-right{
+  float: right !important;
+}
+
+
+/* **  PARALLAX THINGS ** */
+
+
+.parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    /* height: 500px!important; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+.plx-group {
+    margin: 0;
+    /*transform-style: preserve-3d;*/
+}
+
+.plx-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    margin: 0;
+ }
+
+ .plx-fore {
+   /* -webkit-transform: translateZ(90px) scale(.7);
+   transform: translateZ(90px) scale(.7); */
+   z-index: 1;
+ }
+
+ .plx-base {
+     /*border: 5px dashed orange;
+    background-color: rgba(255, 233, 51, 0.5);*/
+
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+    z-index: 0;
+ }
+
+ .plx-back {
+    /* -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2); */
+    z-index: -1;
+ }
+
+ .plx-deep {
+     /*border: 5px dashed red;
+    background-color: rgba(255, 55, 51, 0.5);*/
+
+    /* bottom:68vh;
+    top:-34vh; */
+
+    /* -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3); */
+    
+    /* -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2); */
+    -webkit-transform: translateZ(-300px) scale(1);
+    transform: translateZ(-300px) scale(1);
+    z-index: -2;
+    height: 100vh;
+ }

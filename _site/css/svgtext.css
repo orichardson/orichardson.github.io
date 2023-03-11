@@ -1,0 +1,42 @@
+svg {
+    font: 3em 'Montserrat';
+    width: 200px;
+}
+
+.text-copy {
+    fill: none;
+    fill: #DDD;
+    stroke-dasharray: 6% 10%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: #9C9F84;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #A97D5D;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #F7DCB4;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #5C755E;
+	animation-delay: -4s;
+}
+.text-copy:nth-child(5){
+	stroke: #0000;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+    50% {fill:white;}
+	100% {stroke-dashoffset: -16%;}
+}

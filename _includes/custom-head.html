@@ -1,0 +1,31 @@
+<title id="bigthing">{{page.title}}</title>
+		
+<!-- <meta charset="utf-8">-->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+<!-- JQuery + JQuery UI (for animations) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- <base href="<%- hosturl %>" target="_blank"> -->
+
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<!-- if in main pages, also want page-specific css -->
+{% comment %} <!-- % if page.collection == 'main_pages_prerendered' %} --> {% endcomment %}
+{% if page.special_css %}
+<!-- <link rel="stylesheet" type="text/css" href="/css/{{ page.short }}.css" /> -->
+<div class="special_css">
+<link rel="stylesheet" type="text/css" href="{{ page.special_css }}" />
+</div>
+{% endif %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="/js/load_jekyll_collections.js"></script>
+<script src="/js/main.js"></script>
+<script>
+    window.page='{{page.short}}';
+</script>

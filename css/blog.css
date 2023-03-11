@@ -1,0 +1,138 @@
+
+@media(min-width:992px) {
+	.row {
+		overflow: hidden;
+	}
+
+	.sidebar {
+		margin-bottom: -99999px;
+		padding-bottom: 99999px;
+	}
+
+	#side-sticky-part {
+		min-height:55vh;
+	}
+	#blog-navigation {
+		height:100%
+	}
+}
+
+@media(max-width:991px) {
+	.sidebar {
+		background-color: transparent !important;
+	}
+}
+
+#blog-content {
+	font-family: 'EB Garamond';
+}
+
+h1, h2, h3, h4, p {
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+pre {
+	border-color: #2f062f;
+	color: #fede45;
+	background-color: #3c082c;
+}
+
+
+/** The tree view stuff (below) is adapted from
+https://bootsnipp.com/snippets/featured/quotboottreequot-treeview-for-bootstrap
+*/
+div.panel:first-child {
+    margin-top:20px;
+}
+
+div.treeview {
+	background-color: #312;
+    min-width: 100px;
+    min-height: 100px;
+
+    overflow:auto;
+
+	padding: 4px;
+
+	margin-bottom: 20px;
+
+	color: #746;
+
+	border: solid 1px;
+	border-radius: 4px;
+}
+div.treeview ul:first-child:before {
+}
+
+.treeview, .treeview ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+
+	color: #BAF;
+}
+.treeview ul {
+    margin-left:1em;
+    position:relative
+}
+.treeview ul ul {
+    margin-left:.5em
+}
+.treeview ul:before {
+    content:"";
+    display:block;
+    width:0;
+    position:absolute;
+    top:0;
+    left:0;
+    border-left:1px solid;
+
+    /* creates a more theme-ready standard for the bootstrap themes */
+    bottom:15px;
+}
+.treeview li > a:hover, .treeview li > a.active:hover{
+	color: #CCF;
+}
+
+.treeview li > a.active {
+	font-weight: 600;
+	color: #95A;
+}
+
+.treeview li {
+    margin:0;
+    padding:0 1em;
+    line-height:2em;
+    font-weight:300;
+    position:relative
+}
+.treeview ul li:before {
+    content:"";
+    display:block;
+    width:10px;
+    height:0;
+    border-top:1px solid;
+    margin-top:-1px;
+    position:absolute;
+    top:1em;
+    left:0
+}
+.tree-indicator {
+    margin-right:5px;
+
+    cursor:pointer;
+}
+.treeview li a {
+    text-decoration: none;
+    color:inherit;
+
+    cursor:pointer;
+}
+.treeview li button, .treeview li button:active, .treeview li button:focus {
+    text-decoration: none;
+    color:inherit;
+    border:none;
+    background:transparent;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    outline: 0;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+{%- include custom-head.html -%}
+
+<!-- BELOW: note the explicit styling based on server data. -->
+<!-- <body style='background-color: <%- params.tabs[page].colors.bg %>; color:<%- params.tabs[page].colors.fg %>' > -->
+<body>
+
+<!-- <body style='background-color: {{page.colors.bg}}; color:{{page.colors.fg}}'> -->
+	<div class="parallax">
+		<div class="plx-group">
+			<div class=" plx-layer plx-base">
+
+				<!-- <div class="jumbotron container-fluid"> -->
+				<div class="jumbotron container">
+					<h1 class="title"><span class="wrap">{{page.display}}</span></h1>
+					<h3>a.{{page.subtitle}}.{{subtitle}}</h3>
+				</div>
+
+				<div id="" class="clearfix sticky-anchor">
+					<!-- <nav id="navigation" class="navbar navbar-default sticky"
+						style="opacity: 0.9;background-color: <%- params.tabs[page].colors.nav %>; border-color: <%- params.tabs[page].colors.border %>" > -->
+					<nav id="navigation" class="navbar navbar-default sticky">
+						<div class="container-fluid">
+							<ul class="nav navbar-nav" id="nav-icon-list">
+								{% for tab in site.main_pages %}
+									<li id="nav-{{ tab.short }}" class="nav-item"><a href="#">
+										<span class="glyphicon glyphicon-{{ tab.glyph }}"></span>
+										<span class="hidden-xs text-capitalize"> {{ tab.short }} </span>
+									</a></li>
+								{% endfor %}
+								<!-- <% for(var tab in params.tabs) { %>
+									<li id="nav-<%- tab %>" class="nav-item"><a href="#">
+										<span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
+										<span class="hidden-xs text-capitalize"> <%= tab %> </span>
+									</a></li>
+								<% } %> -->
+							</ul>
+						  <ul class="nav navbar-nav navbar-right"  style="margin-left:0px !important;">
+							<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+							<li><a href="#"><span class="glyphicon glyphicon-equalizer"></span></a></li>
+						  </ul>
+					  </div>
+					</nav>
+				</div>
+
+				<!-- <div id="everything" class="container-fluid"> -->
+					<!-- <%- include('./'+ page + '.ejs', this) %> -->
+					<main class="page-content" aria-label="Content" style="flex:1">
+						<div id="everything" class="container">
+						<!-- <div id="everything" class="wrapper"> -->
+						<!-- <div class="wrapper"> -->
+							{{ content }}
+						<!-- </div> -->
+						</div>
+					</main>
+				<!-- </div> -->
+				<!-- {%- include footer.html -%} -->
+			</div>
+
+		</div>
+
+		<!---->
+		<div class="plx-group">
+			<div  class="plx-layer plx-deep" style="">
+				<div id="background-wrapper"style="margin:0px!important;" >
+					<canvas id="background" resize="true"></canvas>
+				</div>
+			<!----></div>
+		</div>
+	</div>
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-full.js"></script>
+	<script type="text/javascript" src="/js/gen/vines-wind.js"></script>
+	</body>
+</html>

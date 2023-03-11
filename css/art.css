@@ -1,0 +1,27 @@
+/*.loading {
+	position:relative;
+}
+
+.loading:after {
+	content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+	background: rgba(0,0,0,0.7);
+}*/
+
+
+
+.band-light {
+	color: #220043;
+	background-color: #E6DEF5;
+	padding-top:40px;
+	border-top: 3px solid #D485E4;
+}
+
+.band {
+	 font-family: 'Marck Script';
+ }
