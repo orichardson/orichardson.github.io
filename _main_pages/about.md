@@ -16,13 +16,17 @@ glyph: user
 [[CV]](/files/cv.pdf)
 [[Google Scholar]](https://scholar.google.com/citations?user=5_yI4jIAAAAJ)
 [[Github]](https://github.com/orichardson)
+[[DBLP]](https://dblp.org/pid/281/7499.html)
 <!-- [[Twitter]]()
 [[Instagram]]() -->
 {% endcapture %}
 
-I am a theorist who loves to write code, with broad mathematical and scientific training.
+
 I am a fifth-year Computer Science PhD candidate at Cornell, advised by 
 [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
+I am a theorist, but love to write code.
+ <!-- with broad mathematical and scientific training. -->
+
 <!-- I have broad interests and broad technical expertise. -->
 
 My PhD work has focused primarily on a class of graphical models I discovered called

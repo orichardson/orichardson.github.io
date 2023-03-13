@@ -1,5 +1,6 @@
 ---
-display: oli.asdf
+# options: .rsch  .research  .main  .contrib  .out
+display: oli.{math, reflect};
 # title: research
 short: research
 colors: 
@@ -18,7 +19,7 @@ glyph: education
 <ul>
 {% for paper in site.papers %}
 <li>
-    {{paper.title}}<br/>
+    <b>{{paper.title}}</b><br/>
     <a href="{{paper.arxiv}}">[ arxiv ]</a>
     {{ paper.content }} 
 </li>
