@@ -233,7 +233,8 @@ $(function() {
 
 
 	function typeText($elem, textTo, msdelay) {
-		$elem.css({ 'border-right': '0.08em solid #fff'})
+		// $elem.css({ 'border-right': '0.08em solid #fff'})
+		$elem.css({ 'border-right': '0.08em solid #eee', 'padding-right': '5px'})
 		if($elem.data('textTo')) {
 			$elem.data('textTo', textTo); // update to the newest text, for the other guy.
 			return; // don't interfere with the previous timer; let it handle this.
@@ -269,7 +270,7 @@ $(function() {
 				c = Math.random().toString(36).charAt(2);
 				delay *= 3;
 			} else*/ if(!isLetter(c))
-				delay *= 4;
+				delay *= 3;
 			$elem.text(now + c);
 		}
 
