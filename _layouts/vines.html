@@ -18,7 +18,7 @@
 					<h1 class="title"><span class="wrap">{{page.display}}</span></h1>
 					<!-- {% comment %} <h3>a.{{page.subtitle}}.{{subtitle}}</h3> {% endcomment %} -->
 					{%if page.subtitle %}
-					<h3>{{ page.subtitle }}</h3>
+					<h3 class="subtitle">{{ page.subtitle }}</h3>
 					{% endif %}
 				</div>
 
@@ -32,7 +32,8 @@
 								{% assign tabs =  site.main_pages | sort: "order" %}
 								{% for tab in tabs %}
 									<li id="nav-{{ tab.short }}" class="nav-item"><a href="#">
-										<span class="glyphicon glyphicon-{{ tab.glyph }}"></span>
+										<!-- <span class="glyphicon glyphicon-{{ tab.glyph }}"></span> -->
+										<i class="fa-solid fa-{{ tab.glyph }}"></i>
 										<span class="hidden-xs text-capitalize"> {{ tab.short }} </span>
 									</a></li>
 								{% endfor %}

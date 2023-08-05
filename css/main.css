@@ -70,6 +70,13 @@ h1.title {
 				  1px -1px 0 rgb(var(--bg-color)),
 				 -2px -2px 0 rgb(var(--bg-color));
 }
+.subtitle {
+    padding-left:80px;
+    margin-top:0px;
+}
+.subtitle > a {
+    color: var(--accent-color);
+}
 
 
 

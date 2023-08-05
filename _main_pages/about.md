@@ -11,6 +11,7 @@ colors:
 glyph: user
 order: 0
 # subtitle: include(subtitle-links.md)
+subtitle: <a style="color=var(--accent-color)" class="mono" href="mailto:oli@cs.cornell.edu">oli@cs.cornell.edu</a>
 # special_css: /css/about.css
 ---
 
@@ -35,9 +36,9 @@ Currently, I am a fifth-year Computer Science PhD candidate at Cornell, advised 
 <!-- I have broad interests and broad technical expertise. -->
 
 My thesis work focuses primarily on a unifying theory of probabilistic modeling, that allow
-for inconsistent beliefs. This theory is based on a class of grpahical models I invented called
+for inconsistent beliefs. This theory is based on a class of models I invented called
 [Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), which 
-subsumes traditional graphical models, as well as many machine leraning models. 
+subsumes traditional graphical models, as well as many of those in machine learning. 
 
 <!-- Critically, PDGs can contain inconsistent probabilistic information, and that degree of inconsistency
 turns out to be quite important. -->

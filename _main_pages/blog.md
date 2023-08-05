@@ -9,14 +9,14 @@ short: blog
 #     nav: '#8c6d80'
 #     border: '#856879'
 #     shadow: '#f7c3e8'
-## Games colors
+## old rsch colors
 colors: 
-    fg :     '#FFFFFF'
-    bg :     '#000000'
-    menu :   '#000000'
-    nav :    '#4a4a4a'
-    border : '#636363'
-    shadow : '#777777'
+    fg : '#082525'
+    bg : '#a3f4cd'
+    menu : '#00856A'
+    nav : '#1e7c67'
+    border : '#073600'
+    shadow : '#e0fff9'
 glyph: comment
 order: 9
 ---
