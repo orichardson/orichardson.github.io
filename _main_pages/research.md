@@ -16,12 +16,26 @@ glyph: education
 <h2> Publications </h2>
 
 <h3> Conference Papers </h3>
-<ul>
+<ul class='paperlist'>
 {% for paper in site.papers %}
+{% if paper.hide %}{% else %}
 <li>
-    <b>{{paper.title}}</b><br/>
-    <a href="{{paper.arxiv}}">[ arxiv ]</a>
+    <!-- <b>{{paper.title}}</b><br/> -->
+    <b><i> {{ paper.title }} </i></b>
+    <br/>
+    {{ paper.authors }}
+    <br/>
+    {{ paper.conf }} {{ paper.year }}
+    <br/>
+    {%if paper.arxiv %}  <a href="{{paper.arxiv}}">[ arxiv ]</a>   {% endif %}
+    {%if paper.openreview %}  <a href="{{paper.openreview}}">[ OpenReview ]</a>   {% endif %}
+    {%if paper.poster %}  <a href="{{paper.poster}}">[ poster ]</a>   {% endif %}
+    {%if paper.code %}  <a href="{{paper.code}}">[ code ]</a>   {% endif %}
+    {%if paper.blog %}  <a href="{{paper.blog}}">[ blog ]</a>   {% endif %}
+    <br>
+
     {{ paper.content }} 
 </li>
+{% endif %}
 {% endfor %}
 </ul>

@@ -20,7 +20,6 @@ colors:
 glyph: comment
 ---
 
-Here is some blog text
 
 
 

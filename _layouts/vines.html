@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-{%- include head.html -%}
+{% comment %} {%- include head.html -%} {% endcomment %}
 {%- include custom-head.html -%}
 
 <!-- BELOW: note the explicit styling based on server data. -->
@@ -17,6 +17,9 @@
 				<div class="jumbotron container">
 					<h1 class="title"><span class="wrap">{{page.display}}</span></h1>
 					<!-- {% comment %} <h3>a.{{page.subtitle}}.{{subtitle}}</h3> {% endcomment %} -->
+					{%if page.subtitle %}
+					<h3>{{ page.subtitle }}</h3>
+					{% endif %}
 				</div>
 
 				<div id="" class="clearfix sticky-anchor">
@@ -58,7 +61,8 @@
 						</div>
 					</main>
 				<!-- </div> -->
-				<!-- {%- include footer.html -%} -->
+				<!-- {% comment %}{%- include footer.html -%} {% endcomment %}-->
+
 			</div>
 
 		</div>

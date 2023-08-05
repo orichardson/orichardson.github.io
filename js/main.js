@@ -220,15 +220,31 @@ $(function() {
 	function setColors(time, page) {
 		// IMPORTANT: when mnodifying this,
         // make sure that you also modify index.ejs to get the initial values.
+		let colors = MAIN_PAGE_INFO[page].colors;
 		$('body').stop('colors', true,false).animate({
-			'background-color': MAIN_PAGE_INFO[page].colors.bg,
-			'color' : MAIN_PAGE_INFO[page].colors.fg
+			'background-color': colors.bg,
+			'color' : colors.fg
 		}, {duration:time, queue: 'colors'} ).dequeue('colors');
 
 		$('nav').stop('colors', true,false).animate({
-			'background-color' : MAIN_PAGE_INFO[page].colors.nav,
-			'border-color': MAIN_PAGE_INFO[page].colors.border
+			'background-color' : colors.nav,
+			'border-color': colors.border
 		},{duration:time*1.5, queue: 'colors'}).dequeue('colors');
+
+		// $('.matt').stop('colors', true,false).animate({
+		// 	'background-color' : MAIN_PAGE_INFO[page].colors.nav,
+		// },{duration:time*2, queue: 'colors'}).dequeue('colors');
+
+		// $('h1.title').css('text-shadow', '-1px 1px 0 '+colors.bg+
+		// 	', 1px 1px 0 '+colors.bg+
+		// 	', 1px -1px 0 '+colors.bg+
+		// 	', -1px -1px 0 '+colors.bg +')');
+		$(":root").attr("style","--bg-color:"+hexToRgb(colors.bg)+"")
+		$(":root").attr("style","--fg-color:"+hex2Rgb(colors.fg)+"")
+	}
+
+	function preprocess( jqo ) {
+		return jqo.find('p,ol,ul').wrap("<div class='matt'></div>");
 	}
 
 
@@ -285,6 +301,11 @@ $(function() {
             $('.sticky').not('#navigation').remove();
 
 			$('#everything').empty().html(data);
+			preprocess($('#everything'));
+			// console.log(window.MAIN_PAGE_INFO[page].colors.bg+"80");
+			// $('#everything .matt').css('background-color', 
+			// 	'rgba('+ hexToRgb(window.MAIN_PAGE_INFO[page].colors.bg)+", .85)");
+
 			//$('.matt').hide().fadeIn(700)
             paper.view.viewSize.set($canvas.width(), $canvas.height());
             setTimeout(function() {
@@ -336,6 +357,8 @@ $(function() {
 	});
 	cssstr += '</style>'
 	$('head').append(cssstr);
+	preprocess($('#everything'));
+	console.log("HI");
 
 	$(window).on('popstate', function(evt) {
 		if(history.state && history.state.page) {

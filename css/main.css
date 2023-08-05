@@ -12,8 +12,9 @@
  
 
 :root{
-    --bg-color : white;
-    --fg-color : black;
+    --fg-color : 0,0,0;
+    --bg-color : 255,255,255;
+    --accent-color: #961580;
 }
 
 html {
@@ -64,11 +65,12 @@ h1.title {
     padding-left:30px;
     font-family: 'Righteous';
     /* -webkit-text-stroke: 2px white; */
-    text-shadow: -1px 1px 0 var(--bg-color),
-				  1px 1px 0 var(--bg-color),
-				  1px -1px 0 var(--bg-color),
-				 -1px -1px 0 var(--bg-color);
+    text-shadow: -1px 1px 0 rgb(var(--bg-color)),
+				  2px 2px 0 rgb(var(--bg-color)),
+				  1px -1px 0 rgb(var(--bg-color)),
+				 -2px -2px 0 rgb(var(--bg-color));
 }
+
 
 
 h1, h2, h3, h4, h5 {
@@ -103,6 +105,38 @@ h1, h2, h3, h4, h5 {
 
 .navbar-right{
   float: right !important;
+}
+
+
+/** matts **/
+
+.matt {
+    /* background-color: rgba(255,255,255, 0.8); */
+    background-color: rgba(var(--bg-color), 0.8);
+    /* opacity: 0.8; */
+    /*background: linear-gradient(to bottom right, rgba(245,239,255, 0.8), rgba(255,255,255, 1.0) rgba(255,255,255,0.4));,*/
+    padding:3px;
+    margin-bottom:10px;
+}
+
+/* .matt p, .matt li {
+    font-family: 'Cutive Mono';
+	background-color: white;
+}
+.matt > p, .matt >*> li  {
+    margin-bottom: 15px;
+} */
+
+/** Lists need some changes: more spcacing, better item **/
+#everything .paperlist li:not(:last-child) { 
+    margin-bottom: 6px;
+}
+#everything .paperlist li {
+    border-left: 3mm ridge var(--accent-color);
+    padding-left: 3mm;
+}
+ul.paperlist {
+    list-style-type: none;
 }
 
 

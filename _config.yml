@@ -51,7 +51,7 @@ github_username:  orichardson
 
 # Build settings
 # theme: jekyll-theme-minimal
-theme: minima
+# theme: minima
 # plugins:
   # - jekyll-feed
 
