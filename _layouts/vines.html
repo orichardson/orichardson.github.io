@@ -29,7 +29,8 @@
 						<!-- <div class="container-fluid"> -->
 						<div class="container">
 							<ul class="nav navbar-nav" id="nav-icon-list">
-								{% for tab in site.main_pages %}
+								{% assign tabs =  site.main_pages | sort: "order" %}
+								{% for tab in tabs %}
 									<li id="nav-{{ tab.short }}" class="nav-item"><a href="#">
 										<span class="glyphicon glyphicon-{{ tab.glyph }}"></span>
 										<span class="hidden-xs text-capitalize"> {{ tab.short }} </span>

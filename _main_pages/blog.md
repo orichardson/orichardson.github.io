@@ -18,11 +18,8 @@ colors:
     border : '#636363'
     shadow : '#777777'
 glyph: comment
+order: 9
 ---
-
-
-
-
 
 
 {% if site.paginate %}

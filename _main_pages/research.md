@@ -11,6 +11,7 @@ colors:
     border : '#073600'
     shadow : '#e0fff9'
 glyph: education
+order: 2
 ---
 
 <h2> Publications </h2>

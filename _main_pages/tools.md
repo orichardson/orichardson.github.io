@@ -9,6 +9,7 @@ colors:
     border : '#CFB57B'
     shadow : '#253c05'
 glyph: cog
+order: 5
 ---
 
 

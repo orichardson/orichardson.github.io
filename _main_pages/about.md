@@ -9,6 +9,7 @@ colors:
     border : '#E7E7E7'
     shadow : '#e7e7e7'
 glyph: user
+order: 0
 # subtitle: include(subtitle-links.md)
 # special_css: /css/about.css
 ---
