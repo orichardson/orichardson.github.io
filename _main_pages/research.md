@@ -22,19 +22,17 @@ order: 2
 {% if paper.hide %}{% else %}
 <li>
     <!-- <b>{{paper.title}}</b><br/> -->
-    <b><i> {{ paper.title }} </i></b>
+    <i><span class=papertitle>{{ paper.title }} </span></i>
     <br/>
     {{ paper.authors }}
     <br/>
-    {{ paper.conf }} {{ paper.year }}
+    {{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}
     <br/>
-    {%if paper.arxiv %}  <a href="{{paper.arxiv}}">[ arxiv ]</a>   {% endif %}
+    {%if paper.arxiv %}  <a href="{{paper.arxiv}}">[ arXiv ]</a>   {% endif %}
     {%if paper.openreview %}  <a href="{{paper.openreview}}">[ OpenReview ]</a>   {% endif %}
     {%if paper.poster %}  <a href="{{paper.poster}}">[ poster ]</a>   {% endif %}
     {%if paper.code %}  <a href="{{paper.code}}">[ code ]</a>   {% endif %}
     {%if paper.blog %}  <a href="{{paper.blog}}">[ blog ]</a>   {% endif %}
-    <br>
-
     {{ paper.content }} 
 </li>
 {% endif %}

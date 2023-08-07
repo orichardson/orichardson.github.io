@@ -225,6 +225,10 @@ $(function() {
 			'background-color': colors.bg,
 			'color' : colors.fg
 		}, {duration:time, queue: 'colors'} ).dequeue('colors');
+		// $(':root').stop('colors', true,false).animate({
+		// 	'--bg-color': colors.bg,
+		// 	'--fg-color' : colors.fg
+		// }, {duration:time, queue: 'colors'} ).dequeue('colors');
 
 		$('nav').stop('colors', true,false).animate({
 			'background-color' : colors.nav,
@@ -239,8 +243,10 @@ $(function() {
 		// 	', 1px 1px 0 '+colors.bg+
 		// 	', 1px -1px 0 '+colors.bg+
 		// 	', -1px -1px 0 '+colors.bg +')');
-		$(":root").attr("style","--bg-color:"+hexToRgb(colors.bg)+"")
-		$(":root").attr("style","--fg-color:"+hex2Rgb(colors.fg)+"")
+		$(":root").attr("style", "--bg-color:"+hexToRgb(colors.bg)+";\n"+
+			"--fg-color:"+hexToRgb(colors.fg)+"");
+		// $(":root").attr("style", "--fg-color:"+hexToRgb(colors.fg)+"");
+		console.log("BG COLOR: ", hexToRgb(colors.bg))
 	}
 
 	function preprocess( jqo ) {
@@ -297,7 +303,8 @@ $(function() {
 		$.get(window.location.origin+'/main_pages/'+page, function(data) {
 			new_jumbo = window.MAIN_PAGE_INFO[page].display
 			typeText($('.title>.wrap'), new_jumbo, 40);
-
+			$('.subtitle').html(window.MAIN_PAGE_INFO[page].subtitle)
+			
             $('.sticky').not('#navigation').remove();
 
 			$('#everything').empty().html(data);
@@ -358,7 +365,7 @@ $(function() {
 	cssstr += '</style>'
 	$('head').append(cssstr);
 	preprocess($('#everything'));
-	console.log("HI");
+	setColors(0, page);
 
 	$(window).on('popstate', function(evt) {
 		if(history.state && history.state.page) {

@@ -3,10 +3,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);*/
 
-@import url(https://fonts.googleapis.com/css?family=Cinzel);
-@import url(https://fonts.googleapis.com/css?family=Righteous);
-@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn');
 
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
 @import url(https://fonts.googleapis.com/css?family=Marck+Script);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
  
@@ -65,17 +66,26 @@ h1.title {
     padding-left:30px;
     font-family: 'Righteous';
     /* -webkit-text-stroke: 2px white; */
-    text-shadow: -1px 1px 0 rgb(var(--bg-color)),
+    text-shadow: -2px 2px 0 rgb(var(--bg-color)),
 				  2px 2px 0 rgb(var(--bg-color)),
-				  1px -1px 0 rgb(var(--bg-color)),
+				  2px -2px 0 rgb(var(--bg-color)),
 				 -2px -2px 0 rgb(var(--bg-color));
 }
 .subtitle {
     padding-left:80px;
     margin-top:0px;
+    text-shadow: -1px 1px 0 rgb(var(--bg-color)),
+				  1px 1px 0 rgb(var(--bg-color)),
+				  1px -1px 0 rgb(var(--bg-color)),
+				 -1px -1px 0 rgb(var(--bg-color));
 }
 .subtitle > a {
     color: var(--accent-color);
+}
+.matt p, .matt li {
+    font-family: serif;
+    /* font-stretch: condensed; */
+    font-size: large;
 }
 
 
@@ -145,6 +155,10 @@ h1, h2, h3, h4, h5 {
 ul.paperlist {
     list-style-type: none;
     padding-left: 0;
+}
+span.papertitle {
+    font-size:large;
+    font-weight:bold;
 }
 
 

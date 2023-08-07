@@ -9,7 +9,8 @@ window.MAIN_PAGE_INFO['{{mp.short}}'] = {
     short : '{{mp.short}}',
     glyph : '{{mp.glyph}}',
     // title : '{{mp.title}}'
-    display : '{{mp.display}}'
+    display : '{{mp.display}}',
+    subtitle : '{{mp.subtitle}}'
 };
 // JSON.parse('{{mp | jsonify}}');
 {% endfor %} 
