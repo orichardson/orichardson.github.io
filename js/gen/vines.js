@@ -29,6 +29,7 @@ paper.Point.prototype.perp = function() {
 	return new paper.Point(-this.y, this.x);
 }
 
+
 function Vine(position, direction, width, curl, color, gp, params, parent) {
 	this.direction = direction;
 	this.curl = curl;
@@ -52,8 +53,11 @@ function Vine(position, direction, width, curl, color, gp, params, parent) {
 
 
 	this.cursor = new paper.Path.Circle(position, width*0.6 + 5);
-	this.cursor.strokeColor =  'white';
-	this.cursor.fillColor = new paper.Color(0.3, 0.1, 0.4, 1);
+	// this.cursor.strokeColor =  'white';
+	this.cursor.strokeColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--bg-color')+")";
+	console.log(this.cursor.strokeColor);
+	// this.cursor.fillColor = new paper.Color(0.3, 0.1, 0.4, 1);
+	this.cursor.fillColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--fg-color')+")";
 	this.cursor.strokeWidth = 2;
 	this.group.addChild(this.cursor);
 

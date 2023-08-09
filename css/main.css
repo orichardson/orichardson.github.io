@@ -89,7 +89,6 @@ h1.title {
 }
 
 
-
 h1, h2, h3, h4, h5 {
     font-family: 'Cinzel';
     font-weight: bolder;
@@ -134,6 +133,10 @@ h1, h2, h3, h4, h5 {
     /*background: linear-gradient(to bottom right, rgba(245,239,255, 0.8), rgba(255,255,255, 1.0) rgba(255,255,255,0.4));,*/
     padding:3px;
     margin-bottom:10px;
+}
+
+.container-narrow {
+    max-width: 100ch;
 }
 
 /* .matt p, .matt li {

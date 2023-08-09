@@ -17,9 +17,7 @@
 				<div class="jumbotron container">
 					<h1 class="title"><span class="wrap">{{page.display}}</span></h1>
 					<!-- {% comment %} <h3>a.{{page.subtitle}}.{{subtitle}}</h3> {% endcomment %} -->
-					{%if page.subtitle %}
 					<h3 class="subtitle">{{ page.subtitle }}</h3>
-					{% endif %}
 				</div>
 
 				<div id="" class="clearfix sticky-anchor">
@@ -52,19 +50,13 @@
 					</nav>
 				</div>
 
-				<!-- <div id="everything" class="container-fluid"> -->
-					<!-- <%- include('./'+ page + '.ejs', this) %> -->
-					<main class="page-content" aria-label="Content" style="flex:1">
-						<div id="everything" class="container">
-						<!-- <div id="everything" class="wrapper"> -->
-						<!-- <div class="wrapper"> -->
+				<main class="page-content" style="flex:1">
+					<div id="wrapper" class="container">
+						<div id="everything" class="{{ page.content_class }}">
 							{{ content }}
-						<!-- </div> -->
 						</div>
-					</main>
-				<!-- </div> -->
-				<!-- {% comment %}{%- include footer.html -%} {% endcomment %}-->
-
+					</div>
+				</main>
 			</div>
 
 		</div>

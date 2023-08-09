@@ -12,6 +12,7 @@ glyph: user
 order: 0
 # subtitle: include(subtitle-links.md)
 subtitle: <a class="mono" href="mailto:oli@cs.cornell.edu">oli@cs.cornell.edu</a>
+content_class: container-narrow
 # special_css: /css/about.css
 ---
 
@@ -35,6 +36,13 @@ subtitle: <a class="mono" href="mailto:oli@cs.cornell.edu">oli@cs.cornell.edu</a
 <img src="/images/me-3--crop2.jpg" style="width:350px;margin:15px;margin-left:30px;border-radius:50%;"/>
 </div>
 
+<!-- <div class="col-md-6 col-"> -->
+<!-- <div style="width:55px;float:right;margin-left:15px;">
+<img src="/images/theu.png" width=50px/>
+<img src="/images/ucam.png" width=50px/>
+<img src="/images/cornell-seal.png" width=50px/>
+</div> -->
+
 I am a theorist with broad scientific training, who loves to make pretty things out of math and code.
 Currently, I am a 
 <!-- fifth-year -->
@@ -43,15 +51,25 @@ PhD candidate in Computer Science at Cornell, advised by
 <!-- I am a theorist, but love to write code. -->
  <!-- with broad mathematical and scientific training. -->
 Prior that, I did an MPhil in CS at the University of Cambridge.
-As an undergraduate, I studied biology, pure math, and applied machine learning;
+As an undergraduate at the University of Utah,
+I studied biology, pure math, and applied machine learning;
 now I do applied math and theoretical machine learning.
+
+
+<div>
+<img src="/images/cornell-seal.png" height=50px/>
+<img src="/images/ucam.png" height=50px/>
+<img src="/images/theu.png" height=50px/>
+</div>
+
 
 <!-- I have broad interests and broad technical expertise. -->
 
 For now, my research focuses primarily on a unified theory of probabilistic modeling that allows
 for inconsistent beliefs. This theory is based on a class of models I invented, called
-[Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), which can be inconsistent
-subsume traditional graphical models (BNs, factor graphs, causal models), yet can also model modern machine learning settings (Classification, GANs, VAEs, ...).  This gives rise to an intuitive epistemic interpretation of loss functions as a degree of inconsistency, learning/inference/adversarial attack algorithms as ways of resolving that inconsistency. 
+[Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), which
+subsume traditional graphical models (Bayesian networks, factor graphs, causal models), and also model modern machine learning settings (Classification, GANs, VAEs, ...). 
+This gives rise to an intuitive interpretation of loss functions as a degree of inconsistency, and learning/inference/adversarial attack algorithms as ways to resolve that inconsistency. 
 
 <!-- Critically, PDGs can contain inconsistent probabilistic information, and that degree of inconsistency
 turns out to be quite important. -->

@@ -77,8 +77,10 @@ function Vine(position, direction, width, curl, color, gp, params, parent,
 
 
 	this.cursor = new paper.Path.Circle(position, width*0.6 + 5);
-	this.cursor.strokeColor =  'white';
-	this.cursor.fillColor = new paper.Color(0.3, 0.1, 0.4, 1);
+	// this.cursor.strokeColor =  'white';
+	this.cursor.strokeColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--bg-color')+")";
+	// this.cursor.fillColor = new paper.Color(0.3, 0.1, 0.4, 1);
+	this.cursor.fillColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--fg-color')+")";
 	this.cursor.strokeWidth = 2;
 	this.group.addChild(this.cursor);
 

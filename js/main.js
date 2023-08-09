@@ -246,7 +246,6 @@ $(function() {
 		$(":root").attr("style", "--bg-color:"+hexToRgb(colors.bg)+";\n"+
 			"--fg-color:"+hexToRgb(colors.fg)+"");
 		// $(":root").attr("style", "--fg-color:"+hexToRgb(colors.fg)+"");
-		console.log("BG COLOR: ", hexToRgb(colors.bg))
 	}
 
 	function preprocess( jqo ) {
@@ -308,6 +307,7 @@ $(function() {
             $('.sticky').not('#navigation').remove();
 
 			$('#everything').empty().html(data);
+			$('#everything').attr("class", window.MAIN_PAGE_INFO[page].content_class)
 			preprocess($('#everything'));
 			// console.log(window.MAIN_PAGE_INFO[page].colors.bg+"80");
 			// $('#everything .matt').css('background-color', 
@@ -324,6 +324,9 @@ $(function() {
 				if(window.page) {
 					vine.color.hue += new paper.Color(MAIN_PAGE_INFO[page].colors.menu).hue
 						- new paper.Color(MAIN_PAGE_INFO[window.page].colors.menu).hue;
+
+					vine.cursor.strokeColor = window.MAIN_PAGE_INFO[page].colors.bg;
+					vine.cursor.fillColor = window.MAIN_PAGE_INFO[page].colors.fg;
 				}
                 /*vine.color.saturation *= (0.05 + new paper.Color(MAIN_PAGE_INFO[window.page].colors.menu).saturation)
                     / (0.05 + new paper.Color(MAIN_PAGE_INFO[page].colors.menu).saturation)

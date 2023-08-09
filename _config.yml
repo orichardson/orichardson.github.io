@@ -36,12 +36,17 @@ collections:
     output: false
 
 defaults:
- -
-   scope:
-     path: "_main_pages_prerendered"
-   values:
-     layout: vines
-     permalink: /:title/
+  -
+    scope:
+      path: "_main_pages_prerendered"
+    values:
+      layout: vines
+      permalink: /:title/
+  # -
+  #   scope:
+  #     path: "_main_pages"
+  #   values:
+  #     content_class : container
 
 # baseurl: "/~oli" # the subpath of your site, e.g. /blog
 basurl: ""
@@ -63,13 +68,13 @@ github_username:  orichardson
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
 #   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
+  - Gemfile.lock
+  - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
