@@ -50,17 +50,22 @@ PhD candidate in Computer Science at Cornell, advised by
 [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
 <!-- I am a theorist, but love to write code. -->
  <!-- with broad mathematical and scientific training. -->
-Prior that, I did an MPhil in CS at the University of Cambridge.
-As an undergraduate at the University of Utah,
-I studied biology, pure math, and applied machine learning;
-now I do applied math and theoretical machine learning.
+
+- Before starting my PhD, I did an MPhil at the University of Cambridge,
+    where I did research in diagrammatic reasoning with [Mateja Jamnik]().
+- As an undergraduate at the University of Utah,
+    I studied biology, 
+    pure math (tropical geometry, with [Aaron Betram]()), 
+    and applied machine learning (structured prediction, with [Vivek Srikumar]()).
+ <!-- ;**
+ now I do applied math and theoretical machine learning.** -->
 
 
-<div>
+<!-- <div>
 <img src="/images/cornell-seal.png" height=50px/>
 <img src="/images/ucam.png" height=50px/>
 <img src="/images/theu.png" height=50px/>
-</div>
+</div> -->
 
 
 <!-- I have broad interests and broad technical expertise. -->
