@@ -18,7 +18,7 @@ order: 2
 
 
 <!-- <h1> Research </h1> -->
-
+<p style="max-width:85ch;">
 <!-- I develop clean mathematical foundations for fallable agents.
 My work spans machine learning, probabilistic graphical models, information theory, programming languages, category theory, and logic. -->
 My research develops clean and conceptually rich mathematical foundations for agents, which are intuitive and well-suited to modern AI systems. 
@@ -26,11 +26,16 @@ My research develops clean and conceptually rich mathematical foundations for ag
 % Much of the work I have done in my PhD revolves around a knowledge representation I invented, called a Probabilistic Dependency Graph. -->
 The result so far has been an elegant unifying picture that explains a number of standard but seemingly ad-hoc choices made in practice.
 A key ingredient is a class of models I invented called
-[Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), which
+<!-- [Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), -->
+<a href="https://orichardson.github.io/pdg/">Probabilistic Dependency Graphs (PDGs)</a>,
+which
 subsume traditional graphical models, yet can model inconsistent beliefs and most scenarios in machine learning. 
+</p>
 
 For an overview, see my 
 [research statement]({{ site.baseurl }}/files/research-statement.pdf).
+
+<br>
 
 <h2> Papers and Publications </h2>
 
@@ -105,14 +110,23 @@ For an overview, see my
 
 <br>
 
-<h2> Talks </h2>
+<h2> Various Other Talks </h2>
 
 <ul>
-{% assign talks_sorted = site.talks | sort: "year" | reverse %}
-{% for talks in talks_sorted %}
-    <li> {{ talk.title }} 
-    <div class="button-div">
-        {% for l in paper.links %}
+{% assign talks_sorted = site.talks | sort: "date" | reverse %}
+{% for talk in talks_sorted %}
+    <li> 
+    <i> {{ talk.title }}. </i> 
+    <br>
+    {% for label in talk.labels %}
+        <span class="label label-{{label.type}}">{{label.text}}</span>
+    {% endfor %}
+    <span class="details">@ {{ talk.venue }},</span>
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    {{ talk.date | date: "%-e %b %Y" }}.
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        {% for l in talk.links %}
             <a href="{{l[1] | relative_url}}" class="textbuttonlink">{{l[0]}}</a>
         {% endfor %}
     </div>

@@ -34,30 +34,32 @@ redirect_from:
 <!-- <img src="{{ site.baseurl }}/images/me-1-cropped.jpg" style="width:200px;float:right;margin-left:15px;border-radius:50%;"/> -->
 <!-- <img src="{{ site.baseurl }}/images/me-2-cropped.jpg" style="width:25vw; margin-left:15px;border-radius:50%;"/> -->
 <!-- <img src="{{ site.baseurl }}/images/me-3-cropped.jpg" style="width:350px;float:right;margin:15px;border-radius:50%;"/> -->
-<img src="{{ site.baseurl }}/images/me-3--crop2.jpg" 
-    style="width:360px;margin:15px;border-radius:50%;border:2px solid black;max-width:90vw;"/>
+<!-- <img src="{{ site.baseurl }}/images/me-3--crop2.jpg" 
+    style="width:360px;margin:15px;border-radius:50%;border:2px solid black;max-width:90vw;"/> -->
+<img src="{{ site.baseurl }}/images/me4-cropped.jpg" 
+    style="width:290px;margin:15px;border-radius:30%;border:2px solid black;max-width:80vw;"/>
 <!-- <img src="{{ site.baseurl }}/images/me-3-cropped.jpg" 
 style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-width:90vw;"/> -->
 <!-- <img src="/images/me-3--crop2.jpg" style="width:350px;margin:15px;margin-left:30px;border-radius:50%;"/> -->
 <!-- <img src="/images/me-2-cropped.jpg" style="width:350px;height=305px;margin:15px;margin-left:30px;border-radius:50%;"/> -->
 <div class="icon-panel">
 <!-- <a href="mailto:" title="email"><i class="fas fa-envelope"></i></a> -->
-    <a href="https://github.com/orichardson" title="GitHub" style="margin-right:10px"
+    <a href="https://github.com/orichardson" title="GitHub" style="margin-right:-5px"
              target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
+        <i class="fab fa-github" style="margin-right:-9px"></i>
         <br/>
-        <span class="icon-label">[github]</span>
+        <span class="icon-label">[github/</span>
         </a>
     <a href="https://gitlab.com/zaytuna" title="GitLab">
-        <i class="fab fa-gitlab"></i>
+        <i class="fab fa-gitlab" style="margin-left:-9px"></i>
         <br/>
-        <span class="icon-label">[gitlab]</span>
+        <span class="icon-label">gitlab]</span>
         </a>
     <br/>
     <br/>
     <a href="https://scholar.google.com/citations?user=5_yI4jIAAAAJ" title="Google Scholar">
-        <i class="ai ai-google-scholar"></i>
-        <br/>
+        <div style="margin-bottom:-5px;"><i class="ai ai-google-scholar"></i></div>
+        <!-- <br/> -->
         <span class="icon-label">[scholar]</span>
         </a>
     <br/>

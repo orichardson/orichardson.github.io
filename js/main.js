@@ -260,7 +260,8 @@ $(function() {
 		// return jqo.find('p').wrap("<div class='matt'></div>");
 		// return jqo.find('p,li').addClass("matt");
 		// console.log(jqo);
-		jqo.find('>p').wrap("<div class='matt'></div>");
+		// jqo.find('>p').wrap("<div class='matt'></div>");
+		jqo.find('>p').wrapInner("<div class='matt'></div>");
 		jqo.find('li').wrapInner("<div class='matt'></div>");
 	}
 
