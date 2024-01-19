@@ -48,8 +48,8 @@ defaults:
   #   values:
   #     content_class : container
 
-# baseurl: "/~oli" # the subpath of your site, e.g. /blog
-basurl: ""
+baseurl: "/~oli" # the subpath of your site, e.g. /blog
+# basurl: ""
 url: "cs.cornell.edu" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  orichardson
@@ -57,8 +57,9 @@ github_username:  orichardson
 # Build settings
 # theme: jekyll-theme-minimal
 # theme: minima
-# plugins:
-  # - jekyll-feed
+plugins:
+  - jekyll-redirect-from
+# - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -70,11 +71,15 @@ github_username:  orichardson
 #
 exclude:
 #   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
   - Gemfile.lock
   - node_modules/
+  - .git/
+  - .gitignore
+#   - _main_pages_prerendered/
+#   - _main_pages_prerendered/
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/

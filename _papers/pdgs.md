@@ -7,6 +7,5 @@ conf: AAAI
 year: 2021
 code: https://github.com/orichardson/pdg
 poster: /files/posters/pdg-AAAI-poster-D.pdf
+type: conference
 ---
-
-PDGs!

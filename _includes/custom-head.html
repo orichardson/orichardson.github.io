@@ -1,7 +1,11 @@
 <title id="bigthing">{{page.title}}</title>
-		
-<!-- <meta charset="utf-8">-->
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
 
 <!-- JQuery + JQuery UI (for animations) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -12,25 +16,23 @@
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
 
 
-
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
 <!-- if in main pages, also want page-specific css -->
 {% comment %} <!-- % if page.collection == 'main_pages_prerendered' %} --> {% endcomment %}
 {% if page.special_css %}
 <!-- <link rel="stylesheet" type="text/css" href="/css/{{ page.short }}.css" /> -->
 <div class="special_css">
-<link rel="stylesheet" type="text/css" href="{{ page.special_css }}" />
+<link rel="stylesheet" type="text/css" href="{{ page.special_css | relative url }}" />
 </div>
 {% endif %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="/js/load_jekyll_collections.js"></script>
-<script src="/js/main.js"></script>
+<script src="{{ site.baseurl }}/js/load_jekyll_collections.js"></script>
+<script src="{{ site.baseurl }}/js/main.js"></script>
 <script>
     window.page='{{page.short}}';
 </script>

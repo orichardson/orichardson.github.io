@@ -15,7 +15,7 @@ app1.controller('ctrl1', function($scope, $interval) {
 // 	about : {
 // 		colors: { fg :'#000000', bg :'#FFFFFF', menu :'#BBBBBB', nav :'#F8F8F8', border :'#E7E7E7', shadow :'#e7e7e7' },
 // 		descr: "overview, contact info, bragging rights, contact info, links to relevant sites",
-// 		glyph: "user"
+// 		glyph: "user" 
 // 	},
 // 	blog : {
 // 		colors: { fg :'#ffd5f2', bg :'#4d0036', menu :'#5E0042', nav :'#8c6d80', border :'#856879', shadow :'#f7c3e8' },
@@ -207,7 +207,14 @@ $(function() {
 
 	// Next, add handlers to all the menus. Also, complicated styling on change
 
-	var page = window.location.pathname.split("/")[1];
+	// var page = window.location.pathname.split("/")[1];
+	let wlp = window.location.pathname;
+	if(wlp[wlp.length-1] == '/') {
+		wlp = wlp.substring(0,wlp.length-1);
+	}
+	let toks = wlp.split('/');
+	let page = toks[toks.length-1];
+
 	var $active = $("#nav-"+page);
 	$active.addClass('active');
 
@@ -218,8 +225,7 @@ $(function() {
 	}
 
 	function setColors(time, page) {
-		// IMPORTANT: when mnodifying this,
-        // make sure that you also modify index.ejs to get the initial values.
+		console.log("SETcOLORS", time, page);
 		let colors = MAIN_PAGE_INFO[page].colors;
 		$('body').stop('colors', true,false).animate({
 			'background-color': colors.bg,
@@ -249,7 +255,13 @@ $(function() {
 	}
 
 	function preprocess( jqo ) {
-		return jqo.find('p,ol,ul').wrap("<div class='matt'></div>");
+		// return jqo.find('p,ol,ul').wrap("<div class='matt'></div>");
+		// return jqo.find('p,li').wrap("<div class='matt'></div>");
+		// return jqo.find('p').wrap("<div class='matt'></div>");
+		// return jqo.find('p,li').addClass("matt");
+		// console.log(jqo);
+		jqo.find('>p').wrap("<div class='matt'></div>");
+		jqo.find('li').wrapInner("<div class='matt'></div>");
 	}
 
 
@@ -299,7 +311,8 @@ $(function() {
 	}
 
 	function semiload(page, skippush=false) {
-		$.get(window.location.origin+'/main_pages/'+page, function(data) {
+		console.log(page)
+		$.get(window.location.origin+window.baseurl+'/main_pages/'+page, function(data) {
 			new_jumbo = window.MAIN_PAGE_INFO[page].display
 			typeText($('.title>.wrap'), new_jumbo, 40);
 			$('.subtitle').html(window.MAIN_PAGE_INFO[page].subtitle)
@@ -325,8 +338,10 @@ $(function() {
 					vine.color.hue += new paper.Color(MAIN_PAGE_INFO[page].colors.menu).hue
 						- new paper.Color(MAIN_PAGE_INFO[window.page].colors.menu).hue;
 
-					vine.cursor.strokeColor = window.MAIN_PAGE_INFO[page].colors.bg;
-					vine.cursor.fillColor = window.MAIN_PAGE_INFO[page].colors.fg;
+					// vine.cursor.strokeColor = window.MAIN_PAGE_INFO[page].colors.bg;
+					// vine.cursor.fillColor = window.MAIN_PAGE_INFO[page].colors.fg;
+					vine.cursor.strokeColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--fg-color')+")";
+					vine.cursor.fillColor = 'rgba('+getComputedStyle(document.body).getPropertyValue('--bg-color')+",0.5)";
 				}
                 /*vine.color.saturation *= (0.05 + new paper.Color(MAIN_PAGE_INFO[window.page].colors.menu).saturation)
                     / (0.05 + new paper.Color(MAIN_PAGE_INFO[page].colors.menu).saturation)
@@ -341,20 +356,21 @@ $(function() {
             $('.sticky').each(stickify);
 			setActive($('#nav-'+page));
             window.page = page;
+			document.title = page;
 			if(!skippush)
-				window.history.pushState({page:page}, "", '/'+page);
+				window.history.pushState({page:page}, "", window.baseurl+'/'+page);
 		});
 		setColors(400, page);
 	}
 
-	var cssstr = '<style>';
+	let cssstr = '<style>';
 	$("nav li>a").each(function(index, value) {
-		var id = value.parentNode.id;
-		var name = id.substr(4);
-		console.log(name);
+		let id = value.parentNode.id;
+		let name = id.substr(4);
+		// console.log(name);
 
         if(MAIN_PAGE_INFO[name]) {
-            var menucolor = MAIN_PAGE_INFO[name].colors.menu;
+            let menucolor = MAIN_PAGE_INFO[name].colors.menu;
     		cssstr += '#'+id+'> a { color :  '+menucolor +'; }\n'
 //                + '#'+id+'> a:hover { text-shadow : 2px 2px 5px rgba('+ hexToRgb(menucolor) +', 0.5); }\n'
     		 	+ '#'+id+'.active > a { background-color :  '+MAIN_PAGE_INFO[name].colors.shadow +' !important; }\n';
@@ -364,11 +380,33 @@ $(function() {
     			semiload(name);
     		});
         }
+		/* else if(name == 'cv') {
+			$(value).click(function(evt){
+				window.location.href = '/files/cv.pdf'
+			})
+		}*/
 	});
 	cssstr += '</style>'
 	$('head').append(cssstr);
 	preprocess($('#everything'));
 	setColors(0, page);
+
+	var alternate_onframe = undefined;
+
+	$('#tree-pause').click(function(evt) {
+		let temp = paper.view.onFrame;
+		paper.view.onFrame = alternate_onframe;
+		alternate_onframe = temp;
+		$('#tree-pause i').toggleClass('fa-pause fa-play');
+		// $('#tree-pause').toggle() // TODO: figure out how to make this actually work
+	});
+	$('#tree-remove').click(function(evt) {
+		projects[0].clear();
+		$('#tree-pause').remove();
+		$('#tree-remove').remove();
+	});
+	
+
 
 	$(window).on('popstate', function(evt) {
 		if(history.state && history.state.page) {

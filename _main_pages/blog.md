@@ -19,6 +19,7 @@ colors:
     shadow : '#e0fff9'
 glyph: comment
 order: 9
+hide: true
 ---
 
 

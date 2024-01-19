@@ -4,20 +4,27 @@ var DEFAULT_PARAMS = {
 	// min_life: 20,
 	// min_life: 10,
 	min_life: 15,
+	// life_range: 35,
 	life_range: 35,
+	// life_range: 0,
 	// life_range: 25,
 	base_curl_friction: 0.95,
-	curl_explode_width_asymptote: -0.0,
+	// curl_explode_width_asymptote: -0.0,
+	curl_explode_width_asymptote: 0.85,
+	// curl_explode_width_asymptote: 0.5,
 	// curl_explode_width_asymptote: 0,
 	curl_breeze_factor: 3,
 	saturation_hl: 100,
-	hue_velocity: 4,
+	// hue_velocity: 4,
+	hue_velocity: -0.3,
+	hue_velocity_variation: 6,
 	// hue_accel: 1,
 	// hue_friction:0.9,
-	brightness_hl: 300,
+	// brightness_hl: 300,
+	brightness_hl: 200,
 	// brightness_hl: 100,
 	// select_curves: true,
-	select_curves:false,
+	select_curves: false,
 	selected_frames: 10,
 	// min_partition: 0.15,
 	min_partition: 0.1,
@@ -27,13 +34,13 @@ var DEFAULT_PARAMS = {
 	// speed_multiplier_average: 0.95, /* on split, change in speed */
 	// speed_multiplier_range: 0.3,
 	speed_multiplier_range: 0.1,
-	simplify_tolerence: 2,
-	// simplify_tolerence: 4,
+	// simplify_tolerence: 2,
+	simplify_tolerence: 4,
 	// wedge_angle: Math.PI/4,
 	wedge_angle: Math.PI/6,
 	// max_parallel_width: 3,
 	max_parallel_width: 20,
-	// max_parallel_width: 100,
+	// max_parallel_width: 50,
 	with: function(obj) {
 		var newp = 	Object.assign({}, this);
 		for(v in obj) newp[v] = obj[v];
@@ -61,8 +68,9 @@ function Vine(position, direction, width, curl, color, gp, params, parent,
 	this.group = gp || new paper.Group({pivot:position, transformContent:false});
 	this.params = params || Object.assign({}, DEFAULT_PARAMS);
 
-	this.life = this.params.min_life + Math.floor(this.params.life_range*Math.random()) 
-		*life_multiplier;
+	this.life = this.params.min_life + Math.floor(this.params.life_range*Math.random() * life_multiplier);
+	// this.life = Math.ceil((this.params.min_life + this.params.life_range*Math.random() * life_multiplier)
+	// 	* this.width/200);
 
 	this.curve = new paper.Path();
 	this.curve.strokeColor = color;
@@ -75,13 +83,18 @@ function Vine(position, direction, width, curl, color, gp, params, parent,
 	this.group.addChild(this.curve);
 	this.curve.sendToBack();
 
-
-	this.cursor = new paper.Path.Circle(position, width*0.6 + 5);
+	
+	let cw = width*0.6 + 5
+	this.cursor = new paper.Path.Circle(position, cw);
 	// this.cursor.strokeColor =  'white';
-	this.cursor.strokeColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--bg-color')+")";
 	// this.cursor.fillColor = new paper.Color(0.3, 0.1, 0.4, 1);
-	this.cursor.fillColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--fg-color')+")";
+	// this.cursor.strokeColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--bg-color')+")";
+	// this.cursor.fillColor = 'rgb('+getComputedStyle(document.body).getPropertyValue('--fg-color')+")";
+	this.cursor.strokeColor = 'rgba('+getComputedStyle(document.body).getPropertyValue('--fg-color')+",0.6)";
+	this.cursor.fillColor = 'rgba('+getComputedStyle(document.body).getPropertyValue('--bg-color')+",0.95)";
 	this.cursor.strokeWidth = 2;
+	cw *= Math.PI/5;
+	this.cursor.dashArray = [cw,cw];
 	this.group.addChild(this.cursor);
 
 	this.children = [];
@@ -108,23 +121,28 @@ function Vine(position, direction, width, curl, color, gp, params, parent,
 			// this.hue_velocity *= this.params.hue_friction;
 			// this.color.hue += this.hue_velocity;
 
-			this.color.hue += this.params.hue_velocity*(Math.random()-0.5);
+			this.color.hue += this.params.hue_velocity + this.params.hue_velocity_variation*(Math.random()-0.5);
 				// *(this.width/(this.width-1));
-			this.color.brightness += Math.random()*(1-this.color.brightness)/this.params.brightness_hl;
+			this.color.brightness += (Math.random()-0.2)*(1-this.color.brightness)/this.params.brightness_hl;
 			// this.color.saturation += (1-this.color.saturation)/this.params.saturation_hl;
-			this.color.saturation += Math.random()*(1-this.color.saturation)/this.params.saturation_hl;
+			this.color.saturation += (Math.random()-0.2)*(1-this.color.saturation)/this.params.saturation_hl;
 			// this.color.saturation += (0.01+this.color.saturation)*(0.01+this.color.saturation)*
 				// (1-this.color.saturation)/2;
 
-			var b = this.params.base_curl_friction;
+			let b = this.params.base_curl_friction;
 
-			this.curl *= (b + (1-b)/(this.width - this.params.curl_explode_width_asymptote));
+			// this.curl *= (b + (1-b)/(this.width - this.params.curl_explode_width_asymptote));
+			this.curl *= (b + (1-b)*this.params.curl_explode_width_asymptote/(this.width));
 			// this.curl += (Math.random()-0.5)*(1+this.params.curl_breeze_factor/this.width)
 			this.curl += (Math.random()-0.5)*(20/(20+this.width)) * 
 				(1 + this.params.curl_breeze_factor/this.width);
+			// this.curl = Math.sign(this.curl) * Math.min(Math.abs(this.curl), 7+10*Math.random());
+			// if(Math.abs(this.curl) > 20 && Math.random() > 0.8) {
+			// 	this.curl = Math.abs(this.curl) *  Math.log2(this.curl)
+			// }
 			this.direction.angle += this.curl;
 			//this.direction *= 0.99;
-			var newpos = this.curve.lastSegment.point.add(this.direction);
+			let newpos = this.curve.lastSegment.point.add(this.direction);
 
 			if(!paper.view.bounds.contains(newpos)) {
 				//this.alive = false;
@@ -164,22 +182,22 @@ function Vine(position, direction, width, curl, color, gp, params, parent,
 
 			return true;
 		} else if (this.params.select_curves) {
-			var frames = this.params.selected_frames;
+			let frames = this.params.selected_frames;
 			if (this.life <= -frames && this.life > -(frames+1))
 				this.curve.fullySelected = false;
 		}
 
 		if (this.children.length > 0) {
-			var childers = this.children;
+			let childers = this.children;
 
-			var any_alive = false;
-			for(var i = 0; i < childers.length; i++) {
+			let any_alive = false;
+			for(let i = 0; i < childers.length; i++) {
 				if(childers[i].tick()) {
-					if(!any_alive){
-						any_alive = true;
-						if(this.width < this.params.max_parallel_width)
-							return true;
-					}
+					// if(!any_alive){
+					any_alive = true;
+					if(this.width < this.params.max_parallel_width)
+						return true;
+					// }
 				}
 			}
 			if(!any_alive)
@@ -268,6 +286,9 @@ function Vine(position, direction, width, curl, color, gp, params, parent,
 	}
 
 	this.blow = function() {
+		// if (Math.random() > 0.5)
+		// 	return;
+
 		//this.group.rotation = this.group.rotation % Math.PI;
 		this.group.rotate( this.rotMom/(1+this.width) );
 		this.rotMom += this.rotJerk
@@ -278,14 +299,16 @@ function Vine(position, direction, width, curl, color, gp, params, parent,
 		// this.rotJerk += (Math.random()-0.5) * 0.2 / (1 + this.width);
 		this.rotJerk *= 0.94;
 
-		if(this.parent) {
-			var bleed = 0.5
-			this.parent.rotJerk = (this.rotJerk * (bleed/2) + this.parent.rotJerk*(1-bleed/2))
-		}
+		// if(this.parent) {
+		// 	var bleed = 0.5
+		// 	this.parent.rotJerk = (this.rotJerk * (bleed/2) + this.parent.rotJerk*(1-bleed/2))
+		// }
 
-		for (var i = 0; i < this.children.length; i++)
+		for (var i = 0; i < this.children.length; i++) {
 			this.children[i].blow()
-
+			this.rotJerk += this.children[i].rotJerk
+		}
+		this.rotJerk /= (1 + this.children.length);
 	}
 
 	this.agg = function(fun) {
@@ -320,12 +343,16 @@ $(function() {
 	console.log("bottom center = ", paper.view.bounds.bottomCenter);
 	
 	// usual one
-	startVine(320, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
+	// startVine(320, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
+	startVine(350, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
 	// startVine(320, 100, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
 	// startVine(180, 300, paper.view.bounds.bottomCenter, new paper.Point(0, -2.2));
 	// startVine(320, 60, paper.view.bounds.center, new paper.Point(-2.6, 2.6));
 
 	function onFrame(event) {
+		if(event.count % 2 == 0)
+			return;
+
 		for(var i = 0; i < vines.length; i++) {
 //			for(var k = 0; k < 4; k++)
 				vines[i].tick();

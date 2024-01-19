@@ -1,6 +1,7 @@
 ---
 ---
 
+window.baseurl = '{{site.baseurl}}';
 window.MAIN_PAGE_INFO = {};
 
 {% for mp in site.main_pages %}
@@ -13,5 +14,7 @@ window.MAIN_PAGE_INFO['{{mp.short}}'] = {
     subtitle : '{{mp.subtitle}}',
     content_class : '{{mp.content_class}}'
 };
-// JSON.parse('{{mp | jsonify}}');
+{% comment %} 
+// JSON.parse('{{mp | jsonify}}'); 
+{% endcomment %}
 {% endfor %} 

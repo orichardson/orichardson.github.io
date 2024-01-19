@@ -1,8 +1,10 @@
 ---
 # options: .rsch  .research  .main  .contrib  .out
-display: oli.{math, reflect};
+# display: oli.{math, reflect};
+display: oli.io;
 # title: research
 short: research
+subtitle: Research
 colors: 
     fg :     '#FFFFFF'
     bg :     '#000000'
@@ -14,27 +16,106 @@ glyph: flask
 order: 2
 ---
 
-<h2> Publications </h2>
 
-<h3> Conference Papers </h3>
+<!-- <h1> Research </h1> -->
+
+<!-- I develop clean mathematical foundations for fallable agents.
+My work spans machine learning, probabilistic graphical models, information theory, programming languages, category theory, and logic. -->
+My research develops clean and conceptually rich mathematical foundations for agents, which are intuitive and well-suited to modern AI systems. 
+<!-- % I do this by drawing from commonalities across the wide range of fields in which I have expertise, including probabilistic graphical models, information theory, category theory, logic, differential geometry, and machine learning.
+% Much of the work I have done in my PhD revolves around a knowledge representation I invented, called a Probabilistic Dependency Graph. -->
+The result so far has been an elegant unifying picture that explains a number of standard but seemingly ad-hoc choices made in practice.
+A key ingredient is a class of models I invented called
+[Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), which
+subsume traditional graphical models, yet can model inconsistent beliefs and most scenarios in machine learning. 
+
+For an overview, see my 
+[research statement]({{ site.baseurl }}/files/research-statement.pdf).
+
+<h2> Papers and Publications </h2>
+
+<!-- Legend: -->
+<div style="margin-bottom:20px;margin-left:50px;">
+    <div style="rotate:-90deg;display:inline-block; color:gray; font-size:large;margin-right:-10px;">Legend</div>
+    <div style="display:inline-block;vertical-align:middle;border-left:2px solid gray;">
+    <div class="workshop-type legenditem">
+        <span><i class="fa fa-file" aria-hidden="true"></i></span>
+        workshop
+    </div>
+    <br>
+    <div class="conference-type legenditem">
+        <span><i class="fa fa-file" aria-hidden="true"></i></span>
+        conference
+    </div>
+    <br>
+    <div class="journal-type legenditem">
+        <span><i class="fa fa-file" aria-hidden="true"></i></span>
+        journal
+    </div>
+    </div>
+</div>
+
+
+
+<!-- <h3> Conference Papers </h3> -->
 <ul class='paperlist'>
-{% for paper in site.papers %}
+{% assign papers_sorted = site.papers | sort: "year" | reverse %}
+{% for paper in papers_sorted %}
 {% if paper.hide %}{% else %}
-<li>
+<li class="{{paper.type}}-type">
+    {% if paper.oral %} 
+        <div class="special-tag">
+            <i class="fa-solid fa-certificate"></i><br/>
+            <div class="special-tag-text">oral</div>
+        </div>
+    {% endif %}
     <!-- <b>{{paper.title}}</b><br/> -->
-    <i><span class=papertitle>{{ paper.title }} </span></i>
-    <br/>
-    {{ paper.authors }}
-    <br/>
-    {{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}
-    <br/>
-    {%if paper.arxiv %}  <a href="{{paper.arxiv}}">[ arXiv ]</a>   {% endif %}
-    {%if paper.openreview %}  <a href="{{paper.openreview}}">[ OpenReview ]</a>   {% endif %}
-    {%if paper.poster %}  <a href="{{paper.poster}}">[ poster ]</a>   {% endif %}
-    {%if paper.code %}  <a href="{{paper.code}}">[ code ]</a>   {% endif %}
-    {%if paper.blog %}  <a href="{{paper.blog}}">[ blog ]</a>   {% endif %}
-    {{ paper.content }} 
+    <!-- <span class="papertitle hangingindent">{{ paper.title }} </span> -->
+    <div class="papertitle hangingindent">{{ paper.title }}
+        {% comment %}
+        {% if paper.oral %} 
+        <span class="special-tag">
+            <i class="fa-solid fa-certificate"></i><br/>
+            <div class="special-tag-text">oral</div>
+        </span>
+        {% endif %}
+        {% endcomment %}
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr">
+        {{ paper.authors }}
+        <br/>
+        {{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}
+        <br/>
+    </div>
+    <div class="button-div">
+        {%if paper.arxiv %}  <a href="{{paper.arxiv | relative_url}}" class="textbuttonlink">arXiv</a>   {% endif %}
+        {%if paper.poster %} <a href="{{paper.poster | relative_url}}" class="textbuttonlink">poster</a>   {% endif %}
+        {%if paper.code %}   <a href="{{paper.code | relative_url}}" class="textbuttonlink">code</a>   {% endif %}
+        {%if paper.blog %}   <a href="{{paper.blog | relative_url}}" class="textbuttonlink">blog</a>   {% endif %}
+        {% for l in paper.extralinks %}
+            <a href="{{l[1] | relative_url}}" class="textbuttonlink">{{l[0]}}</a>
+        {% endfor %}
+        {{ paper.content }}
+    </div>
 </li>
 {% endif %}
+{% endfor %}
+</ul>
+
+<br>
+
+<h2> Talks </h2>
+
+<ul>
+{% assign talks_sorted = site.talks | sort: "year" | reverse %}
+{% for talks in talks_sorted %}
+    <li> {{ talk.title }} 
+    <div class="button-div">
+        {% for l in paper.links %}
+            <a href="{{l[1] | relative_url}}" class="textbuttonlink">{{l[0]}}</a>
+        {% endfor %}
+    </div>
+    </li>
 {% endfor %}
 </ul>

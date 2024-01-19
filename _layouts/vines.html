@@ -10,71 +10,77 @@
 
 <!-- <body style='background-color: {{page.colors.bg}}; color:{{page.colors.fg}}'> -->
 	<div class="parallax">
-		<div class="plx-group">
-			<div class=" plx-layer plx-base">
+		<div class="plx-layer plx-base">
 
-				<!-- <div class="jumbotron container-fluid"> -->
-				<div class="jumbotron container">
-					<h1 class="title"><span class="wrap">{{page.display}}</span></h1>
-					<!-- {% comment %} <h3>a.{{page.subtitle}}.{{subtitle}}</h3> {% endcomment %} -->
-					<h3 class="subtitle">{{ page.subtitle }}</h3>
-				</div>
-
-				<div id="" class="clearfix sticky-anchor">
-					<!-- <nav id="navigation" class="navbar navbar-default sticky"
-						style="opacity: 0.9;background-color: <%- params.tabs[page].colors.nav %>; border-color: <%- params.tabs[page].colors.border %>" > -->
-					<nav id="navigation" class="navbar navbar-default sticky">
-						<!-- <div class="container-fluid"> -->
-						<div class="container">
-							<ul class="nav navbar-nav" id="nav-icon-list">
-								{% assign tabs =  site.main_pages | sort: "order" %}
-								{% for tab in tabs %}
-									<li id="nav-{{ tab.short }}" class="nav-item"><a href="#">
-										<!-- <span class="glyphicon glyphicon-{{ tab.glyph }}"></span> -->
-										<i class="fa-solid fa-{{ tab.glyph }}"></i>
-										<span class="hidden-xs text-capitalize"> {{ tab.short }} </span>
-									</a></li>
-								{% endfor %}
-								<!-- <% for(var tab in params.tabs) { %>
-									<li id="nav-<%- tab %>" class="nav-item"><a href="#">
-										<span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
-										<span class="hidden-xs text-capitalize"> <%= tab %> </span>
-									</a></li>
-								<% } %> -->
-							</ul>
-						  <ul class="nav navbar-nav navbar-right"  style="margin-left:0px !important;">
-							<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-							<li><a href="#"><span class="glyphicon glyphicon-equalizer"></span></a></li>
-						  </ul>
-					  </div>
-					</nav>
-				</div>
-
-				<main class="page-content" style="flex:1">
-					<div id="wrapper" class="container">
-						<div id="everything" class="{{ page.content_class }}">
-							{{ content }}
-						</div>
-					</div>
-				</main>
+			<!-- <div class="jumbotron container-fluid"> -->
+			<div class="jumbotron container">
+				<h1 class="title"><span class="wrap">{{page.display}}</span></h1>
+				<!-- {% comment %} <h3>a.{{page.subtitle}}.{{subtitle}}</h3> {% endcomment %} -->
+				<h3 class="subtitle">{{ page.subtitle }}</h3>
 			</div>
 
-		</div>
+			<div id="" class="clearfix sticky-anchor">
+				<!-- <nav id="navigation" class="navbar navbar-default sticky"
+					style="opacity: 0.9;background-color: <%- params.tabs[page].colors.nav %>; border-color: <%- params.tabs[page].colors.border %>" > -->
+				<nav id="navigation" class="navbar navbar-default sticky">
+					<!-- <div class="container-fluid"> -->
+					<div class="container">
+						<ul class="nav navbar-nav" id="nav-icon-list">
+							{% assign tabs =  site.main_pages | where: 'hide', nil  | sort: "order" %}
+							{% for tab in tabs %}
+								<li id="nav-{{ tab.short }}" class="nav-item"><a href="#">
+									<!-- <span class="glyphicon glyphicon-{{ tab.glyph }}"></span> -->
+									<i class="fa-solid fa-{{ tab.glyph }}"></i>
+									<span class="text-capitalize"> {{ tab.short }} </span>
+								</a></li>
+							{% endfor %}
+							{% comment %}
+							<li id="nav-cv" class="nav-item"><a href="#" style="color:#338;">
+								<!-- <span class="glyphicon glyphicon-{{ tab.glyph }}"></span> -->
+								<i class="fa-solid fa-trophy"></i>
+								<span class="hidden-xs">CV.pdf</span>
+							</a></li>
+							{% endcomment %}
+							<!-- <% for(var tab in params.tabs) { %>
+								<li id="nav-<%- tab %>" class="nav-item"><a href="#">
+									<span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
+									<span class="hidden-xs text-capitalize"> <%= tab %> </span>
+								</a></li>
+							<% } %> -->
+						</ul>
+						<ul class="nav navbar-nav navbar-right"  style="margin-left:0px !important;">
+						<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+						<li><a href="#"><span class="glyphicon glyphicon-equalizer"></span></a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
 
-		<!---->
-		<div class="plx-group">
-			<div  class="plx-layer plx-deep" style="">
-				<div id="background-wrapper"style="margin:0px!important;" >
-					<canvas id="background" resize="true"></canvas>
+			<main class="page-content" style="flex:1">
+				<div id="wrapper" class="container">
+					<div id="everything" class="{{ page.content_class }}">
+						{{ content }}
+					</div>
 				</div>
-			<!----></div>
+			</main>
+		</div>
+		<!---->
+		<div  class="plx-layer plx-deep">
+			<div id="tree-button-panel">
+				<button id="tree-remove" type="button" class="btn btn-outline-secondary">
+					<i class="fa-solid fa-ban"></i> </button>
+				<br/>
+				<button id="tree-pause" type="button" class="btn btn-outline-secondary"> 
+					<i class="fa-solid fa-pause"></i> </button>
+			</div>
+			<div id="background-wrapper"style="margin:0px!important;" >
+				<canvas id="background" resize="true"></canvas>
+			</div>
 		</div>
 	</div>
 
 
-
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-full.js"></script>
-	<script type="text/javascript" src="/js/gen/vines-wind.js"></script>
+	<script type="text/javascript" src="{{site.baseurl}}/js/gen/vines-wind.js"></script>
 	</body>
 </html>
