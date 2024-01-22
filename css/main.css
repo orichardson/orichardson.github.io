@@ -155,6 +155,9 @@ h1, h2, h3, h4, h5 {
 .container-narrow {
     max-width: 100ch;
 }
+#everything h1, #everything h2 {
+    margin-top: 30px;
+}
 
 /* .matt p, .matt li {
     font-family: 'Cutive Mono';
@@ -179,13 +182,13 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     position: relative;
     margin-bottom: 30px;
-    /* min-height: 330px; // calculated; might need to change manually */
-    min-height: 280px;
+    min-height: 330px; /* calculated; might need to change manually */
+    /* min-height: 280px; */
 }
 .portrait > .icon-panel {
     position: absolute;
     /* font-size: 50px; */
-    left: calc(50% - 180px - 140px);
+    left: calc(50% - 180px - 110px);
     top: calc(50% - 125px);
 }
 /* for small screens, put them below (no line breaks) */
@@ -203,6 +206,7 @@ h1, h2, h3, h4, h5 {
 .portrait > .icon-panel a {
     color: var(--accent-color);
     display:inline-block;
+    margin-right: 10px;
 }
 .portrait > .icon-panel a:hover{
     filter: grayscale(1);
@@ -226,11 +230,14 @@ h1, h2, h3, h4, h5 {
     padding-left: 3mm;
     position: relative;
 }
+.conference-type {
+    --accent-color: #C7A;
+}
 .workshop-type {
     --accent-color:steelblue;
 }
 .journal-type {
-    --accent-color:crimson;
+    --accent-color:seagreen;
 }
 
 /* #everything .paperlist li.oral>a::before {
@@ -242,7 +249,7 @@ h1, h2, h3, h4, h5 {
     position:absolute;
     right: calc(100% + 5mm);
     color: var(--accent-color);
-    filter: brightness(3) saturate(0.5);
+    /* filter: brightness(3) saturate(0.5); */
 }
 .special-tag>.special-tag-text {
     position: absolute;
@@ -265,6 +272,14 @@ h1, h2, h3, h4, h5 {
     }       
 }
 
+.label-invtalk {
+    /* background-color: darkslateblue; */
+    background-color: midnightblue;
+    /* color: lightgray; */
+}
+.label-exam {
+    background-color: var(--accent-color);
+}
 
 .legenditem {
     color: var(--accent-color);
@@ -292,16 +307,26 @@ div.papertitle {
     text-indent: -22px ;
 }
 .paper-descr {
-    color: #A9B;
+    /* color: #A9B; */
+    color: color-mix(in srgb, 
+        color-mix(in srgb, rgb(var(--fg-color)) 60%, var(--accent-color)) 80%,
+        rgb(var(--bg-color)));
     margin-top:3px;
 }
 .textbuttonlink {
     margin: 0px 2px;
 }
-.paperlist .textbuttonlink {
-    background-color: #101035;
+.textbuttonlink {
+    /* background-color: #101035; */
+    background-color:  color-mix(in srgb, var(--accent-color) 20%, rgb(var(--bg-color)));
+    color:  color-mix(in srgb, var(--accent-color) 40%, #337ab7);
     /* border: 1px solid; */
     /* padding: 1px 4px; */
+}
+.textbuttonlink:hover {
+    /* color: color-mix(in srgb, var(--accent-color) 25%, #23527c); */
+    color: var(--accent-color);
+    background-color:  color-mix(in srgb, var(--accent-color) 30%, rgb(var(--bg-color)));
 }
 a.textbuttonlink:before {
     content: "[ ";
