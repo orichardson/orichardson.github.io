@@ -16,7 +16,6 @@ content_class: container-narrow
 # special_css: /css/about.css
 redirect_from:
   - /
-  - /~oli
 ---
 {% comment %}
 {% capture subtitle %}
@@ -116,7 +115,7 @@ I earned three majors (Mathematics, Cell & Molecular Biology, and Computer Scien
 <!-- ;**
  now I do applied math and theoretical machine learning.** -->
 
-Even before that, I [made video games](https://gitlab.com/zaytuna).
+Even before that, I [made video games](https://gitlab.com/zaytuna) in my free time.
 <!-- I also play many sports and improvise on the piano! -->
 I also improvise on the piano!
 
