@@ -78,7 +78,8 @@ exclude:
   - node_modules/
   - .git/
   - .gitignore
-#   - _main_pages_prerendered/
+  - _site/
+  # - files/
 #   - _main_pages_prerendered/
 #   - vendor/bundle/
 #   - vendor/cache/

@@ -3,5 +3,5 @@ title: "Cat Thoughts: An Intro to Categorical Thinking"
 venue: Cornell Graduate Student Seminar
 date: 2019-02-20
 links:
-    - ['slides', '/files/slides/cats.pptx']
+    - ['slides.pptx', '/files/slides/cats.pptx']
 ---

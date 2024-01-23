@@ -6,6 +6,6 @@ venue: University of Tenessee CS Dept
 labels:
     - { type: "invtalk", text: "Invited Talk" }
 links:
-   - ["slides", ""]
+   - ["slides.pptx", "/files/slides/oli-utk.pptx"]
    - ["recording", "https://tennessee.zoom.us/rec/share/qkJSMBhYrMyAPW5lM34j-qrKyBBah4YhmSuAV4klrFDI8i_rThI9mXkXIDseQPLi.Bn71TPjCky7hjHFm"]
 ---

@@ -1,7 +1,7 @@
 ---
-title: A Tutorial on Bialgebras
+title: A Tutorial on Bialgebra
 date: 2022-09-17
-venue: Cornell Programming Languages Discussion Group
+venue: Cornell Seminar on Programming Languages
 links:
-    - ['slides', '/files/slides/distrib-pldg-22.pdf']
+    - ['slides.pdf', '/files/slides/distrib-pldg-22.pdf']
 ---

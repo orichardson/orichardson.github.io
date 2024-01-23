@@ -53,6 +53,7 @@ var num_points_created = 0; // for bookkeeping
 paper.Point.prototype.perp = function() {
 	return new paper.Point(-this.y, this.x);
 }
+window.n_ticks_per_frame = 1;
 
 function Vine(position, direction, width, curl, color, gp, params, parent, 
 		life_multiplier=1, hue_velo=0) {
@@ -355,6 +356,7 @@ $(function() {
 
 		for(var i = 0; i < vines.length; i++) {
 //			for(var k = 0; k < 4; k++)
+			for(var k = 0; k < window.n_ticks_per_frame; k++)
 				vines[i].tick();
 			vines[i].blow();
 		}

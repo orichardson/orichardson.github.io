@@ -393,6 +393,7 @@ $(function() {
 	setColors(0, page);
 
 	var alternate_onframe = undefined;
+	// var alternate_ticks_per_frame = 25;
 
 	$('#tree-pause').click(function(evt) {
 		let temp = paper.view.onFrame;
@@ -405,6 +406,11 @@ $(function() {
 		projects[0].clear();
 		$('#tree-pause').remove();
 		$('#tree-remove').remove();
+		$('#tree-ffwd').remove();
+	});
+	$('#tree-ffwd').click(function(evt) {
+		window.n_ticks_per_frame = 20;
+		$('#tree-ffwd').remove();
 	});
 	
 

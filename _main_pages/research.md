@@ -37,7 +37,7 @@ For an overview, see my
 
 <br>
 
-<h2> Papers and Publications </h2>
+<h2> Peer-Reviewed Papers and Publications </h2>
 
 <!-- Legend: -->
 <div style="margin-bottom:20px;margin-left:50px;">
@@ -68,11 +68,15 @@ For an overview, see my
 {% for paper in papers_sorted %}
 {% if paper.hide %}{% else %}
 <li class="{{paper.type}}-type">
-    {% if paper.oral %} 
+    {% if paper.awards %}
+    <div class="special-tags">
+    {% for award in paper.awards %} 
         <div class="special-tag">
             <i class="fa-solid fa-certificate"></i><br/>
-            <div class="special-tag-text">oral</div>
+            <div class="special-tag-text">{{award}}</div>
         </div>
+    {% endfor %}
+    </div>
     {% endif %}
     <!-- <b>{{paper.title}}</b><br/> -->
     <!-- <span class="papertitle hangingindent">{{ paper.title }} </span> -->
@@ -90,7 +94,7 @@ For an overview, see my
     <div class="paper-descr">
         {{ paper.authors }}
         <br/>
-        {{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}
+        {{ paper.journal }}{{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}
         <br/>
     </div>
     <div class="button-div">
@@ -133,3 +137,11 @@ For an overview, see my
     </li>
 {% endfor %}
 </ul>
+
+<!--- Eventually notes can go here! -->
+<!-- 
+    * semiringoid notes
+    * notes on qualitative PDGs
+    * notes on databases and PDGs
+    * 
+ -->

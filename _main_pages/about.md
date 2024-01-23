@@ -87,7 +87,7 @@ Currently, I am a
 <!-- sixth-year -->
 PhD candidate in Computer Science at Cornell University, advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
 I develop clean mathematical foundations for fallable agents, which are well-suited to modern AI systems.
-My work spans machine learning, probabilistic graphical models, information theory, programming languages, category theory, and logic.
+My work combines machine learning, probabilistic graphical models, information theory, programming languages, category theory, microeconomics, and logic.
 See my <a onclick="$('#nav-research>a').click();">research page</a> for more information!
 {% comment %}
 <!-- I am a theorist, but love to write code. -->
@@ -117,10 +117,9 @@ I earned three majors (Mathematics, Cell & Molecular Biology, and Computer Scien
  now I do applied math and theoretical machine learning.** -->
 
 Even before that, I [made video games](https://gitlab.com/zaytuna).
+<!-- I also play many sports and improvise on the piano! -->
 I also improvise on the piano!
 
 
 
 {{ subtitle }}
-
-
