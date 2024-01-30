@@ -97,6 +97,13 @@ For an overview, see my
         {{ paper.journal }}{{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}
         <br/>
     </div>
+    {% comment %}
+    {% include accordion.html
+        text_unfolded=""
+        button_styles=";"
+        text_folded=" abstract "
+        content=paper.content %}
+    {% endcomment %}
     <div class="button-div">
         {%if paper.arxiv %}  <a href="{{paper.arxiv | relative_url}}" class="textbuttonlink">arXiv</a>   {% endif %}
         {%if paper.poster %} <a href="{{paper.poster | relative_url}}" class="textbuttonlink">poster</a>   {% endif %}
@@ -105,7 +112,6 @@ For an overview, see my
         {% for l in paper.extralinks %}
             <a href="{{l[1] | relative_url}}" class="textbuttonlink">{{l[0]}}</a>
         {% endfor %}
-        {{ paper.content }}
     </div>
 </li>
 {% endif %}

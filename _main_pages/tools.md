@@ -16,8 +16,40 @@ subtitle: Tools and Applications
 
 # General Use
 
-- [The PDG Python Library](https://github.com/orichardson/pdg)
-    - [Online Directed Hypergraph Editor](https://orichardson.github.io/pdg/hgraph_editor)
+<ul>
+<li>
+    The <a href="https://github.com/orichardson/pdg">PDG Python Library</a>
+    <ul><li>
+    The online 
+        <a href="https://orichardson.github.io/pdg/hgraph_editor">directed hypergraph editor</a>,
+        for visualizing PDG structures.
+    </li></ul></li>
+<li>
+<span markdown=1> [LaTeX library (.sty)]({{ site.baseurl }}/files/restatelinks.sty)</span>
+for links in the margins to and from proofs elsewhere (e.g., in appendix)
+
+{%- capture usage -%}
+```latex
+\newtheorem{theorem}{....}
+
+\begin{linked}{theorem}{label}
+THEOREM TEXT
+\end{linked}
+
+...
+
+\recall{theorem:label}
+\begin{lproof} \label{proof:label}
+PROOF TEXT
+\end{lproof}
+```
+{%- endcapture -%}
+{% include accordion.html
+    content=usage
+    text_folded=" ( instructions for use ) "
+    text_unfolded="To use, write something like the following:"  %}
+</li>
+</ul>
 
 # Cornell CIS: Links & Web Apps
  - [Materials](https://drive.google.com/drive/folders/1PNoxfNyq8dpLiEjNRrZrzfqUogz_msoZ?usp=drive_link)

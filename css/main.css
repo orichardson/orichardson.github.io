@@ -149,7 +149,6 @@ h1, h2, h3, h4, h5 {
 
 
 /** matts **/
-
 .matt {
     /* background-color: rgba(255,255,255, 0.8); */
     background-color: rgba(var(--bg-color), 0.8);
@@ -169,6 +168,22 @@ h1, h2, h3, h4, h5 {
 }
 #everything h1, #everything h2 {
     margin-top: 30px;
+}
+
+.accordion-panel .extra-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion-panel .toggle-button {
+    /* float: right;     */
+    background: none;
+    border: none;
+    /* font-family: monospace; */
+    color: color-mix(in srgb, rgb(var(--fg-color)) 70%, rgb(var(--bg-color)))
+}
+.accordion-panel .text-unfolded {
+    display:none;
 }
 
 /* .matt p, .matt li {
@@ -305,12 +320,12 @@ div.papertitle {
     color: var(--accent-color);
     background-color:  color-mix(in srgb, var(--accent-color) 30%, rgb(var(--bg-color)));
 }
-a.textbuttonlink:before {
+.textbuttonlink:before {
     content: "[ ";
     font-size: x-large;
     margin-left: -3px;
 }
-a.textbuttonlink:after {
+.textbuttonlink:after {
     content: " ]";
     font-size: x-large;
     margin-right: -3px;
