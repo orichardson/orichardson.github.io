@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 /* @import url(https://fonts.googleapis.com/css?family=Marck+Script);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond); */
+@import "github-syntax-highlight.css";
  
 
 :root{
@@ -180,6 +181,8 @@ h1, h2, h3, h4, h5 {
     background: none;
     border: none;
     /* font-family: monospace; */
+}
+.dim70 {
     color: color-mix(in srgb, rgb(var(--fg-color)) 70%, rgb(var(--bg-color)))
 }
 .accordion-panel .text-unfolded {
@@ -307,11 +310,10 @@ div.papertitle {
 }
 .textbuttonlink {
     margin: 0px 2px;
-}
-.textbuttonlink {
     /* background-color: #101035; */
     background-color:  color-mix(in srgb, var(--accent-color) 20%, rgb(var(--bg-color)));
     color:  color-mix(in srgb, var(--accent-color) 40%, #337ab7);
+    white-space: nowrap;
     /* border: 1px solid; */
     /* padding: 1px 4px; */
 }

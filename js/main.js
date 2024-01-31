@@ -283,6 +283,7 @@ $(function() {
 					$curr_panel.find(".text-unfolded").show();
 					$curr_panel.find(".text-folded").hide();
 				}
+				evt.preventDefault();
 			})
 		});
 	}

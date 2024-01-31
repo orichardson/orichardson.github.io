@@ -66,8 +66,9 @@ For an overview, see my
 <ul class='paperlist'>
 {% assign papers_sorted = site.papers | sort: "year" | reverse %}
 {% for paper in papers_sorted %}
+{% if paper.content.size > 5 %} {% assign more = true %} {% else %} {% assign more = false %} {% endif %}
 {% if paper.hide %}{% else %}
-<li class="{{paper.type}}-type">
+<li class="{{paper.type}}-type accordion-panel">
     {% if paper.awards %}
     <div class="special-tags">
     {% for award in paper.awards %} 
@@ -80,7 +81,7 @@ For an overview, see my
     {% endif %}
     <!-- <b>{{paper.title}}</b><br/> -->
     <!-- <span class="papertitle hangingindent">{{ paper.title }} </span> -->
-    <div class="papertitle hangingindent">{{ paper.title }}
+    <div class="papertitle hangingindent {% if more %}toggle-button{% endif %}">{{ paper.title }}
         {% comment %}
         {% if paper.oral %} 
         <span class="special-tag">
@@ -91,19 +92,19 @@ For an overview, see my
         {% endcomment %}
     </div>
         <!-- <br/> -->
-    <div class="paper-descr">
+    <div class="paper-descr {% if more %}toggle-button{% endif %}">
         {{ paper.authors }}
         <br/>
         {{ paper.journal }}{{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}
         <br/>
     </div>
-    {% comment %}
-    {% include accordion.html
-        text_unfolded=""
-        button_styles=";"
-        text_folded=" abstract "
-        content=paper.content %}
-    {% endcomment %}
+    {% if more %}<div class="extra-content" style="margin-left:10px;font-size:initial;">
+        {% capture pagecontent %}
+            CONTENT:{{paper.content}}
+            OUTPUT:{{paper.output}}
+        {% endcapture %}
+        {{ pagecontent }}
+    </div>{% endif %}
     <div class="button-div">
         {%if paper.arxiv %}  <a href="{{paper.arxiv | relative_url}}" class="textbuttonlink">arXiv</a>   {% endif %}
         {%if paper.poster %} <a href="{{paper.poster | relative_url}}" class="textbuttonlink">poster</a>   {% endif %}
@@ -112,6 +113,14 @@ For an overview, see my
         {% for l in paper.extralinks %}
             <a href="{{l[1] | relative_url}}" class="textbuttonlink">{{l[0]}}</a>
         {% endfor %}
+        {% if more %}
+        <button class="textbuttonlink toggle-button">
+            <span class="text-folded">
+                abstract <i class="fa-solid fa-circle-chevron-left"></i></span>
+            <span class="text-unfolded">
+                <i class="fa-solid fa-circle-chevron-up"></i></span>
+        </button>
+        {% endif %}
     </div>
 </li>
 {% endif %}

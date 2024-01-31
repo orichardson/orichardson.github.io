@@ -23,31 +23,47 @@ subtitle: Tools and Applications
     The online 
         <a href="https://orichardson.github.io/pdg/hgraph_editor">directed hypergraph editor</a>,
         for visualizing PDG structures.
+    {% capture demo %}
+    {% endcapture %}
     </li></ul></li>
 <li>
 <span markdown=1> [LaTeX library (.sty)]({{ site.baseurl }}/files/restatelinks.sty)</span>
 for links in the margins to and from proofs elsewhere (e.g., in appendix)
 
 {%- capture usage -%}
+download `restatelinks.sty` using the link above,  
+save it in the same folder as your .tex document, and  
+use it something like this:
+
 ```latex
-\newtheorem{theorem}{....}
+\documentclass{article}
 
-\begin{linked}{theorem}{label}
-THEOREM TEXT
-\end{linked}
+% this is the file restatelinks.sty you can download above
+\usepackage{restatelinks} 
 
-...
+\usepackage{amsthm,thmtools} % need theorem restate
+\newtheorem{thm}{Theorem}
 
-\recall{theorem:label}
-\begin{lproof} \label{proof:label}
-PROOF TEXT
-\end{lproof}
+\begin{document}
+    % instead of beginning a "thm", begin a "linked" environment
+    \begin{linked}[Fancy Theorem Name]{thm}{label} 
+        THEOREM TEXT
+    \end{linked}
+
+    ... intermediate text ...
+
+    \recall{thm:label} % re-state the theorem
+    % use "lproof" to get nice colors & a target for forward reference
+    \begin{lproof} \label{proof:label}
+        PROOF TEXT
+    \end{lproof}
+\end{document}
 ```
 {%- endcapture -%}
 {% include accordion.html
     content=usage
     text_folded=" ( instructions for use ) "
-    text_unfolded="To use, write something like the following:"  %}
+    text_unfolded="To use,"  %}
 </li>
 </ul>
 

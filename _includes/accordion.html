@@ -1,5 +1,5 @@
 <div class="accordion-panel">
-    <button class="toggle-button">
+    <button class="toggle-button dim70">
         <span class="text-folded">
             <i class="fa-solid fa-circle-chevron-right"></i>
             {{ include.text_folded }} 
@@ -10,6 +10,12 @@
         </span>
     </button>
     <div class="extra-content">
-        {{ include.content || markdownify }}
+        {{ include.content | markdownify }}
+
+        <button class="toggle-button dim70">
+            <span class="text-unfolded">
+                <i class="fa-solid fa-circle-chevron-up"></i>
+            </span>
+        </button>
     </div>
 </div>

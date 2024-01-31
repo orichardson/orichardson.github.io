@@ -31,7 +31,7 @@ collections:
   main_pages_prerendered:
     output: true
   papers:
-    output: false
+    output: true
   talks:
     output: false
 
