@@ -81,7 +81,7 @@ For an overview, see my
     {% endif %}
     <!-- <b>{{paper.title}}</b><br/> -->
     <!-- <span class="papertitle hangingindent">{{ paper.title }} </span> -->
-    <div class="papertitle hangingindent {% if more %}toggle-button{% endif %}">{{ paper.title }}
+    <div class="papertitle hangingindent {% if more %}toggle-bbutton{% endif %}">{{ paper.title }}
         {% comment %}
         {% if paper.oral %} 
         <span class="special-tag">
@@ -92,7 +92,7 @@ For an overview, see my
         {% endcomment %}
     </div>
         <!-- <br/> -->
-    <div class="paper-descr {% if more %}toggle-button{% endif %}">
+    <div class="paper-descr {% if more %}toggle-bbutton{% endif %}">
         {{ paper.authors }}
         <br/>
         {{ paper.journal }}{{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}

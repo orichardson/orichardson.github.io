@@ -264,12 +264,12 @@ $(function() {
 		jqo.find('>p').wrapInner("<div class='matt'></div>");
 		jqo.find('li').wrapInner("<div class='matt'></div>");
 
-		console.log(jqo.find(".accordion-panel").length)
 		jqo.find(".accordion-panel").each(function(idx, elt){
 			console.log(idx,elt);
 			let $curr_panel = $(elt);
 			let $extracontent = $curr_panel.find(".extra-content").get(0);
-			$curr_panel.find(".toggle-button").click(function(evt) {
+
+			toggle_fun = function(evt) {
 				// console.log($curr_panel[0]);
 				// "this" should still be the panel
 				// $(this).find("i").toggleClass('fa-circle-chevron-left fa-circle-chevron-down');
@@ -284,7 +284,10 @@ $(function() {
 					$curr_panel.find(".text-folded").hide();
 				}
 				evt.preventDefault();
-			})
+			};
+
+			$curr_panel.find(".toggle-button").click(toggle_fun);
+			$curr_panel.find(".toggle-bbutton").dblclick(toggle_fun);
 		});
 	}
 

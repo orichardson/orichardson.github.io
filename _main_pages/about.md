@@ -85,7 +85,7 @@ I am a theorist with broad scientific training, who loves to make pretty things 
 Currently, I am a 
 <!-- sixth-year -->
 PhD candidate in Computer Science at Cornell University, advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
-I develop clean mathematical foundations for fallable agents, which are well-suited to modern AI systems.
+I develop clean mathematical foundations for fallible agents, which are well-suited to modern AI systems.
 My work combines machine learning, probabilistic graphical models, information theory, programming languages, category theory, microeconomics, and logic.
 See my <a onclick="$('#nav-research>a').click();">research page</a> for more information!
 {% comment %}
