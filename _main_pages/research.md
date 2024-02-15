@@ -99,11 +99,7 @@ For an overview, see my
         <br/>
     </div>
     {% if more %}<div class="extra-content" style="margin-left:10px;font-size:initial;">
-        {% capture pagecontent %}
-            CONTENT:{{paper.content}}
-            OUTPUT:{{paper.output}}
-        {% endcapture %}
-        {{ pagecontent }}
+        {{ paper.content | markdownify}}
     </div>{% endif %}
     <div class="button-div">
         {%if paper.arxiv %}  <a href="{{paper.arxiv | relative_url}}" class="textbuttonlink">arXiv</a>   {% endif %}

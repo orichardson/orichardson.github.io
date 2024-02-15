@@ -279,7 +279,8 @@ $(function() {
 					$curr_panel.find(".text-folded").show();
 					$curr_panel.find(".text-unfolded").hide();
 				} else {
-					$extracontent.style.maxHeight = $extracontent.scrollHeight+"px";
+					// 1.3 is just buffer in case of page resize. 
+					$extracontent.style.maxHeight = (1.3*$extracontent.scrollHeight)+"px";
 					$curr_panel.find(".text-unfolded").show();
 					$curr_panel.find(".text-folded").hide();
 				}

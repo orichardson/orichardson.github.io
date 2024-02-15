@@ -26,14 +26,14 @@ description: >- # this means to ignore newlines until
 # line in _config.yml. It will appear in your document head meta (for
 # Google search results) and in your feed.xml site description.
 collections:
-  main_pages:
-    output: true
-  main_pages_prerendered:
-    output: true
   papers:
     output: true
   talks:
     output: false
+  main_pages:
+    output: true
+  main_pages_prerendered:
+    output: true
 
 defaults:
   -

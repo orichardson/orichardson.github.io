@@ -34,8 +34,8 @@ for links in the margins to and from proofs elsewhere (e.g., in appendix)
 download `restatelinks.sty` using the link above,  
 save it in the same folder as your .tex document, and  
 use it something like this:
-
 ```latex
+%% example.tex
 \documentclass{article}
 
 % this is the file restatelinks.sty you can download above
@@ -79,7 +79,10 @@ use it something like this:
     
 - [TA Hour Reporting System](https://research.cs.cornell.edu/csgo/ta),
     to collect anonymous statistics about TA workload among graduate students. Built in 2021. The results are shared with the
-    [Computer Science Graduate Organization (CSGO)](https://csgo.cs.cornell.edu) and the CS department (current DGS, Chair, and Associate Director).  
+    [Computer Science Graduate Organization (CSGO)](https://csgo.cs.cornell.edu) and the CS department.  
+     <!-- (current DGS, Chair, and Associate Director).   -->
+
+    <a href="{{site.baseurl}}ta-system-slides.pptx" class="">[slides.pptx]</a>
 
 - <span class='depricated-tag label label-warning'>depricated</span>
     [CSGO Buddy System](https://research.cs.cornell.edu/csgo/buddy),
