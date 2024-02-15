@@ -215,7 +215,8 @@ $(function() {
 	let toks = wlp.split('/');
 	let page = toks[toks.length-1];
 
-	var $active = $("#nav-"+page);
+	var $active = $(".navtab-"+page);
+	console.log($active);
 	$active.addClass('active');
 
 	function setActive($newelement) {
@@ -382,7 +383,7 @@ $(function() {
             }
 
             $('.sticky').each(stickify);
-			setActive($('#nav-'+page));
+			setActive($('.navtab-'+page));
             window.page = page;
 			document.title = page;
 			if(!skippush)
@@ -393,16 +394,22 @@ $(function() {
 
 	let cssstr = '<style>';
 	$("nav li>a").each(function(index, value) {
-		let id = value.parentNode.id;
-		let name = id.substr(4);
+		// let id = value.parentNode.id;
+		// let name = id.substr(4);
+		let name = value.parentNode.dataset.name;
 		// console.log(name);
 
         if(MAIN_PAGE_INFO[name]) {
             let menucolor = MAIN_PAGE_INFO[name].colors.menu;
-    		cssstr += '#'+id+'> a { color :  '+menucolor +'; }\n'
-//                + '#'+id+'> a:hover { text-shadow : 2px 2px 5px rgba('+ hexToRgb(menucolor) +', 0.5); }\n'
-    		 	+ '#'+id+'.active > a { background-color :  '+MAIN_PAGE_INFO[name].colors.shadow +' !important; }\n';
-
+//     		cssstr += '#'+id+'> a { color :  '+menucolor +'; }\n'
+// //                + '#'+id+'> a:hover { text-shadow : 2px 2px 5px rgba('+ hexToRgb(menucolor) +', 0.5); }\n'
+//     		 	+ '#'+id+'.active > a { background-color :  '+
+// 					MAIN_PAGE_INFO[name].colors.shadow +' !important; }\n';
+			cssstr += '.navtab-'+name+'> a { color :  '+menucolor +' !important; }\n'
+			//                + '#'+id+'> a:hover { text-shadow : 2px 2px 5px rgba('+ hexToRgb(menucolor) +', 0.5); }\n'
+								+ '.navtab-'+name+'.active > a { background-color :  '+
+								MAIN_PAGE_INFO[name].colors.shadow +' !important; }\n';
+					
     		$(value).click(function(event) {
     			event.preventDefault();
     			semiload(name);

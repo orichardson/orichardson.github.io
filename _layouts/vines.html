@@ -25,22 +25,22 @@
 				<nav id="navigation" class="navbar navbar-default sticky">
 					<!-- <div class="container-fluid"> -->
 					<div class="container">
-						<ul class="nav navbar-nav" id="nav-icon-list">
+						<ul id="nav-icon-list" class="nav navbar-nav">
 							{% assign tabs =  site.main_pages | where: 'hide', nil  | sort: "order" %}
+							{% capture navbuttons %}
 							{% for tab in tabs %}
-								<li id="nav-{{ tab.short }}" class="nav-item"><a href="#">
+								<li class="nav-item navtab-{{ tab.short }}" data-name="{{tab.short}}"><a href="{{tab.url}}">
 									<!-- <span class="glyphicon glyphicon-{{ tab.glyph }}"></span> -->
 									<i class="fa-solid fa-{{ tab.glyph }}"></i>
 									<span class="text-capitalize"> {{ tab.short }} </span>
 								</a></li>
 							{% endfor %}
-							{% comment %}
-							<li id="nav-cv" class="nav-item"><a href="#" style="color:#338;">
-								<!-- <span class="glyphicon glyphicon-{{ tab.glyph }}"></span> -->
+							{% endcapture %}
+							{{ navbuttons }}
+							<!-- <li id="nav-cv" class="nav-item"><a href="#" style="color:#338;">
 								<i class="fa-solid fa-trophy"></i>
 								<span class="hidden-xs">CV.pdf</span>
-							</a></li>
-							{% endcomment %}
+							</a></li> -->
 							<!-- <% for(var tab in params.tabs) { %>
 								<li id="nav-<%- tab %>" class="nav-item"><a href="#">
 									<span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
@@ -53,6 +53,7 @@
 						<li><a href="#"><span class="glyphicon glyphicon-equalizer"></span></a></li>
 						</ul>
 					</div>
+					
 				</nav>
 			</div>
 
@@ -63,6 +64,14 @@
 					</div>
 				</div>
 			</main>
+
+			{% comment %}
+			<div style="margin-bottom:20px" class="text-center">
+				<ul class="nav navbar-nav">
+					{{ navbuttons }}
+				</ul>
+			</div>
+			{% endcomment %}
 		</div>
 		<!---->
 		<div  class="plx-layer plx-deep">
