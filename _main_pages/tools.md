@@ -77,12 +77,14 @@ use it something like this:
     [[Fall 22]](https://docs.google.com/spreadsheets/d/1jyscultcrHN3-cWCRnZQ2xMFXoCLeWEoTxr8j9RI2Go/)
 
     
-- [TA Hour Reporting System](https://research.cs.cornell.edu/csgo/ta),
-    to collect anonymous statistics about TA workload among graduate students. Built in 2021. The results are shared with the
-    [Computer Science Graduate Organization (CSGO)](https://csgo.cs.cornell.edu) and the CS department.  
+- The [TA Hour Reporting System](https://research.cs.cornell.edu/csgo/ta), which I built in 2021,
+    collects (anonymous) statistics about TA workload among graduate students. The results are shared with the
+    [Computer Science Graduate Organization (CSGO)](https://csgo.cs.cornell.edu) and the CS department.
      <!-- (current DGS, Chair, and Associate Director).   -->
-
-    <a href="{{site.baseurl}}ta-system-slides.pptx" class="">[slides.pptx]</a>
+    Here are some
+    <a href="{{site.baseurl}}/files/slides/ta-reporting-system.pptx" class="">slides(.pptx)</a>
+    describing the motivations and designs.
+    Another outcome of this effort to improve life for TA's was the [official CS dept TA handbook](https://www.cs.cornell.edu/sites/default/files/shared/graduate_ta_handbook.pdf), meant to clarify the opaque details of the matching process and what can be expected of a TA.
 
 - <span class='depricated-tag label label-warning'>depricated</span>
     [CSGO Buddy System](https://research.cs.cornell.edu/csgo/buddy),

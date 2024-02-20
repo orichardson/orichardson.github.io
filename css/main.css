@@ -378,13 +378,21 @@ div.papertitle {
 
 .label-invtalk {
     /* background-color: darkslateblue; */
-    background-color: midnightblue;
+    /* background-color: midnightblue; */
     /* color: lightgray; */
+    background-color: #211;
+    color:lightcoral;
+    /* border: 1px inset coral; */
 }
 .label-exam {
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
+    color: hotpink;
+    background-color: #402;
 }
-
+.talk-details{
+    color:gray;
+    vertical-align: middle;
+}
 
 
 

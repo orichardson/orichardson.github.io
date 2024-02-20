@@ -125,9 +125,11 @@ For an overview, see my
 
 <br>
 
-<h2> Various Other Talks </h2>
+<!-- <h2> Various Other Talks </h2> -->
+<!-- <h2> Academic Talks </h2> -->
+<h2> Academic Talks </h2>
 
-<ul>
+<ul style="--accent-color: lightsteelblue;">
 {% assign talks_sorted = site.talks | sort: "date" | reverse %}
 {% for talk in talks_sorted %}
     <li> 
@@ -136,10 +138,11 @@ For an overview, see my
     {% for label in talk.labels %}
         <span class="label label-{{label.type}}">{{label.text}}</span>
     {% endfor %}
-    <span class="details">@ {{ talk.venue }},</span>
+    <span class="talk-details">@ {{ talk.venue }},
     &nbsp;&nbsp;&nbsp;
     <!-- <br> -->
     {{ talk.date | date: "%-e %b %Y" }}.
+    </span>
     <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
         {% for l in talk.links %}
             <a href="{{l[1] | relative_url}}" class="textbuttonlink">{{l[0]}}</a>
