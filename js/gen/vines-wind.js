@@ -111,8 +111,8 @@ function Vine(position, direction, width, curl, color, gp, params, parent,
 
 
 		if(this.curve.segments.length <= 2) {
-			this.cursor.strokeColor = 'black';
-			this.cursor.fillColor = new paper.Color(0.2, 0.3, 0.4, 0.5);
+			// this.cursor.strokeColor = 'black';
+			// this.cursor.fillColor = new paper.Color(0.2, 0.3, 0.4, 0.5);
 		} else {
 			//this.cursor.bringToFront();
 		}
