@@ -29,7 +29,9 @@
 							{% assign tabs =  site.main_pages | where: 'hide', nil  | sort: "order" %}
 							{% capture navbuttons %}
 							{% for tab in tabs %}
-								<li class="nav-item navtab-{{ tab.short }}" data-name="{{tab.short}}"><a href="{{tab.url}}">
+								<li class="nav-item navtab-{{ tab.short }}" data-name="{{tab.short}}">
+									<!-- <a href="{{tab.url}}"> -->
+									<a href="{{site.baseurl | append: '/' | append: tab.short}}">
 									<!-- <span class="glyphicon glyphicon-{{ tab.glyph }}"></span> -->
 									<i class="fa-solid fa-{{ tab.glyph }}"></i>
 									<span class="text-capitalize"> {{ tab.short }} </span>
