@@ -78,14 +78,15 @@ style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-widt
 <img src="/images/cornell-seal.png" width=50px/>
 </div> -->
 
-<div class="seal">
-    <img src="{{ site.baseurl }}/images/cornell-seal.png" style="width:7ex;"/>
+<div class="seal" style="margin-top:-10px">
+    <a href="https://mila.quebec"><img src="{{ site.baseurl }}/images/mila-logo.png" style="width:5.2em;"/></a> <br/>
+    <a href="https://www.umontreal.ca/"><img src="{{ site.baseurl }}/images/udm-logo.png" style="width:4.3em;margin-top:4px;"/></a>
 </div>
+<!-- **Bio.&nbsp;&nbsp;** -->
 I am a theorist with broad scientific training, who loves to make pretty things out of math and code.
-Currently, I am a 
-<!-- sixth-year -->
-PhD candidate in Computer Science at Cornell University, advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
-I develop clean mathematical foundations for fallible agents, which are well-suited to modern AI systems.
+This September, I will be joining [MILA](https://mila.quebec/en) as a postdoc under [Yoshua Bengio](https://yoshuabengio.org/profile/). 
+I develop natural mathematical foundations for fallible agents, which are well-suited to modern AI systems.
+<!-- Currently, I am a PhD candidate in Computer Science at Cornell University, advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern). -->
 My work combines 
 machine learning, probabilistic graphical models, information theory, programming languages, category theory, microeconomics, causality, and logic.
 See my <a onclick="event.preventDefault();$('.navtab-research>a').click();" href="{{ site.baseurl }}/research/">research page</a> for more information!
@@ -107,11 +108,13 @@ As an undergraduate at the University of Utah,
     and applied machine learning (structured prediction, with [Vivek Srikumar]()). -->
 {% endcomment %}
 
-<div class="seal"> 
-    <img src="{{ site.baseurl }}/images/ucam.png" style="width:5ex;"/><br/>
-    <img src="{{ site.baseurl }}/images/theu.png" style="width:6ex;margin-top:4px"/>
+<div class="seal">
+    <a href="https://www.cs.cornell.edu/"><img src="{{ site.baseurl }}/images/cornell-seal.png" style="width:3.8em;margin-right:0.5em"/></a><br/>
+    <a href="https://www.cam.ac.uk/"><img src="{{ site.baseurl }}/images/ucam.png" style="width:3.0em;margin-top:8px;margin-right:0.6em"/></a><br/>
+    <a href="https://www.utah.edu"><img src="{{ site.baseurl }}/images/theu.png" style="width:3.7em;margin-top:5px;margin-right:0.6em"/></a>
 </div>
-Before my PhD, I did an MPhil in CS from the University of Cambridge, where I worked on diagrammatic reasoning with [Mateja Jamnik](https://www.cl.cam.ac.uk/~mj201/).
+I received my PhD in Computer Science from Cornell University in 2024, where I was advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
+Before that, I did an MPhil in CS at the University of Cambridge under [Mateja Jamnik](https://www.cl.cam.ac.uk/~mj201/).
 I earned three majors (Mathematics, Cell & Molecular Biology, and Computer Science) and three minors (Chemistry, Physics, Cognitive Science) as an undergraduate at the University of Utah. There, my research focused on pure math (tropical geometry, with [Aaron Bertram](https://www.math.utah.edu/~bertram/)) and applied machine learning (structured prediction for natural language, with [Vivek Srikumar](https://svivek.com/)).
 <!-- ;**
  now I do applied math and theoretical machine learning.** -->
@@ -120,8 +123,7 @@ Even before that, I [made video games](https://gitlab.com/zaytuna) in my free ti
 <!-- I also play many sports and improvise on the piano! -->
 I also improvise on the piano!
 
-
-
+<br>
 {{ subtitle }}
 
 <!-- MUSIC! SHould wait until I have another page + more improv. 

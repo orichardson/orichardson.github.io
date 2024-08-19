@@ -21,7 +21,8 @@ order: 2
 <p style="max-width:85ch;">
 <!-- I develop clean mathematical foundations for fallable agents.
 My work spans machine learning, probabilistic graphical models, information theory, programming languages, category theory, and logic. -->
-My research develops clean and conceptually rich mathematical foundations for agents, which are intuitive and well-suited to modern AI systems. 
+<!-- My research aims to develop clean, intuitive, and conceptually rich mathematical foundations for agents that are well-suited to modern AI systems.  -->
+My research develops clean and conceptually rich mathematical foundations for modern AI systems. 
 <!-- % I do this by drawing from commonalities across the wide range of fields in which I have expertise, including probabilistic graphical models, information theory, category theory, logic, differential geometry, and machine learning.
 % Much of the work I have done in my PhD revolves around a knowledge representation I invented, called a Probabilistic Dependency Graph. -->
 The result so far has been an elegant unifying picture that explains a number of standard but seemingly ad-hoc choices made in practice.
@@ -33,30 +34,38 @@ subsume traditional graphical models, yet can model inconsistent beliefs and mos
 </p>
 
 For an overview, see my 
-[research statement]({{ site.baseurl }}/files/research-statement.pdf).
+[research statement]({{ site.baseurl }}/files/research-statement.pdf);  
+    &nbsp;&nbsp;for (a great deal) more, see
+    my [dissertation]({{ site.baseurl }}/files/oli-dissertation.pdf).
 
 <br>
 
 <h2> Peer-Reviewed Papers and Publications </h2>
 
 <!-- Legend: -->
-<div style="margin-bottom:20px;margin-left:50px;">
-    <div style="rotate:-90deg;display:inline-block; color:gray; font-size:large;margin-right:-10px;">Legend</div>
-    <div style="display:inline-block;vertical-align:middle;border-left:2px solid gray;">
-    <div class="workshop-type legenditem">
-        <span><i class="fa fa-file" aria-hidden="true"></i></span>
-        workshop
-    </div>
-    <br>
-    <div class="conference-type legenditem">
-        <span><i class="fa fa-file" aria-hidden="true"></i></span>
-        conference
-    </div>
-    <br>
-    <div class="journal-type legenditem">
-        <span><i class="fa fa-file" aria-hidden="true"></i></span>
-        journal
-    </div>
+<div style="margin-bottom:20px;margin-left:70px;">
+    <div style="rotate:-90deg;display:inline-block; color:gray; font-size:large;margin-right:-15px;">Legend</div>
+    <div style="display:inline-block;vertical-align:middle;border-left:4px solid gray;padding-left:5px">
+        <!-- TODO: make this into a loop... -->
+        <div class="thesis-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            thesis
+        </div>
+        <!-- <br> -->
+        <div class="workshop-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            workshop
+        </div>
+        <br>
+        <div class="conference-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            conference
+        </div>
+        <!-- <br> -->
+        <div class="journal-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            journal
+        </div>
     </div>
 </div>
 
@@ -95,7 +104,7 @@ For an overview, see my
     <div class="paper-descr {% if more %}toggle-bbutton{% endif %}">
         {{ paper.authors }}
         <br/>
-        {{ paper.journal }}{{ paper.conf }} {{ paper.year }} {{ paper.pubinfo }}
+        {{ paper.journal }}{{ paper.conf }} {{paper.month}} {{ paper.year }} {{ paper.pubinfo }}
         <br/>
     </div>
     {% if more %}<div class="extra-content" style="margin-left:10px;font-size:initial;">

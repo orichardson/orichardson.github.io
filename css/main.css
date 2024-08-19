@@ -269,9 +269,13 @@ h1, h2, h3, h4, h5 {
 .journal-type {
     --accent-color:seagreen;
 }
+.thesis-type {
+    --accent-color: crimson;  /*  */
+}
 
 
 ul.paperlist {
+    margin-top: 50px;
     list-style-type: none;
     padding-left: 0;
 }
@@ -311,8 +315,10 @@ div.papertitle {
 .textbuttonlink {
     margin: 0px 2px;
     /* background-color: #101035; */
+    
     background-color:  color-mix(in srgb, var(--accent-color) 20%, rgb(var(--bg-color)));
-    color:  color-mix(in srgb, var(--accent-color) 40%, #337ab7);
+    /* color:  color-mix(in srgb, var(--accent-color) 40%, #337ab7); */
+    color:  color-mix(in srgb, var(--accent-color) 50%, #84aac9);
     white-space: nowrap;
     /* border: 1px solid; */
     /* padding: 1px 4px; */
