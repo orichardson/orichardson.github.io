@@ -84,7 +84,7 @@ style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-widt
 </div>
 <!-- **Bio.&nbsp;&nbsp;** -->
 I am a theorist with broad scientific training, who loves to make pretty things out of math and code.
-This September, I will be joining [MILA](https://mila.quebec/en) as a postdoc under [Yoshua Bengio](https://yoshuabengio.org/profile/). 
+In September 2024, I joined [MILA](https://mila.quebec/en) as a postdoc under [Yoshua Bengio](https://yoshuabengio.org/profile/). 
 I develop natural mathematical foundations for fallible agents, which are well-suited to modern AI systems.
 <!-- Currently, I am a PhD candidate in Computer Science at Cornell University, advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern). -->
 My work combines 
