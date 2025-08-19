@@ -51,8 +51,8 @@ defaults:
 
 # baseurl: "/~oli" # the subpath of your site, e.g. /blog
 # url: "cs.cornell.edu" # the base hostname & protocol for your site, e.g. http://example.com
-basurl: ""
-url: "orichardson.github.io"
+baseurl: ""
+url: "https://orichardson.github.io"
 # twitter_username: jekyllrb
 github_username:  orichardson
 
