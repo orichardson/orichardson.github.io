@@ -1,0 +1,21 @@
+---
+# This empty Front Matter tells Jekyll to process the file
+---
+{% assign research_url = site.url | append: site.baseurl | append: "/research/" %}
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-g">
+		<title>Redirecting…</title>
+		<link rel="canonical" href="{{ research_url }}">
+		<script> window.location.replace("{{ research_url }}"); </script>
+		<meta http-equiv="refresh" content="0; url={{ research_url }}">
+	</head>
+	<body>
+		<p>If you are not redirected automatically, follow this
+			<a href="{{ research_url }}">link</a>.
+		</p> 
+	</body>
+</html>

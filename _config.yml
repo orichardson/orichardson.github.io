@@ -50,16 +50,17 @@ defaults:
   #     content_class : container
 
 # baseurl: "/~oli" # the subpath of your site, e.g. /blog
+# url: "cs.cornell.edu" # the base hostname & protocol for your site, e.g. http://example.com
 basurl: ""
-url: "cs.cornell.edu" # the base hostname & protocol for your site, e.g. http://example.com
+url: "orichardson.github.io"
 # twitter_username: jekyllrb
 github_username:  orichardson
 
 # Build settings
 # theme: jekyll-theme-minimal
 # theme: minima
-plugins:
-  - jekyll-redirect-from
+# plugins:
+# - jekyll-redirect-from
 # - jekyll-feed
 
 # Exclude from processing.
