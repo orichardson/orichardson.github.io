@@ -8,4 +8,9 @@ year: 2021
 code: https://github.com/orichardson/pdg
 poster: /files/posters/pdg-AAAI-poster-D.pdf
 type: conference
+tags:
+  - graphical models
+  - information theory
+  - inconsistency
+  - knowledge representation
 ---

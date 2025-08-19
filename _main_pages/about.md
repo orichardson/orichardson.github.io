@@ -14,8 +14,6 @@ order: 0
 subtitle: <a class="mono" href="mailto:oli@cs.cornell.edu">oli<span style="margin-left:5px;margin-right:5px;font-family:sans-serif;">@</span>cs.cornell.edu</a>
 content_class: container-narrow
 # special_css: /css/about.css
-redirect_from:
-  - /
 ---
 {% comment %}
 {% capture subtitle %}
@@ -84,12 +82,11 @@ style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-widt
 </div>
 <!-- **Bio.&nbsp;&nbsp;** -->
 I am a theorist with broad scientific training, who loves to make pretty things out of math and code.
-In September 2024, I joined [MILA](https://mila.quebec/en) as a postdoc under [Yoshua Bengio](https://yoshuabengio.org/profile/). 
-I develop natural mathematical foundations for fallible agents, which are well-suited to modern AI systems.
+I develop natural mathematical foundations for fallible agents, which help us better understand AI systems of all kinds.
 <!-- Currently, I am a PhD candidate in Computer Science at Cornell University, advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern). -->
 My work combines 
 machine learning, probabilistic graphical models, information theory, programming languages, category theory, microeconomics, causality, and logic.
-See my <a onclick="event.preventDefault();$('.navtab-research>a').click();" href="{{ site.baseurl }}/research/">research page</a> for more information!
+See my <a onclick="event.preventDefault();$('.navtab-research>a').click();" href="{{ site.baseurl }}/research/">research page</a> for more information.
 {% comment %}
 <!-- I am a theorist, but love to write code. -->
 <!-- with broad mathematical and scientific training. -->
@@ -107,12 +104,12 @@ As an undergraduate at the University of Utah,
     pure math (tropical geometry, with [Aaron Betram]()), 
     and applied machine learning (structured prediction, with [Vivek Srikumar]()). -->
 {% endcomment %}
-
 <div class="seal">
     <a href="https://www.cs.cornell.edu/"><img src="{{ site.baseurl }}/images/cornell-seal.png" style="width:3.8em;margin-right:0.5em"/></a><br/>
     <a href="https://www.cam.ac.uk/"><img src="{{ site.baseurl }}/images/ucam.png" style="width:3.0em;margin-top:8px;margin-right:0.6em"/></a><br/>
     <a href="https://www.utah.edu"><img src="{{ site.baseurl }}/images/theu.png" style="width:3.7em;margin-top:5px;margin-right:0.6em"/></a>
 </div>
+In September 2024, I joined [Mila](https://mila.quebec/en) as a postdoc under [Yoshua Bengio](https://yoshuabengio.org/profile/). 
 I received my PhD in Computer Science from Cornell University in 2024, where I was advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
 Before that, I did an MPhil in CS at the University of Cambridge under [Mateja Jamnik](https://www.cl.cam.ac.uk/~mj201/).
 I earned three majors (Mathematics, Cell & Molecular Biology, and Computer Science) and three minors (Chemistry, Physics, Cognitive Science) as an undergraduate at the University of Utah. There, my research focused on pure math (tropical geometry, with [Aaron Bertram](https://www.math.utah.edu/~bertram/)) and applied machine learning (structured prediction for natural language, with [Vivek Srikumar](https://svivek.com/)).

@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5 {
     width:fit-content;
     font-family: serif;
     /* font-stretch: condensed; */
-    font-size: large;    
+    font-size: large; 
 }
 #everything > .matt > p {
     margin-bottom: 20px;
@@ -252,10 +252,10 @@ h1, h2, h3, h4, h5 {
 
 /* specific to  RESEARCH */
 
-#everything .paperlist li:not(:last-child) { 
+#everything .paperlist > li:not(:last-child) { 
     margin-bottom: 5mm;
 }
-#everything .paperlist li {
+#everything .paperlist > li {
     border-left: 3mm ridge var(--accent-color);
     padding-left: 3mm;
     position: relative;
@@ -271,6 +271,10 @@ h1, h2, h3, h4, h5 {
 }
 .thesis-type {
     --accent-color: crimson;  /*  */
+}
+
+a.paper {
+    color:#a1c6e4;
 }
 
 
@@ -400,6 +404,18 @@ div.papertitle {
     vertical-align: middle;
 }
 
+
+.post-list > li {
+    position: relative;
+    margin-left: 50px;
+}
+
+.post-meta {
+    position: absolute;
+    right: 100%;
+    white-space: nowrap;
+    margin-right: 20px;
+}
 
 
 /* **  PARALLAX THINGS ** */

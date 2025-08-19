@@ -226,7 +226,6 @@ $(function() {
 	}
 
 	function setColors(time, page) {
-		console.log("SETcOLORS", time, page);
 		let colors = MAIN_PAGE_INFO[page].colors;
 		$('body').stop('colors', true,false).animate({
 			'background-color': colors.bg,

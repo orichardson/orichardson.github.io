@@ -9,4 +9,8 @@ extralinks:
     - ['2-page extended abstract', '/files/papers/lafi.pdf']
     - ['slides.pptx', '/files/slides/mixlang-lafi24.pptx']
 type: workshop
+tags:
+    - differential geometry
+    - programming languages
+    - continuous computation
 ---

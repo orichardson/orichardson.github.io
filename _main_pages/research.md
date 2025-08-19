@@ -14,6 +14,8 @@ colors:
     shadow : '#777777'
 glyph: flask
 order: 2
+redirect_from:
+  - /
 ---
 
 
@@ -22,25 +24,43 @@ order: 2
 <!-- I develop clean mathematical foundations for fallable agents.
 My work spans machine learning, probabilistic graphical models, information theory, programming languages, category theory, and logic. -->
 <!-- My research aims to develop clean, intuitive, and conceptually rich mathematical foundations for agents that are well-suited to modern AI systems.  -->
-My research develops clean and conceptually rich mathematical foundations for modern AI systems. 
+<!-- My research develops clean and conceptually rich mathematical foundations for AI systems.  -->
+My research develops clean mathematical and conceptual foundations for fallible AI systems.
 <!-- % I do this by drawing from commonalities across the wide range of fields in which I have expertise, including probabilistic graphical models, information theory, category theory, logic, differential geometry, and machine learning.
 % Much of the work I have done in my PhD revolves around a knowledge representation I invented, called a Probabilistic Dependency Graph. -->
-The result so far has been an elegant unifying picture that explains a number of standard but seemingly ad-hoc choices made in practice.
-A key ingredient is a class of models I invented called
+The result so far has been an elegant unifying picture that explains many standard but seemingly ad-hoc choices made in practice.
+A key technical ingredient is a class of models I invented called
 <!-- [Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), -->
-<a href="https://orichardson.github.io/pdg/">Probabilistic Dependency Graphs (PDGs)</a>,
+<!-- <a class="paper" href="https://arxiv.org/abs/2012.10800">Probabilistic Dependency Graphs</a> <a href="https://orichardson.github.io/pdg/">(PDGs)</a> -->
+Probabilistic Dependency Graphs <a href="https://orichardson.github.io/pdg/">(PDGs)</a>
 which
-subsume traditional graphical models, yet can model inconsistent beliefs and most scenarios in machine learning. 
-</p>
+<!-- <a class="paper" href="https://arxiv.org/abs/2012.10800"> -->
+subsume traditional graphical models,
+<!-- </a> -->
+<!-- and admit <a class="paper" href="https://arxiv.org/abs/2311.05580">similarly expensive inference procedures</a>, -->
+<!-- yet can model inconsistent beliefs and <a class="paper" href="https://arxiv.org/abs/2202.11862">most scenarios in machine learning</a>.  -->
+yet can model inconsistent beliefs and most scenarios in machine learning. 
+<!-- This leads to a simple -->
+Indeed, many important algorithms in AI turn out to be instances of an intuitive heuristic approach to resolving probabilistic inconsistency. 
+</p> 
+
+The hope is that a principled approach
 
 For an overview, see my 
 [research statement]({{ site.baseurl }}/files/research-statement.pdf);  
     &nbsp;&nbsp;for (a great deal) more, see
-    my [dissertation]({{ site.baseurl }}/files/oli-dissertation.pdf).
+    <!-- [dissertation]({{ site.baseurl }}/files/oli-dissertation.pdf) -->
+    my <span class="thesis-type">
+        <a href="{{site.baseurl}}/files/oli-dissertation.pdf" style="color: color-mix(in srgb, var(--accent-color), white 30%) ;">dissertation</a></span>.
 
 <br>
 
-<h2> Peer-Reviewed Papers and Publications </h2>
+<h2>
+<!-- <input class="search" size=13 oninput="this.size = this.value.length" style="background: none; text-align:center;" 
+    value="Peer-Reviewed" />  &nbsp; -->
+Peer-Reviewed
+Papers and Publications 
+</h2>
 
 <!-- Legend: -->
 <div style="margin-bottom:20px;margin-left:70px;">

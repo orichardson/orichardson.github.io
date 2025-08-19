@@ -5,14 +5,16 @@ year: 2024
 authors: Oliver Richardson, Spencer Peters, and Joseph Halpern
 type: conference
 extralinks:
-  - ['.pdf', '/files/papers/QIM.pdf']
+  # - ['.pdf', '/files/papers/QIM.pdf']
   - ['slides.pptx', '/files/slides/QIM-5min.pptx']
-# hide: true
 poster: /files/posters/QIM-poster.pdf
-# arxiv: https://arxiv.org/abs/???
 arxiv: https://arxiv.org/abs/2501.15488
 # code: https://github.com/orichardson/pdg-infer-uai
 # recording: ???
+tags: 
+  - causality
+  - information theory
+  - graphical models
 ---
 
 **Abstract.**
