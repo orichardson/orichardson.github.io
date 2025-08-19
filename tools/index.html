@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title id="bigthing">Tools</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<!-- JQuery + JQuery UI (for animations) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- <base href="<%- hosturl %>" target="_blank"> -->
+
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<!-- if in main pages, also want page-specific css -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="/js/load_jekyll_collections.js"></script>
+<script src="/js/main.js"></script>
+<script>
+    window.page='tools';
+</script><!-- BELOW: note the explicit styling based on server data. -->
+<!-- <body style='background-color: <%- params.tabs[page].colors.bg %>; color:<%- params.tabs[page].colors.fg %>' > -->
+<body>
+
+<!-- <body style='background-color: #F9FABB; color:#342608'> -->
+	<div class="parallax">
+		<div class="plx-layer plx-base">
+
+			<!-- <div class="jumbotron container-fluid"> -->
+			<div class="jumbotron container">
+				<h1 class="title"><span class="wrap">oli.util;</span></h1>
+				<!--  -->
+				<h3 class="subtitle">Tools and Applications</h3>
+			</div>
+
+			<div id="" class="clearfix sticky-anchor">
+				<!-- <nav id="navigation" class="navbar navbar-default sticky"
+					style="opacity: 0.9;background-color: <%- params.tabs[page].colors.nav %>; border-color: <%- params.tabs[page].colors.border %>" > -->
+				<nav id="navigation" class="navbar navbar-default sticky">
+					<!-- <div class="container-fluid"> -->
+					<div class="container">
+						<ul id="nav-icon-list" class="nav navbar-nav">
+							
+							
+							
+							
+								<li class="nav-item navtab-about" data-name="about">
+									<!-- <a href="/main_pages/about.html"> -->
+									<a href="/about">
+									<!-- <span class="glyphicon glyphicon-user"></span> -->
+									<i class="fa-solid fa-user"></i>
+									<span class="text-capitalize"> about </span>
+								</a></li>
+							
+								<li class="nav-item navtab-research" data-name="research">
+									<!-- <a href="/main_pages/research.html"> -->
+									<a href="/research">
+									<!-- <span class="glyphicon glyphicon-flask"></span> -->
+									<i class="fa-solid fa-flask"></i>
+									<span class="text-capitalize"> research </span>
+								</a></li>
+							
+								<li class="nav-item navtab-tools" data-name="tools">
+									<!-- <a href="/main_pages/tools.html"> -->
+									<a href="/tools">
+									<!-- <span class="glyphicon glyphicon-cog"></span> -->
+									<i class="fa-solid fa-cog"></i>
+									<span class="text-capitalize"> tools </span>
+								</a></li>
+							
+							
+							<!-- <li id="nav-cv" class="nav-item"><a href="#" style="color:#338;">
+								<i class="fa-solid fa-trophy"></i>
+								<span class="hidden-xs">CV.pdf</span>
+							</a></li> -->
+							<!-- <% for(var tab in params.tabs) { %>
+								<li id="nav-<%- tab %>" class="nav-item"><a href="#">
+									<span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
+									<span class="hidden-xs text-capitalize"> <%= tab %> </span>
+								</a></li>
+							<% } %> -->
+						</ul>
+						<ul class="nav navbar-nav navbar-right"  style="margin-left:0px !important;">
+						<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+						<li><a href="#"><span class="glyphicon glyphicon-equalizer"></span></a></li>
+						</ul>
+					</div>
+					
+				</nav>
+			</div>
+
+			<main class="page-content" style="flex:1">
+				<div id="wrapper" class="container">
+					<div id="everything" class="">
+						<h1 id="general-use">General Use</h1>
+
+<ul>
+<li>
+    The <a href="https://github.com/orichardson/pdg">PDG Python Library</a>
+    <ul><li>
+    The online 
+        <a href="https://orichardson.github.io/pdg/hgraph_editor">directed hypergraph editor</a>,
+        for visualizing PDG structures.
+    
+    </li></ul></li>
+<li>
+<span> <a href="/files/restatelinks.sty">LaTeX library (.sty)</a></span>
+for links in the margins to and from proofs elsewhere (e.g., in appendix)<div class="accordion-panel">
+    <button class="toggle-button dim70">
+        <span class="text-folded">
+            <i class="fa-solid fa-circle-chevron-right"></i>
+             ( instructions for use )  
+        </span>
+        <span class="text-unfolded">
+            <i class="fa-solid fa-circle-chevron-down"></i>
+            To use,
+        </span>
+    </button>
+    <div class="extra-content">
+        <p>download <code class="language-plaintext highlighter-rouge">restatelinks.sty</code> using the link above,<br />
+save it in the same folder as your .tex document, and<br />
+use it something like this:</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%% example.tex</span>
+<span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+
+<span class="c">% this is the file restatelinks.sty you can download above</span>
+<span class="k">\usepackage</span><span class="p">{</span>restatelinks<span class="p">}</span> 
+
+<span class="k">\usepackage</span><span class="p">{</span>amsthm,thmtools<span class="p">}</span> <span class="c">% need theorem restate</span>
+<span class="k">\newtheorem</span><span class="p">{</span>thm<span class="p">}{</span>Theorem<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+    <span class="c">% instead of beginning a "thm", begin a "linked" environment</span>
+    <span class="nt">\begin{linked}</span>[Fancy Theorem Name]<span class="p">{</span>thm<span class="p">}{</span>label<span class="p">}</span> 
+        THEOREM TEXT
+    <span class="nt">\end{linked}</span>
+
+    ... intermediate text ...
+
+    <span class="k">\recall</span><span class="p">{</span>thm:label<span class="p">}</span> <span class="c">% re-state the theorem</span>
+    <span class="c">% use "lproof" to get nice colors &amp; a target for forward reference</span>
+    <span class="nt">\begin{lproof}</span> <span class="k">\label</span><span class="p">{</span>proof:label<span class="p">}</span>
+        PROOF TEXT
+    <span class="nt">\end{lproof}</span>
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+
+        <button class="toggle-button dim70">
+            <span class="text-unfolded">
+                <i class="fa-solid fa-circle-chevron-up"></i>
+            </span>
+        </button>
+    </div>
+</div>
+</li>
+</ul>
+
+<h1 id="cornell-cis-links--web-apps">Cornell CIS: Links &amp; Web Apps</h1>
+<ul>
+  <li>
+    <p><a href="https://drive.google.com/drive/folders/1PNoxfNyq8dpLiEjNRrZrzfqUogz_msoZ?usp=drive_link">Materials</a>
+ for <a href="https://wiki.cs.cornell.edu/index.php?title=Grad_Seminar">Grad Seminar</a>, the weekly PhD/MS student meeting and seminar.<br />
+ I organized the event from Fall 2019 to Spring 2024, except for a 2-semester pandemic lapse.<br />
+ Seminar Schedules: 
+ <a href="https://docs.google.com/spreadsheets/d/1XzqbWSRpkgGB4imlfuOmiRROp6f_vJWlhHhDCC4zImM/edit?usp=sharing">[Spring 24]</a>
+ <a href="https://docs.google.com/spreadsheets/d/1uvaxmpYPRZMTJZLnQzLw_GFU1I7KMzNP9XKxOVnotP8/edit?usp=sharing">[Fall 23]</a>
+ <a href="https://docs.google.com/spreadsheets/d/1jyscultcrHN3-cWCRnZQ2xMFXoCLeWEoTxr8j9RI2Go/">[Fall 22]</a></p>
+  </li>
+  <li>
+    <p>The <a href="https://research.cs.cornell.edu/csgo/ta">TA Hour Reporting System</a>, which I built in 2021,
+  collects (anonymous) statistics about TA workload among graduate students. The results are shared with the
+  <a href="https://csgo.cs.cornell.edu">Computer Science Graduate Organization (CSGO)</a> and the CS department.
+   <!-- (current DGS, Chair, and Associate Director).   -->
+  Here are some
+  <a href="/files/slides/ta-reporting-system.pptx" class="">slides(.pptx)</a>
+  describing the motivations and designs.
+  Another outcome of this effort to improve life for TA’s was the <a href="https://www.cs.cornell.edu/sites/default/files/shared/graduate_ta_handbook.pdf">official CS dept TA handbook</a>, meant to clarify the opaque details of the matching process and what can be expected of a TA.</p>
+  </li>
+  <li>
+    <p><span class="depricated-tag label label-warning">depricated</span>
+  <a href="https://research.cs.cornell.edu/csgo/buddy">CSGO Buddy System</a>,
+  an opt-out (random) group assignment and chat system, used by the CSGO 2020-2021 to facilitate regular student meetings during the start of the pandemic.</p>
+  </li>
+</ul>
+
+					</div>
+				</div>
+			</main>
+
+			
+		</div>
+		<!---->
+		<div  class="plx-layer plx-deep">
+			<div id="tree-button-panel">
+				<!-- btn btn-secondary -->
+				<button id="tree-ffwd" type="button" class="">
+					<i class="fas fa-fast-forward"></i> </button>
+				<button id="tree-remove" type="button" class="">
+					<i class="fa-solid fa-ban"></i> </button>
+				<br/>
+				<button id="tree-pause" type="button" class=""> 
+					<i class="fa-solid fa-pause"></i> </button>
+			</div>
+			<div id="background-wrapper"style="margin:0px!important;" >
+				<canvas id="background" resize="true"></canvas>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.18/paper-full.min.js"></script>
+	<script type="text/javascript" src="/js/gen/vines-wind.js"></script>
+	</body>
+</html>
