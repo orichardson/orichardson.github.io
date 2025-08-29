@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title id="bigthing">Research</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<!-- JQuery + JQuery UI (for animations) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- <base href="<%- hosturl %>" target="_blank"> -->
+
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<!-- if in main pages, also want page-specific css -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="/js/load_jekyll_collections.js"></script>
+<script src="/js/main.js"></script>
+<script>
+    window.page='research';
+</script><!-- BELOW: note the explicit styling based on server data. -->
+<!-- <body style='background-color: <%- params.tabs[page].colors.bg %>; color:<%- params.tabs[page].colors.fg %>' > -->
+<body>
+
+<!-- <body style='background-color: #000000; color:#FFFFFF'> -->
+	<div class="parallax">
+		<div class="plx-layer plx-base">
+
+			<!-- <div class="jumbotron container-fluid"> -->
+			<div class="jumbotron container">
+				<h1 class="title"><span class="wrap">oli.io;</span></h1>
+				<!--  -->
+				<h3 class="subtitle">Research</h3>
+			</div>
+
+			<div id="" class="clearfix sticky-anchor">
+				<!-- <nav id="navigation" class="navbar navbar-default sticky"
+					style="opacity: 0.9;background-color: <%- params.tabs[page].colors.nav %>; border-color: <%- params.tabs[page].colors.border %>" > -->
+				<nav id="navigation" class="navbar navbar-default sticky">
+					<!-- <div class="container-fluid"> -->
+					<div class="container">
+						<ul id="nav-icon-list" class="nav navbar-nav">
+							
+							
+							
+							
+								<li class="nav-item navtab-about" data-name="about">
+									<!-- <a href="/main_pages/about.html"> -->
+									<a href="/about">
+									<!-- <span class="glyphicon glyphicon-user"></span> -->
+									<i class="fa-solid fa-user"></i>
+									<span class="text-capitalize"> about </span>
+								</a></li>
+							
+								<li class="nav-item navtab-research" data-name="research">
+									<!-- <a href="/main_pages/research.html"> -->
+									<a href="/research">
+									<!-- <span class="glyphicon glyphicon-flask"></span> -->
+									<i class="fa-solid fa-flask"></i>
+									<span class="text-capitalize"> research </span>
+								</a></li>
+							
+								<li class="nav-item navtab-tools" data-name="tools">
+									<!-- <a href="/main_pages/tools.html"> -->
+									<a href="/tools">
+									<!-- <span class="glyphicon glyphicon-cog"></span> -->
+									<i class="fa-solid fa-cog"></i>
+									<span class="text-capitalize"> tools </span>
+								</a></li>
+							
+							
+							<!-- <li id="nav-cv" class="nav-item"><a href="#" style="color:#338;">
+								<i class="fa-solid fa-trophy"></i>
+								<span class="hidden-xs">CV.pdf</span>
+							</a></li> -->
+							<!-- <% for(var tab in params.tabs) { %>
+								<li id="nav-<%- tab %>" class="nav-item"><a href="#">
+									<span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
+									<span class="hidden-xs text-capitalize"> <%= tab %> </span>
+								</a></li>
+							<% } %> -->
+						</ul>
+						<ul class="nav navbar-nav navbar-right"  style="margin-left:0px !important;">
+						<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+						<li><a href="#"><span class="glyphicon glyphicon-equalizer"></span></a></li>
+						</ul>
+					</div>
+					
+				</nav>
+			</div>
+
+			<main class="page-content" style="flex:1">
+				<div id="wrapper" class="container">
+					<div id="everything" class="">
+						<!-- <h1> Research </h1> -->
+<p style="max-width:85ch;">
+<!-- I develop clean mathematical foundations for fallable agents.
+My work spans machine learning, probabilistic graphical models, information theory, programming languages, category theory, and logic. -->
+<!-- My research aims to develop clean, intuitive, and conceptually rich mathematical foundations for agents that are well-suited to modern AI systems.  -->
+<!-- My research develops clean and conceptually rich mathematical foundations for AI systems.  -->
+My research develops clean mathematical and conceptual foundations for fallible AI systems.
+<!-- % I do this by drawing from commonalities across the wide range of fields in which I have expertise, including probabilistic graphical models, information theory, category theory, logic, differential geometry, and machine learning.
+% Much of the work I have done in my PhD revolves around a knowledge representation I invented, called a Probabilistic Dependency Graph. -->
+The result so far has been an elegant unifying picture that explains many standard but seemingly ad-hoc choices made in practice.
+A key technical ingredient is a class of models I invented called
+<!-- [Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), -->
+<!-- <a class="paper" href="https://arxiv.org/abs/2012.10800">Probabilistic Dependency Graphs</a> <a href="https://orichardson.github.io/pdg/">(PDGs)</a> -->
+Probabilistic Dependency Graphs <a href="https://orichardson.github.io/pdg/">(PDGs)</a>
+which
+<!-- <a class="paper" href="https://arxiv.org/abs/2012.10800"> -->
+subsume traditional graphical models,
+<!-- </a> -->
+<!-- and admit <a class="paper" href="https://arxiv.org/abs/2311.05580">similarly expensive inference procedures</a>, -->
+<!-- yet can model inconsistent beliefs and <a class="paper" href="https://arxiv.org/abs/2202.11862">most scenarios in machine learning</a>.  -->
+yet can model inconsistent beliefs and most scenarios in machine learning. 
+<!-- This leads to a simple -->
+Indeed, many important algorithms in AI turn out to be instances of an intuitive heuristic approach to resolving probabilistic inconsistency. 
+</p>
+
+<!-- The hope is that a principled approach  -->
+
+<p>For an overview, see my 
+<a href="/files/research-statement.pdf">research statement</a>;<br />
+      for (a great deal) more, see
+    <!-- [dissertation](/files/oli-dissertation.pdf) -->
+    my <span class="thesis-type">
+        <a href="/files/oli-dissertation.pdf" style="color: color-mix(in srgb, var(--accent-color), white 30%) ;">dissertation</a></span>.</p>
+
+<p><br /></p>
+
+<h2>
+<!-- <input class="search" size=13 oninput="this.size = this.value.length" style="background: none; text-align:center;" 
+    value="Peer-Reviewed" />  &nbsp; -->
+Peer-Reviewed
+Papers and Publications 
+</h2>
+
+<!-- Legend: -->
+<div style="margin-bottom:20px;margin-left:70px;">
+    <div style="rotate:-90deg;display:inline-block; color:gray; font-size:large;margin-right:-15px;">Legend</div>
+    <div style="display:inline-block;vertical-align:middle;border-left:4px solid gray;padding-left:5px">
+        <!-- TODO: make this into a loop... -->
+        <div class="thesis-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            thesis
+        </div>
+        <!-- <br> -->
+        <div class="workshop-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            workshop
+        </div>
+        <br />
+        <div class="conference-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            conference
+        </div>
+        <!-- <br> -->
+        <div class="journal-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            journal
+        </div>
+    </div>
+</div>
+
+<!-- <h3> Conference Papers </h3> -->
+<ul class="paperlist">
+
+
+
+
+<li class="conference-type accordion-panel">
+    
+    <div class="special-tags">
+     
+        <div class="special-tag">
+            <i class="fa-solid fa-certificate"></i><br />
+            <div class="special-tag-text">oral</div>
+        </div>
+    
+    </div>
+    
+    <!-- <b>Learning with Confidence</b><br/> -->
+    <!-- <span class="papertitle hangingindent">Learning with Confidence </span> -->
+    <div class="papertitle hangingindent toggle-bbutton">Learning with Confidence
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr toggle-bbutton">
+        Oliver Richardson
+        <br />
+        UAI  2025 
+        <br />
+    </div>
+    <div class="extra-content" style="margin-left:10px;font-size:initial;">
+        <p><strong>Abstract.</strong>
+We characterize a notion of confidence that arises when learning or updating beliefs. 
+This notion of trust, or <em>learner’s confidence</em>, can be used alongside (and is easily be mistaken for) probability or likelihood, but it is fundamentally a different concept. 
+Although perhaps not as useful as probability itself, our notion of confidence captures and unifies many concepts in the literature, from Shafer’s weight of evidence, to Kalman gain, as well as number of training epochs and learning rate.
+We provide a mathematical definition of what it means to learn with confidence, and give two canonical ways of measuring confidence on a continuum. 
+Under additional assumptions, we derive more compact representations of confidence-based learning in terms of vector fields and loss functions.
+These representations induce an extended language of compound “parallel” observations. 
+We illustrate our framework by analyzing standard ways of updating beliefs.</p>
+
+    </div>
+    <div class="button-div">
+          <a href="https://arxiv.org/abs/2508.11037" class="textbuttonlink">arXiv</a>   
+         <a href="/files/posters/LwC-poster.pdf" class="textbuttonlink">poster</a>   
+        
+        
+        
+            <a href="/files/slides/lwc-uai.pdf" class="textbuttonlink">slides.pdf</a>
+        
+        
+        <button class="textbuttonlink toggle-button">
+            <span class="text-folded">
+                abstract <i class="fa-solid fa-circle-chevron-left"></i></span>
+            <span class="text-unfolded">
+                <i class="fa-solid fa-circle-chevron-up"></i></span>
+        </button>
+        
+    </div>
+</li>
+
+
+
+
+<li class="conference-type accordion-panel">
+    
+    <!-- <b>Qualitative Mechanism Independence</b><br/> -->
+    <!-- <span class="papertitle hangingindent">Qualitative Mechanism Independence </span> -->
+    <div class="papertitle hangingindent toggle-bbutton">Qualitative Mechanism Independence
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr toggle-bbutton">
+        Oliver Richardson, Spencer Peters, and Joseph Halpern
+        <br />
+        NeurIPS  2024 
+        <br />
+    </div>
+    <div class="extra-content" style="margin-left:10px;font-size:initial;">
+        <p><strong>Abstract.</strong>
+We define what it means for a joint probability distribution to be compatible with a set of independent causal mechanisms, at a qualitative level—or, more precisely, with a directed hypergraph A, which is the qualitative structure of a probabilistic dependency graph (PDG). When A represents a qualitative Bayesian network, QIM-compatibility with A reduces to satisfying the appropriate conditional independencies. But giving semantics to hypergraphs using QIM-compatibility lets us do much more. For one thing, we can capture functional dependencies. For another, we can capture important aspects of causality using compatibility: we can use compatibility to understand cyclic causal graphs, and to demonstrate structural compatibility, we must essentially produce a causal model. Finally, QIM-compatibility has deep connections to information theory. Applying compatibility to cyclic structures helps to clarify a longstanding conceptual issue in information theory.</p>
+
+    </div>
+    <div class="button-div">
+          <a href="https://arxiv.org/abs/2501.15488" class="textbuttonlink">arXiv</a>   
+         <a href="/files/posters/QIM-poster.pdf" class="textbuttonlink">poster</a>   
+        
+        
+        
+            <a href="/files/slides/QIM-5min.pptx" class="textbuttonlink">slides.pptx</a>
+        
+        
+        <button class="textbuttonlink toggle-button">
+            <span class="text-folded">
+                abstract <i class="fa-solid fa-circle-chevron-left"></i></span>
+            <span class="text-unfolded">
+                <i class="fa-solid fa-circle-chevron-up"></i></span>
+        </button>
+        
+    </div>
+</li>
+
+
+
+
+<li class="thesis-type accordion-panel">
+    
+    <!-- <b>A Unified Theory of Probabilistic Modeling, Dependence, and Inconsistency</b><br/> -->
+    <!-- <span class="papertitle hangingindent">A Unified Theory of Probabilistic Modeling, Dependence, and Inconsistency </span> -->
+    <div class="papertitle hangingindent toggle-bbutton">A Unified Theory of Probabilistic Modeling, Dependence, and Inconsistency
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr toggle-bbutton">
+        Oliver Richardson
+        <br />
+        PhD Thesis, Cornell University, August 2024 
+        <br />
+    </div>
+    <div class="extra-content" style="margin-left:10px;font-size:initial;">
+        <div style="margin-top:20px;">
+  <p><!--max-width:80ch;-->
+<!-- <img style="float:right;margin-left:15px;margin-bottom:5px;border-radius:20px;filter:invert(1);" 
+    src="/files/posters/one-true-loss-thumb4.png"/> -->
+<strong>Abstract.</strong>
+What should you do with conflicting information? To be <em>rational</em> in the traditional sense, you must immediately resolve the inconsistency, so as to maintain a consistent (probabilistic) picture of the world. But how? And is it really critical to do so immediately?  Inconsistency is clearly undesirable, but, as we will soon show, we stand to gain a lot by representing it.</p>
+
+  <p>This thesis develops a broad theory of how to approach probabilistic modeling with possibly-inconsistent information, unifying and reframing much of the literature in graphical models and machine learning in the process. The key ingredient is a novel kind of graphical model, called a Probabilistic Dependency Graph (PDG), which allows for arbitrary (even conflicting) pieces of probabilistic information.</p>
+  <ul>
+    <li>In Part I, we establish PDGs as a generalization of other models of mental state, including traditional graphical models such as Bayesian Networks and Factor Graphs, as well as causal models, and even generalizations of probability distributions, such as Dempster-Shafer Belief functions.</li>
+    <li>In Part II, we show that PDGs also capture modern neural representations. Surprisingly, standard loss functions can be viewed as the inconsistency of a PDG that models the situation appropriately.
+Furthermore, many important algorithms in AI are instances of a simple approach to resolving inconsistencies.</li>
+    <li>In Part III, we provide algorithms for PDG inference, and uncover a deep algorithmic equivalence between the problems of inference and calculating a PDG’s numerical degree of inconsistency. We also develop powerful yet inutuitive principles for reasoning with (and about) PDGs.
+<!-- (475 pages) --></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="button-div">
+        
+        
+        
+        
+        
+            <a href="/files/oli-dissertation.pdf" class="textbuttonlink">.pdf</a>
+        
+        
+        <button class="textbuttonlink toggle-button">
+            <span class="text-folded">
+                abstract <i class="fa-solid fa-circle-chevron-left"></i></span>
+            <span class="text-unfolded">
+                <i class="fa-solid fa-circle-chevron-up"></i></span>
+        </button>
+        
+    </div>
+</li>
+
+
+
+
+<li class="workshop-type accordion-panel">
+    
+    <!-- <b>Mixture Languages</b><br/> -->
+    <!-- <span class="papertitle hangingindent">Mixture Languages </span> -->
+    <div class="papertitle hangingindent ">Mixture Languages
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr ">
+        Oliver Richardson and Jialu Bao
+        <br />
+        POPL  2024 Languages for Inference (LAFI) Workshop
+        <br />
+    </div>
+    
+    <div class="button-div">
+        
+         <a href="/files/posters/mixture-languages-workshop-poster.pdf" class="textbuttonlink">poster</a>   
+        
+        
+        
+            <a href="/files/papers/lafi.pdf" class="textbuttonlink">2-page extended abstract</a>
+        
+            <a href="/files/slides/mixlang-lafi24.pptx" class="textbuttonlink">slides.pptx</a>
+        
+        
+    </div>
+</li>
+
+
+
+
+<li class="workshop-type accordion-panel">
+    
+    <!-- <b>The Local Inconsistency Resolution Algorithm</b><br/> -->
+    <!-- <span class="papertitle hangingindent">The Local Inconsistency Resolution Algorithm </span> -->
+    <div class="papertitle hangingindent ">The Local Inconsistency Resolution Algorithm
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr ">
+        Oliver Richardson
+        <br />
+        ICML  2023 Workshop on Structured Probabilistic Inference &amp; Generative Modeling (SPIGM); Workshop on Localized Learning (LLW)
+        <br />
+    </div>
+    
+    <div class="button-div">
+        
+         <a href="/files/posters/LIR.pdf" class="textbuttonlink">poster</a>   
+        
+        
+        
+            <a href="/files/papers/lir.pdf" class="textbuttonlink">4-page extended abstract</a>
+        
+            <a href="https://openreview.net/forum?id=5VTeqSXLCo" class="textbuttonlink">SPIGM.OpenReview</a>
+        
+            <a href="https://openreview.net/forum?id=KzSNLSXKW5" class="textbuttonlink">LLW.OpenReview</a>
+        
+        
+    </div>
+</li>
+
+
+
+
+<li class="conference-type accordion-panel">
+    
+    <div class="special-tags">
+     
+        <div class="special-tag">
+            <i class="fa-solid fa-certificate"></i><br />
+            <div class="special-tag-text">spotlight</div>
+        </div>
+    
+    </div>
+    
+    <!-- <b>Inference for Probabilistic Dependency Graphs</b><br/> -->
+    <!-- <span class="papertitle hangingindent">Inference for Probabilistic Dependency Graphs </span> -->
+    <div class="papertitle hangingindent ">Inference for Probabilistic Dependency Graphs
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr ">
+        Oliver Richardson, Joseph Halpern, and Christopher De Sa
+        <br />
+        UAI  2023 
+        <br />
+    </div>
+    
+    <div class="button-div">
+          <a href="https://arxiv.org/abs/2311.05580" class="textbuttonlink">arXiv</a>   
+         <a href="/files/posters/inference-for-pdgs.pdf" class="textbuttonlink">poster</a>   
+           <a href="https://github.com/orichardson/pdg-infer-uai" class="textbuttonlink">code</a>   
+        
+        
+        
+    </div>
+</li>
+
+
+
+
+<li class="conference-type accordion-panel">
+    
+    <div class="special-tags">
+     
+        <div class="special-tag">
+            <i class="fa-solid fa-certificate"></i><br />
+            <div class="special-tag-text">oral</div>
+        </div>
+    
+    </div>
+    
+    <!-- <b>Loss as the Inconsistency of a Probabilistic Dependency Graph: Choose Your Model, not Your Loss Function</b><br/> -->
+    <!-- <span class="papertitle hangingindent">Loss as the Inconsistency of a Probabilistic Dependency Graph: Choose Your Model, not Your Loss Function </span> -->
+    <div class="papertitle hangingindent toggle-bbutton">Loss as the Inconsistency of a Probabilistic Dependency Graph: Choose Your Model, not Your Loss Function
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr toggle-bbutton">
+        Oliver Richardson
+        <br />
+        AISTATS  2022 
+        <br />
+    </div>
+    <div class="extra-content" style="margin-left:10px;font-size:initial;">
+        <div style="margin-top:20px;"> <!--max-width:80ch;-->
+<img style="float:right;margin-left:15px;margin-bottom:5px;border-radius:20px;filter:invert(1);" src="/files/posters/one-true-loss-thumb4.png" />
+<b>Abstract.</b>
+In a world blessed with a great diversity of loss functions, we argue that that choice between them is not a matter of taste or pragmatics, but of model. Probabilistic depencency graphs (PDGs) are probabilistic models that come equipped with a measure of "inconsistency". We prove that many standard loss functions arise as the inconsistency of a natural PDG describing the appropriate scenario, and use the same approach to justify a well-known connection between regularizers and priors. We also show that the PDG inconsistency captures a large class of statistical divergences, and detail benefits of thinking of them in this way, including an intuitive visual language for deriving inequalities between them. In variational inference, we find that the ELBO, a somewhat opaque objective for latent variable models, and variants of it arise for free out of uncontroversial modeling assumptions---as do simple graphical proofs of their corresponding bounds. Finally, we observe that inconsistency becomes the log partition function (free energy) in the setting where PDGs are factor graphs.
+</div>
+
+    </div>
+    <div class="button-div">
+          <a href="https://arxiv.org/abs/2202.11862" class="textbuttonlink">arXiv</a>   
+         <a href="/files/posters/one-true-loss-poster.png" class="textbuttonlink">poster</a>   
+        
+        
+        
+            <a href="/files/slides/one-true-loss--15min.pptx" class="textbuttonlink">slides.pptx</a>
+        
+        
+        <button class="textbuttonlink toggle-button">
+            <span class="text-folded">
+                abstract <i class="fa-solid fa-circle-chevron-left"></i></span>
+            <span class="text-unfolded">
+                <i class="fa-solid fa-circle-chevron-up"></i></span>
+        </button>
+        
+    </div>
+</li>
+
+
+
+
+<li class="conference-type accordion-panel">
+    
+    <!-- <b>Probabilistic Dependency Graphs</b><br/> -->
+    <!-- <span class="papertitle hangingindent">Probabilistic Dependency Graphs </span> -->
+    <div class="papertitle hangingindent ">Probabilistic Dependency Graphs
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr ">
+        Oliver Richardson and Joseph Halpern
+        <br />
+        AAAI  2021 
+        <br />
+    </div>
+    
+    <div class="button-div">
+          <a href="https://arxiv.org/abs/2012.10800" class="textbuttonlink">arXiv</a>   
+         <a href="/files/posters/pdg-AAAI-poster-D.pdf" class="textbuttonlink">poster</a>   
+           <a href="https://github.com/orichardson/pdg" class="textbuttonlink">code</a>   
+        
+        
+        
+    </div>
+</li>
+
+
+
+
+<li class="workshop-type accordion-panel">
+    
+    <!-- <b>Complexity and Scale: Understanding the Creative</b><br/> -->
+    <!-- <span class="papertitle hangingindent">Complexity and Scale: Understanding the Creative </span> -->
+    <div class="papertitle hangingindent ">Complexity and Scale: Understanding the Creative
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr ">
+        Oliver Richardson
+        <br />
+        International Association of Computing and Philosophy (IACAP)  2014 
+        <br />
+    </div>
+    
+    <div class="button-div">
+        
+        
+        
+        
+        
+            <a href="/files/papers/complexity-scale-creativity.pdf" class="textbuttonlink">conference paper</a>
+        
+        
+    </div>
+</li>
+
+
+
+
+<li class="journal-type accordion-panel">
+    
+    <!-- <b>Capitalization in the St Petersburg Game: Why Statistical Distributions Matter</b><br/> -->
+    <!-- <span class="papertitle hangingindent">Capitalization in the St Petersburg Game: Why Statistical Distributions Matter </span> -->
+    <div class="papertitle hangingindent ">Capitalization in the St Petersburg Game: Why Statistical Distributions Matter
+        
+    </div>
+        <!-- <br/> -->
+    <div class="paper-descr ">
+        Mariam Thalos and Oliver Richardson
+        <br />
+        Politics, Philosophy &amp; Economics  2014 
+        <br />
+    </div>
+    
+    <div class="button-div">
+        
+        
+        
+        
+        
+            <a href="https://journals.sagepub.com/doi/10.1177/1470594X13491792" class="textbuttonlink">paper</a>
+        
+            <a href="https://gitlab.com/zaytuna/st-petersburg-sim" class="textbuttonlink">code</a>
+        
+        
+    </div>
+</li>
+
+
+</ul>
+
+<p><br /></p>
+
+<!-- <h2> Various Other Talks </h2> -->
+<!-- <h2> Academic Talks </h2> -->
+<h2> Academic Talks </h2>
+
+<ul style="--accent-color: lightsteelblue;">
+
+
+    <li> 
+    <i> The Pursuit of Epistemic Consistency as a "Universal" Objective. </i> 
+    <br />
+    
+    <span class="talk-details">@ ILIAD Conference,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    29 Jul 2024.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="/files/slides/???.pptx" class="textbuttonlink">slides.pptx</a>
+        
+            <a href="https://youtu.be/CDpIDO3iJu8" class="textbuttonlink">recording (YouTube)</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> A Probabilistic Model of Belief, Dependence, and Inconsistency. </i> 
+    <br />
+    
+        <span class="label label-exam">B Exam</span>
+    
+    <span class="talk-details">@ Cornell CS Department,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    16 Jul 2024.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="/files/slides/B-exam.pptx" class="textbuttonlink">slides.pptx</a>
+        
+            <a href="https://cornell.box.com/s/y8qzev22v26pw10lpruso0d3llnuwma7" class="textbuttonlink">recording</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> How to Compute with PDGs: Inference, Inconsistency Measurement, and the Close Relationship Between the Two. </i> 
+    <br />
+    
+        <span class="label label-invtalk">Invited Talk</span>
+    
+    <span class="talk-details">@ Cornell CS Theory Seminar,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    19 Feb 2024.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="https://www.cs.cornell.edu/content/how-compute-pdgs-inference-inconsistency-measurement-and-close-relationship-between-two" class="textbuttonlink">talk page</a>
+        
+            <a href="/files/slides/theory-sem-24.pptx" class="textbuttonlink">slides.pptx</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> Learning, Inference, and the Pursuit of Consistency. </i> 
+    <br />
+    
+        <span class="label label-invtalk">Invited Talk</span>
+    
+    <span class="talk-details">@ Cornell CS Student Colloquium,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    7 Dec 2023.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="/files/slides/student-colloq.pptx" class="textbuttonlink">slides.pptx</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> Probabilistic (In)consistency as a Basis for Learning and Inference. </i> 
+    <br />
+    
+        <span class="label label-invtalk">Invited Talk</span>
+    
+    <span class="talk-details">@ University of Tenessee CS Dept,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    29 Nov 2023.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="/files/slides/oli-utk.pptx" class="textbuttonlink">slides.pptx</a>
+        
+            <a href="https://tennessee.zoom.us/rec/share/qkJSMBhYrMyAPW5lM34j-qrKyBBah4YhmSuAV4klrFDI8i_rThI9mXkXIDseQPLi.Bn71TPjCky7hjHFm" class="textbuttonlink">recording</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> A Tutorial on Bialgebra. </i> 
+    <br />
+    
+    <span class="talk-details">@ Cornell Seminar on Programming Languages,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    17 Sep 2022.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="/files/slides/distrib-pldg-22.pdf" class="textbuttonlink">slides.pdf</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> Loss as the Inconsistency of a Probabilistic Dependency Graph: Choose Your Model, Not Your Loss Function. </i> 
+    <br />
+    
+        <span class="label label-invtalk">Invited Talk</span>
+    
+    <span class="talk-details">@ Cornell Seminar on Artificial Intelligence,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    2 Sep 2022.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="https://www.cs.cornell.edu/content/loss-inconsistency-probabilistic-dependency-graph-choose-your-model-not-your-loss-function" class="textbuttonlink">talk page</a>
+        
+            <a href="/files/slides/one-true-loss--45min.pptx" class="textbuttonlink">slides.pptx</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> Probabilistic Dependency Graphs and Inconsistency: How to Model, Measure, and Mitigate Internal Conflict. </i> 
+    <br />
+    
+        <span class="label label-exam">A Exam</span>
+    
+    <span class="talk-details">@ Cornell CS Department,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    17 Sep 2021.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="/files/slides/aexam-final.pdf" class="textbuttonlink">slides.pdf</a>
+        
+            <a href="https://cornell.box.com/s/ihaxjxoqvs1y5xbn563jtgcyny4fwou4" class="textbuttonlink">recording</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> Probabilistic Dependency Graphs. </i> 
+    <br />
+    
+    <span class="talk-details">@ Cornell CS Theory Tea,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    17 Mar 2021.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="/files/slides/pdg-slides.pdf" class="textbuttonlink">slides.pdf</a>
+        
+    </div>
+    </li>
+
+    <li> 
+    <i> Cat Thoughts: An Intro to Categorical Thinking. </i> 
+    <br />
+    
+    <span class="talk-details">@ Cornell Graduate Student Seminar,
+    &nbsp;&nbsp;&nbsp;
+    <!-- <br> -->
+    20 Feb 2019.
+    </span>
+    <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
+        
+            <a href="/files/slides/cats.pptx" class="textbuttonlink">slides.pptx</a>
+        
+    </div>
+    </li>
+
+</ul>
+
+<!--- Eventually notes can go here! -->
+<!-- 
+    * semiringoid notes
+    * notes on qualitative PDGs
+    * notes on databases and PDGs
+    * 
+ -->
+
+					</div>
+				</div>
+			</main>
+
+			
+		</div>
+		<!---->
+		<div  class="plx-layer plx-deep">
+			<div id="tree-button-panel">
+				<!-- btn btn-secondary -->
+				<button id="tree-ffwd" type="button" class="">
+					<i class="fas fa-fast-forward"></i> </button>
+				<button id="tree-remove" type="button" class="">
+					<i class="fa-solid fa-ban"></i> </button>
+				<br/>
+				<button id="tree-pause" type="button" class=""> 
+					<i class="fa-solid fa-pause"></i> </button>
+			</div>
+			<div id="background-wrapper"style="margin:0px!important;" >
+				<canvas id="background" resize="true"></canvas>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.18/paper-full.min.js"></script>
+	<script type="text/javascript" src="/js/gen/vines-wind.js"></script>
+	</body>
+</html>
