@@ -7,6 +7,10 @@ categories: ai
 
 # {{ page.title }}
 
+## Diversity and Optimization
+
+What
+
 
 ## Three Concerns 
 

@@ -44,7 +44,7 @@ yet can model inconsistent beliefs and most scenarios in machine learning.
 Indeed, many important algorithms in AI turn out to be instances of an intuitive heuristic approach to resolving probabilistic inconsistency. 
 </p> 
 
-The hope is that a principled approach
+<!-- The hope is that a principled approach  -->
 
 For an overview, see my 
 [research statement]({{ site.baseurl }}/files/research-statement.pdf);  
