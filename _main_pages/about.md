@@ -11,7 +11,9 @@ colors:
 glyph: user
 order: 0
 # subtitle: include(subtitle-links.md)
-subtitle: <a class="mono" href="mailto:oli@cs.cornell.edu">oli<span style="margin-left:5px;margin-right:5px;font-family:sans-serif;">@</span>cs.cornell.edu</a>
+# subtitle: <a class="mono" href="mailto:oli@cs.cornell.edu">oli<span style="margin-left:5px;margin-right:5px;font-family:sans-serif;">@</span>cs.cornell.edu</a>
+subtitle: <a class="mono" href="mailto:oliver.richardson@mila.quebec">oliver.richardson<span style="margin-left:5px;margin-right:5px;font-family:Courier;">@</span>mila.quebec</a>
+# subtitle_file: emails.html
 content_class: container-narrow
 # special_css: /css/about.css
 ---
@@ -67,6 +69,9 @@ style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-widt
         <span class="icon-label">[CV.pdf]</span>
         </a>
 </div>
+<div class="emails-panel">
+    {% include emails.html %}
+</div>
 </div>
 
 <!-- <div class="col-md-6 col-"> -->
@@ -76,17 +81,15 @@ style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-widt
 <img src="/images/cornell-seal.png" width=50px/>
 </div> -->
 
-<div class="seal" style="margin-top:-10px">
-    <a href="https://mila.quebec"><img src="{{ site.baseurl }}/images/mila-logo.png" style="width:5.2em;"/></a> <br/>
-    <a href="https://www.umontreal.ca/"><img src="{{ site.baseurl }}/images/udm-logo.png" style="width:4.3em;margin-top:4px;"/></a>
-</div>
+
 <!-- **Bio.&nbsp;&nbsp;** -->
-I am a theorist with broad scientific training, who loves to make pretty things out of math and code.
-I develop natural mathematical foundations for fallible agents, which help us better understand AI systems of all kinds.
+I am a theorist with broad scientific training who likes to make beautiful things out of math and code.
+I develop mathematical and conceptual foundations for fallible agents, which help us better understand AI systems of all kinds.
+<!-- I also work on exotic probabilistic methods and AI safety.  -->
 <!-- Currently, I am a PhD candidate in Computer Science at Cornell University, advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern). -->
 My work combines 
-machine learning, probabilistic graphical models, information theory, programming languages, category theory, microeconomics, causality, and logic.
-See my <a onclick="event.preventDefault();$('.navtab-research>a').click();" href="{{ site.baseurl }}/research/">research page</a> for more information.
+traditional machine learning, probabilistic graphical models, information theory, programming languages, category theory, microeconomics, causality, and logic.
+See my <a onclick="event.preventDefault();$('.navtab-research>a').click();" href="{{ site.baseurl }}/research/">research page</a> for more information!
 {% comment %}
 <!-- I am a theorist, but love to write code. -->
 <!-- with broad mathematical and scientific training. -->
@@ -104,28 +107,51 @@ As an undergraduate at the University of Utah,
     pure math (tropical geometry, with [Aaron Betram]()), 
     and applied machine learning (structured prediction, with [Vivek Srikumar]()). -->
 {% endcomment %}
-<div class="seal">
+
+<div class="seal" style="margin-top:-10px">
+    <!-- <a href="https://lawzero.org"><img src="{{ site.baseurl }}/images/l0-logo.jpg" style="width:4.2em;margin-top:4px"/></a>  -->
+    <a href="https://mila.quebec"><img src="{{ site.baseurl }}/images/mila-logo.png" style="width:5.2em;margin-right:-0.5em"/></a>
+    <!-- <br/> -->
+    <a href="https://www.umontreal.ca/"><img src="{{ site.baseurl }}/images/udm-logo.png" style="width:4.8em;margin-top:4px;"/></a>
+    <br/>
+    <a href="https://lawzero.org"><img src="{{ site.baseurl }}/images/LawZeroLogo.svg" style="width:10em;margin-top:3px"/></a> 
+    <br/>
+    <!-- <a href="https://www.matsprogram.org/"><img src="{{ site.baseurl }}/images/MATS-logo.svg"  style="width:7em;margin-top:6px"/></a> -->
+</div>
+<div class="seal" style="clear:right">
     <a href="https://www.cs.cornell.edu/"><img src="{{ site.baseurl }}/images/cornell-seal.png" style="width:3.8em;margin-right:0.5em"/></a><br/>
     <a href="https://www.cam.ac.uk/"><img src="{{ site.baseurl }}/images/ucam.png" style="width:3.0em;margin-top:8px;margin-right:0.6em"/></a><br/>
     <a href="https://www.utah.edu"><img src="{{ site.baseurl }}/images/theu.png" style="width:3.7em;margin-top:5px;margin-right:0.6em"/></a>
 </div>
-In September 2024, I joined [Mila](https://mila.quebec/en) as a postdoc under [Yoshua Bengio](https://yoshuabengio.org/profile/). 
-I received my PhD in Computer Science from Cornell University in 2024, where I was advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
+I am a postdoctoral fellow at [l'Université de Montréal](https://umontreal.ca) and [Mila](https://mila.quebec/en)
+<!-- Québec AI institute -->
+under [Yoshua Bengio](https://yoshuabengio.org/profile/), and also work part-time (35%) as a senior machine learning research scientist at [LawZero](https://lawzero.org).
+I mentor for
+<!-- [![MATS Program]({{site.baseurl}}/images/MATS-logo.svg)](https://www.matsprogram.org/) -->
+<!-- the [<img src="{{site.baseurl}}/images/MATS-logo.svg" style="height:1.2em;" /> Program](https://www.matsprogram.org/).  -->
+the [MATS Program](https://www.matsprogram.org/) in both roles.
+<!--  -->
+I received my PhD in Computer Science from Cornell University in 2024, where I was advised by the great [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
 Before that, I did an MPhil in CS at the University of Cambridge under [Mateja Jamnik](https://www.cl.cam.ac.uk/~mj201/).
-I earned three majors (Mathematics, Cell & Molecular Biology, and Computer Science) and three minors (Chemistry, Physics, Cognitive Science) as an undergraduate at the University of Utah. There, my research focused on pure math (tropical geometry, with [Aaron Bertram](https://www.math.utah.edu/~bertram/)) and applied machine learning (structured prediction for natural language, with [Vivek Srikumar](https://svivek.com/)).
-<!-- ;**
- now I do applied math and theoretical machine learning.** -->
+I earned three majors (Mathematics, Cell & Molecular Biology, and Computer Science) and three minors (Chemistry, Physics, Cognitive Science) as an undergraduate at the University of Utah, where I did research in pure math (tropical geometry, with [Aaron Bertram](https://www.math.utah.edu/~bertram/)) and applied machine learning (structured prediction for natural language, with [Vivek Srikumar](https://svivek.com/)).
+<!-- ;**-
+<small>(whereas now I do applied math and theoretical machine learning.)</small>
+-->
+In high school, I [made video games](https://gitlab.com/zaytuna) in my free time.
 
-Even before that, I [made video games](https://gitlab.com/zaytuna) in my free time.
 <!-- I also play many sports and improvise on the piano! -->
-I also improvise on the piano!
+I am 
+<!-- [married](orichardson.github.io/voli) -->
+married
+to the one and only [Varsha Kishore](https://varshakishore.github.io/).
+<br>
+<!-- I like to sing and improvise on the piano (but not at the same time). -->
+I like to sing and improvise on the piano.
 
 <br>
-{{ subtitle }}
 
 <!-- MUSIC! SHould wait until I have another page + more improv. 
 <h4 >Improvization</h4>
 <div class="loading">
 <iframe width="100%" height="450"  scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/349382933&amp;color=7e00bc&amp;;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-</div>
--->
+</div> -->

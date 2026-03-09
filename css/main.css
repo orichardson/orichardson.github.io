@@ -221,6 +221,15 @@ h1, h2, h3, h4, h5 {
     left: calc(50% - 180px - 110px);
     top: calc(50% - 125px);
 }
+@media screen and (min-width: 760px){
+    .portrait > .emails-panel {
+        position: absolute;
+        left: calc(50% + 180px - 25px);
+        top: calc(50%);
+        rotate: 25deg;
+        text-align: left;
+    }
+}
 /* for small screens, put them below (no line breaks) */
 @media screen and (max-width: 760px){
     .portrait > .icon-panel > br {
@@ -472,3 +481,30 @@ div.papertitle {
     z-index: -2;
     height: 100vh;
  }
+
+
+ .smallgray {
+     color: color-mix(in srgb, rgb(var(--fg-color)) 50%, rgb(var(--bg-color)));
+     font-size: smaller;
+     /* font-family: monospace; */
+     display: inline-block;
+     /* margin-left: 10px; */
+ }
+ .float-right{
+    float: right;
+ }
+ blockquote.right-quote {
+    border-left-width: 0px;
+    border-right: 3px solid var(--accent-color);
+    padding-right: 10px;
+    text-align: right;
+    color: color-mix(in srgb, rgb(var(--fg-color)) 60%, var(--accent-color));
+    font-style: italic;
+ }
+ .abstract {
+    max-width: 80%;
+    margin-left:10%;
+    margin-right:10%;
+    text-align: justify;
+    margin-bottom: 10vh;
+}

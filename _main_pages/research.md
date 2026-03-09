@@ -25,7 +25,7 @@ redirect_from:
 My work spans machine learning, probabilistic graphical models, information theory, programming languages, category theory, and logic. -->
 <!-- My research aims to develop clean, intuitive, and conceptually rich mathematical foundations for agents that are well-suited to modern AI systems.  -->
 <!-- My research develops clean and conceptually rich mathematical foundations for AI systems.  -->
-My research develops clean mathematical and conceptual foundations for fallible AI systems.
+My research develops mathematical and conceptual foundations for fallible AI systems.
 <!-- % I do this by drawing from commonalities across the wide range of fields in which I have expertise, including probabilistic graphical models, information theory, category theory, logic, differential geometry, and machine learning.
 % Much of the work I have done in my PhD revolves around a knowledge representation I invented, called a Probabilistic Dependency Graph. -->
 The result so far has been an elegant unifying picture that explains many standard but seemingly ad-hoc choices made in practice.
@@ -47,7 +47,8 @@ Indeed, many important algorithms in AI turn out to be instances of an intuitive
 <!-- The hope is that a principled approach  -->
 
 For an overview, see my 
-[research statement]({{ site.baseurl }}/files/research-statement.pdf);  
+[research statement]({{ site.baseurl }}/files/research-statement.pdf)
+    <span style="color:#555; font-size:smaller;">[last update March 2024]</span> ;  
     &nbsp;&nbsp;for (a great deal) more, see
     <!-- [dissertation]({{ site.baseurl }}/files/oli-dissertation.pdf) -->
     my <span class="thesis-type">
@@ -97,7 +98,7 @@ Papers and Publications
 {% for paper in papers_sorted %}
 {% if paper.content.size > 5 %} {% assign more = true %} {% else %} {% assign more = false %} {% endif %}
 {% if paper.hide %}{% else %}
-<li class="{{paper.type}}-type accordion-panel">
+<li id="{{paper.name | split: '.' | first}}" class="{{paper.type}}-type accordion-panel">
     {% if paper.awards %}
     <div class="special-tags">
     {% for award in paper.awards %} 
@@ -153,6 +154,9 @@ Papers and Publications
 </ul>
 
 <br>
+
+<!-- <h2> Position Papers and Blog Posts </h2> -->
+
 
 <!-- <h2> Various Other Talks </h2> -->
 <!-- <h2> Academic Talks </h2> -->

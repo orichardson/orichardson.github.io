@@ -226,6 +226,7 @@ $(function() {
 	}
 
 	function setColors(time, page) {
+		if(!(page in MAIN_PAGE_INFO)) return;
 		let colors = MAIN_PAGE_INFO[page].colors;
 		$('body').stop('colors', true,false).animate({
 			'background-color': colors.bg,
@@ -422,7 +423,9 @@ $(function() {
 	});
 	cssstr += '</style>'
 	$('head').append(cssstr);
-	preprocess($('#everything'));
+	if(page in MAIN_PAGE_INFO) {
+		preprocess($('#everything'));
+	}
 	setColors(0, page);
 
 	var alternate_onframe = undefined;

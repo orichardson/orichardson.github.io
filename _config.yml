@@ -29,6 +29,8 @@ description: >- # this means to ignore newlines until ...
 collections:
   papers:
     output: true
+  pieces:
+    output: true
   talks:
     output: false
   main_pages:
@@ -43,6 +45,12 @@ defaults:
     values:
       layout: vines
       permalink: /:title/
+  -
+    scope:
+      path: ""
+      type: pieces
+    values:
+      layout: piece
   # -
   #   scope:
   #     path: "_main_pages"

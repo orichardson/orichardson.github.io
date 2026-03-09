@@ -1,1 +1,15 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include custom-head.html -%}
+
+<body>
+    <main class="page-content" style="flex:1">
+        <div id="wrapper" class="container">
+            <div id="everything" class="{{ page.content_class }}">
+                {{ content }}
+            </div>
+        </div>
+    </main>
+</body>
+</html>

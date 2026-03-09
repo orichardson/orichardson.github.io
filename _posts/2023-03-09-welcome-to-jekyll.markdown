@@ -2,7 +2,7 @@
 title:  "Welcome to Jekyll!"
 date:   2023-03-09 14:37:35 -0500
 categories: jekyll update
-hide: true
+hide: 
 ---
 
 SOME CHANGES

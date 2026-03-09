@@ -1,0 +1,16 @@
+---
+title: Latent Veracity Inference for Identifying Errors in Stepwise Reasoning
+conf: ICLR
+year: 2026
+authors: Minsu Kim, Jean-Pierre R. Falet, Oliver Ethan Richardson, Xiaoyin Chen, Moksh Jain, Sungjin Ahn, Sungsoo Ahn, Yoshua Bengio 
+# poster: /files/posters/LIR.pdf
+type: conference
+arxiv: https://arxiv.org/abs/2505.11824
+supercedes: lir
+---
+
+<div style="margin-top:20px;"> <!--max-width:80ch;-->
+<img style="float:right;margin-left:15px;margin-bottom:5px;border-radius:20px;max-width:100%;" 
+    src="{{ site.baseurl }}/files/posters/lvi-transp-fig.png"/>
+<b>Abstract.</b>
+Chain-of-Thought (CoT) reasoning has advanced the capabilities and transparency of language models (LMs); however, reasoning chains can contain inaccurate statements that reduce performance and trustworthiness. To address this, we propose to augment each reasoning step in a CoT with a latent veracity (or correctness) variable. To efficiently explore this expanded space, we introduce Veracity Search (VS), a discrete search algorithm over veracity assignments. It performs otherwise intractable inference in the posterior distribution over latent veracity values by leveraging the LM's joint likelihood over veracity and the final answer as a proxy reward. This efficient inference-time verification method facilitates supervised fine-tuning of an Amortized Veracity Inference (AVI) machine by providing pseudo-labels for veracity. AVI generalizes VS, enabling accurate zero-shot veracity inference in novel contexts. Empirical results demonstrate that VS reliably identifies errors in logical (ProntoQA), mathematical (GSM8K), and commonsense (CommonsenseQA) reasoning benchmarks, with AVI achieving comparable zero-shot accuracy. Finally, we demonstrate the utility of latent veracity inference for providing feedback during self-correction and self-improvement.
