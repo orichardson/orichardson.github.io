@@ -7,7 +7,8 @@ short: pieces
 colors:
     fg: '#ffd5f2'
     bg: '#4d0036'
-    menu: '#5E0042'
+    # menu: '#5E0042'
+    menu: '#6f034f'
     nav: '#8c6d80'
     border: '#856879'
     shadow: '#f7c3e8'
@@ -29,19 +30,25 @@ subtitle: ideas in writing
 {%- assign date_format = site.minima.date_format | default: "%-d %b, %Y" -%}
 
 
-<h2 class="">Pieces</h2>
+<h2 class="">Pieces
+</h2>
+<div class="smallgray float-right">[last updated]</div>
+<br/>
 <!-- <ul> -->
-{% assign pieces = site.pieces | where: 'hide', nil %}
+{% assign pieces = site.pieces | sort: 'date' | reverse %}
+{% unless site.future %}
+  {% assign pieces = pieces | where: 'hide', nil | where_exp: "p", "p.date <= site.time" %}
+{% endunless %}
 {%- for piece in pieces %}
-<!-- <li> -->
+  {%- assign is_draft = false %}
+  {%- if piece.hide or piece.date > site.time %}{% assign is_draft = true %}{% endif %}
   <h4>
   <a class="post-link" href="{{ piece.url | relative_url }}">
       {{ piece.title | escape }}
     </a>
+  {% if is_draft %}<span class="smallgray">[draft]</span>{% endif %}
   <span class="smallgray float-right">{{ piece.date | date: date_format }}</span></h4>
-  <!-- {{ essay.excerpt }} -->
   {{ piece.tldr }}
-<!-- </li> -->
 {%- endfor -%}
 <!-- </ul> -->
 
