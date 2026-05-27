@@ -222,8 +222,10 @@ $(function() {
 	paper.setup('background');
 	paper.install(window);
 
-	startVine(320, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
+	// if(!document.cookie.split(";").some((item) => item.trim().startsWith("tree=false"))) {
+	// startVine(320, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
 	//startVine(180, 300, paper.view.bounds.bottomCenter, new paper.Point(0, -2.2));
+	// }
 
 	function onFrame(event) {
 		for(var i = 0; i < vines.length; i++)

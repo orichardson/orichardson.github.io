@@ -11,7 +11,8 @@ window.MAIN_PAGE_INFO['{{mp.short}}'] = {
     glyph : '{{mp.glyph}}',
     // title : '{{mp.title}}'
     display : '{{mp.display}}',
-    subtitle : '{{mp.subtitle}}',
+    subtitle : `{{mp.subtitle}}`
+    ,
     content_class : '{{mp.content_class}}'
 };
 {% comment %} 

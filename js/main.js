@@ -263,10 +263,10 @@ $(function() {
 		// console.log(jqo);
 		// jqo.find('>p').wrap("<div class='matt'></div>");
 		jqo.find('>p').wrapInner("<div class='matt'></div>");
-		jqo.find('li').wrapInner("<div class='matt'></div>");
+		jqo.find('ul:not(.nomatts)>li').wrapInner("<div class='matt'></div>");
 
 		jqo.find(".accordion-panel").each(function(idx, elt){
-			console.log(idx,elt);
+			// console.log(idx,elt);
 			let $curr_panel = $(elt);
 			let $extracontent = $curr_panel.find(".extra-content").get(0);
 
@@ -294,14 +294,14 @@ $(function() {
 	}
 
 
-	function typeText($elem, textTo, msdelay) {
+	function typeText($elem, htmlTo, msdelay) {
 		// $elem.css({ 'border-right': '0.08em solid #fff'})
 		$elem.css({ 'border-right': '0.08em solid #eee', 'padding-right': '5px'})
-		if($elem.data('textTo')) {
-			$elem.data('textTo', textTo); // update to the newest text, for the other guy.
+		if($elem.data('htmlTo')) {
+			$elem.data('htmlTo', htmlTo); // update to the newest text, for the other guy.
 			return; // don't interfere with the previous timer; let it handle this.
 		}
-		$elem.data('textTo', textTo);
+		$elem.data('htmlTo', htmlTo);
 		typing($elem, msdelay);
 	}
 
@@ -310,38 +310,45 @@ $(function() {
 	}
 
 	function typing($elem, msdelay) {
-		var now = $elem.text();
-		var textTo = $elem.data('textTo')
-		var delay = msdelay*(Math.random() + 0.7)
+		let html_now = $elem.html();
+		let text_now = html_now.replace(/<\/?[^>]+(>|$)/g, "");
+		let html_to = $elem.data('htmlTo');
+		let text_to = html_to.replace(/<\/?[^>]+(>|$)/g, "");
+		let delay = msdelay*(Math.random() + 0.7)
 
-		if(textTo == now) {
+		if(text_now.toLowerCase() == text_to.toLowerCase()) {
 			$elem.css({'border-right-width' : 0});
-			$elem.removeData('textTo');
+			$elem.html(html_to);
+			$elem.removeData('htmlTo');
 			return;
-		} else if(now.length > textTo.length || textTo.substring(0, now.length) != now) {
-			now = now.substring(0, now.length-1);
-			$elem.text(now);
-			if(textTo.substring(0, now.length) == now)
+		} else if(text_now.length > text_to.length || text_to.substring(0, text_now.length).toLowerCase() != text_now.toLowerCase()) {
+			text_now = text_now.substring(0, text_now.length-1);
+			$elem.text(text_now);
+			if(text_to.substring(0, text_now.length).toLowerCase() == text_now.toLowerCase()) {
+				text_now = text_to.substring(0, text_now.length);
+				$elem.text(text_now);
 				delay *= 3;
+			}
 			else
 				delay /= 3;
 		} else {
-			var c = textTo.charAt(now.length);
+			var c = text_to.charAt(text_now.length);
 
 			/*if(Math.random()<0.05) {
 				c = Math.random().toString(36).charAt(2);
 				delay *= 3;
 			} else*/ if(!isLetter(c))
 				delay *= 3;
-			$elem.text(now + c);
+			$elem.text(text_now + c);
 		}
 
 		setTimeout(function() {typing($elem, msdelay); }, delay);
 	}
 
 	function semiload(page, skippush=false) {
-		console.log(page)
+		// console.log(page)
 		$.get(window.location.origin+window.baseurl+'/main_pages/'+page, function(data) {
+			// if(page in window.MAIN_PAGE_INFO){ 
 			new_jumbo = window.MAIN_PAGE_INFO[page].display
 			typeText($('.title>.wrap'), new_jumbo, 40);
 			$('.subtitle').html(window.MAIN_PAGE_INFO[page].subtitle)
@@ -401,14 +408,16 @@ $(function() {
 
         if(MAIN_PAGE_INFO[name]) {
             let menucolor = MAIN_PAGE_INFO[name].colors.menu;
+			let shadowcolor = MAIN_PAGE_INFO[name].colors.shadow;
 //     		cssstr += '#'+id+'> a { color :  '+menucolor +'; }\n'
 // //                + '#'+id+'> a:hover { text-shadow : 2px 2px 5px rgba('+ hexToRgb(menucolor) +', 0.5); }\n'
 //     		 	+ '#'+id+'.active > a { background-color :  '+
 // 					MAIN_PAGE_INFO[name].colors.shadow +' !important; }\n';
-			cssstr += '.navtab-'+name+'> a { color :  '+menucolor +' !important; }\n'
+			cssstr += `.navtab-${name}> a { color :  ${menucolor} !important; }\n`
 			//                + '#'+id+'> a:hover { text-shadow : 2px 2px 5px rgba('+ hexToRgb(menucolor) +', 0.5); }\n'
-								+ '.navtab-'+name+'.active > a { background-color :  '+
-								MAIN_PAGE_INFO[name].colors.shadow +' !important; }\n';
+						+ `.navtab-${name}.active > a { background-color :  ${shadowcolor} !important; }\n`
+						+ `.navtab-${name}:not(.active) > a:hover { text-decoration:underline !important; `+
+								`background-color : color-mix(${shadowcolor} 0%, rgb(var(--bg-color))) !important; }\n`;
 					
     		$(value).click(function(event) {
     			event.preventDefault();
@@ -440,15 +449,48 @@ $(function() {
 	});
 	$('#tree-remove').click(function(evt) {
 		projects[0].clear();
-		$('#tree-pause').remove();
+		vines.splice(0,1);
+		$('#tree-button-panel>.toggle').toggle();
+		/*$('#tree-pause').remove();
 		$('#tree-remove').remove();
-		$('#tree-ffwd').remove();
+		$('#tree-ffwd').remove();*/
 	});
 	$('#tree-ffwd').click(function(evt) {
-		window.n_ticks_per_frame = 20;
-		$('#tree-ffwd').remove();
+		window.n_ticks_per_frame *= 10;
+		// $('#tree-ffwd').hide();
 	});
-	
+	$('#tree-play').click(function(evt){
+		window.n_ticks_per_frame = 1;
+		// $('#tree-ffwd').show();
+		$('#tree-button-panel>.toggle').toggle();
+		startVine(320, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
+	});
+	$('#tree-nostart-cookie').click(function(evt){
+		// somehow this is supposed to no tmess with other cookies?
+		let future = document.getElementById('tree-nostart-cookie').checked;
+		let d = new Date();
+		d.setFullYear(d.getFullYear() + future*2-1);
+		// one year in the past if unset, one year in the future if set.
+		document.cookie = `tree=false; expires=${d.toUTCString()}; path=/;`;
+	});
+
+	notree =document.cookie.split(";").some((item) => item.trim().startsWith("tree=false")) 
+	document.getElementById('tree-nostart-cookie').checked = notree
+
+	console.log('notree', notree)
+	if(notree){
+		$('#tree-button-panel>.toggle').toggle();
+	}
+	else {
+		$(function(){
+		// startVine(320, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
+		startVine(350, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
+		// startVine(320, 100, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
+		// startVine(180, 300, paper.view.bounds.bottomCenter, new paper.Point(0, -2.2));
+		// startVine(320, 60, paper.view.bounds.center, new paper.Point(-2.6, 2.6));
+		});
+	}
+
 
 
 	$(window).on('popstate', function(evt) {

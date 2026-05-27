@@ -2,6 +2,7 @@
 title: Qualitative Mechanism Independence
 conf: NeurIPS
 year: 2024
+month: December
 authors: Oliver Richardson, Spencer Peters, and Joseph Halpern
 type: conference
 extralinks:

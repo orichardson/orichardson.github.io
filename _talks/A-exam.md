@@ -4,7 +4,7 @@ title: "Probabilistic Dependency Graphs and Inconsistency: How to Model, Measure
 venue: Cornell CS Department
 date: 2021-09-17
 labels:
-    - { type: "exam", text: "A Exam" }
+    - { type: "exam", text: "PhD Proposal / A-Exam" }
 links:
     - ['slides.pdf', '/files/slides/aexam-final.pdf']
     - ['recording', 'https://cornell.box.com/s/ihaxjxoqvs1y5xbn563jtgcyny4fwou4']

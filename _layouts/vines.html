@@ -47,13 +47,24 @@
 		<div  class="plx-layer plx-deep">
 			<div id="tree-button-panel">
 				<!-- btn btn-secondary -->
-				<button id="tree-ffwd" type="button" class="">
-					<i class="fas fa-fast-forward"></i> </button>
-				<button id="tree-remove" type="button" class="">
-					<i class="fa-solid fa-ban"></i> </button>
-				<br/>
-				<button id="tree-pause" type="button" class=""> 
-					<i class="fa-solid fa-pause"></i> </button>
+				<div class="toggle" id="buttons-tree-running" data-parity="0">
+					<button id="tree-ffwd" type="button" class="">
+						<i class="fas fa-fast-forward"></i> </button>
+					<button id="tree-remove" type="button" class="">
+						<i class="fa-solid fa-xmark"></i> </button>
+					<br/>
+					<button id="tree-pause" type="button" class=""> 
+						<i class="fa-solid fa-pause"></i> </button>
+				</div>
+				<div class="toggle" data-parity="1" style="display:none;">
+					<input id="tree-nostart-cookie" type="checkbox"></input>
+					<label for="tree-nostart-cookie" style="margin-right:10px;text-align:left;opacity:50%;">
+						save as cookie: <br/> no unsolicited vines!
+					</label>
+					<br/>
+					<button id="tree-play" type="button" class="">
+						<i class="fas fa-seedling"></i> </button>
+				</div>
 			</div>
 			<div id="background-wrapper"style="margin:0px!important;" >
 				<canvas id="background" resize="true"></canvas>

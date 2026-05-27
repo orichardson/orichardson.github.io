@@ -5,16 +5,20 @@ colors:
     fg : '#342608'
     bg : '#F9FABB'
     # menu : '#9c6c06' #darkgoldenrod
-    menu: '#008b8b' # darkcyan
-    nav : '#E6C06F'
+    # menu: '#008b8b' # darkcyan
+    # menu: '#09b7b7' # darkcyan
+    menu: '#0f9696' # darkcyan
+    # shadow : '#1b2c03'
+    # shadow : '#253c05'
+    shadow : '#2d2b0e'
+    nav : '#dcc594'
     border : '#CFB57B'
-    shadow : '#253c05'
 glyph: cog
 order: 5
 subtitle: Tools and Applications
 ---
 
-# General Use
+## General Use
 
 <ul>
 <li>
@@ -35,11 +39,12 @@ download `restatelinks.sty` using the link above,
 save it in the same folder as your .tex document, and  
 use it something like this:
 ```latex
-%% example.tex
+%%%% example.tex %%%%
 \documentclass{article}
 
 % this is the file restatelinks.sty you can download above
-\usepackage{restatelinks} 
+\usepackage[nobox]{restatelinks} % nobox option removes proof background
+    % you can also use [strip] option to remove margin links (for submission).
 
 \usepackage{amsthm,thmtools} % need theorem restate
 \newtheorem{thm}{Theorem}
@@ -53,7 +58,7 @@ use it something like this:
     ... intermediate text ...
 
     \recall{thm:label} % re-state the theorem
-    % use "lproof" to get nice colors & a target for forward reference
+    % use "lproof" to get a target for forward reference (& colors, depending on options)
     \begin{lproof} \label{proof:label}
         PROOF TEXT
     \end{lproof}
@@ -67,7 +72,7 @@ use it something like this:
 </li>
 </ul>
 
-# Cornell CIS: Links & Web Apps
+## Cornell CIS: Links & Web Apps
  - [Materials](https://drive.google.com/drive/folders/1PNoxfNyq8dpLiEjNRrZrzfqUogz_msoZ?usp=drive_link)
     for [Grad Seminar](https://wiki.cs.cornell.edu/index.php?title=Grad_Seminar), the weekly PhD/MS student meeting and seminar.  
     I organized the event from Fall 2019 to Spring 2024, except for a 2-semester pandemic lapse.  

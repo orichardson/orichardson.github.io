@@ -164,7 +164,7 @@ function startVine(hue, width, anchor, dir) {
 }
 
 var vines = [
-	startVine(320, 50, view.bounds.topRight, new Point(-1.4, 1.4))
+	// startVine(320, 50, view.bounds.topRight, new Point(-1.4, 1.4))
 //	,startVine(180, 300, view.bounds.bottomCenter, new Point(0, -2.2))
 ];
 

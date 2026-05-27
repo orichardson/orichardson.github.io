@@ -345,7 +345,7 @@ $(function() {
 	
 	// usual one
 	// startVine(320, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
-	startVine(350, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
+	// startVine(350, 60, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
 	// startVine(320, 100, paper.view.bounds.topRight, new paper.Point(-1.6, 1.6));
 	// startVine(180, 300, paper.view.bounds.bottomCenter, new paper.Point(0, -2.2));
 	// startVine(320, 60, paper.view.bounds.center, new paper.Point(-2.6, 2.6));
@@ -370,9 +370,10 @@ $(function() {
 	function onResize(event) {
 		// vines[0].group.translate(paper.view.bounds.topRight.subtract(vines[0].group.pivot));
 		//vines[1].group.translate(paper.view.bounds.bottomCenter.subtract(vines[1].group.pivot));
-		
-		vines[0].group.translate(paper.view.bounds.topRight.subtract(vines[0].group.pivot));
-		vines[0].group.pivot = paper.view.bounds.topRight;
+		if(vines.length > 0) {	
+			vines[0].group.translate(paper.view.bounds.topRight.subtract(vines[0].group.pivot));
+			vines[0].group.pivot = paper.view.bounds.topRight;
+		}
 	}
 
 	paper.view.onFrame = onFrame;

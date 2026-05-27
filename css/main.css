@@ -6,11 +6,12 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 /* @import url('https://fonts.googleapis.com/css?family=Cutive+Mono'); */
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn');
-
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 /* @import url(https://fonts.googleapis.com/css?family=Marck+Script);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond); */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import "github-syntax-highlight.css";
+
  
 
 :root{
@@ -24,6 +25,10 @@ html {
 body {
     position: relative;
     min-height:100% !important;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif */
+    /* font-family: 'EB Garamond'; */
+    /* font-family: "ABeeZee", serif; */
+    font-family: serif;
 }
 .mono {
     /* font-family: 'Cutive Mono'; */
@@ -57,6 +62,10 @@ body {
     float: right;
     margin-top:15px;
     text-align: right;
+    opacity: 30%;
+}
+#tree-button-panel:hover{
+    opacity:100%;
 }
 #tree-button-panel button {
     background: none;
@@ -71,15 +80,24 @@ body {
     font-size: 50px;
 }
 
-#tree-pause {
-    margin-right:60px;
-    margin-top:-15px;
+#tree-pause, #tree-play {
+    margin-right:40px;
+    /* margin-top:-15px; */
 }
 #tree-remove {
     margin-right:5px;
 }
 #tree-ffwd {
-    opacity: 10%;
+    /* opacity: 15%; */
+}
+#tree-play:hover{
+    color: #080;
+}
+#tree-nostart-cookie {
+    margin:10px;
+    vertical-align: top;
+    scale:2;
+    accent-color: gray;
 }
 
 .jumbotron {
@@ -89,12 +107,13 @@ body {
 
 h1.title {
     padding-left:30px;
-        font-family: 'Righteous';
+    font-family: 'Righteous';
+    --shadow-blur: 4px;
     /* -webkit-text-stroke: 2px white; */
-    text-shadow: -2px 2px 0 rgb(var(--bg-color)),
-				  2px 2px 0 rgb(var(--bg-color)),
-				  2px -2px 0 rgb(var(--bg-color)),
-				 -2px -2px 0 rgb(var(--bg-color));
+    text-shadow: -2px 2px var(--shadow-blur) rgb(var(--bg-color)),
+				  2px 2px var(--shadow-blur) rgb(var(--bg-color)),
+				  2px -2px var(--shadow-blur) rgb(var(--bg-color)),
+				 -2px -2px var(--shadow-blur) rgb(var(--bg-color));
 }
 h1.title span.wrap {
     pointer-events: auto;
@@ -108,12 +127,22 @@ h1.title span.wrap {
 				  1px -1px 0 rgb(var(--bg-color)),
 				 -1px -1px 0 rgb(var(--bg-color));
 }
-.subtitle > a {
-    color: var(--accent-color);
+.subtitle  a {
+    /* color: color-mix(in srgb, rgb(var(--bg-color)) 50%, var(--accent-color)); */
+    color: color-mix(in srgb, rgb(var(--bg-color)) 50%, rgb(var(--fg-color)));
+    /* color: rgb(var(--fg-color)); */
+    /* var(--accent-color); */
+}
+
+@media screen and (max-width: 760px) {
+    .subtitle { 
+        padding-left: 10px; 
+        font-size: large;
+    }
 }
 
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
     font-family: 'Cinzel';
     font-weight: bolder;
 }
@@ -158,13 +187,17 @@ h1, h2, h3, h4, h5 {
     padding:3px;
     width:fit-content;
     font-family: serif;
-    /* font-stretch: condensed; */
+    /* font-stretch: semi-condensed; */
+    /* font-family: 'EB Garamond'; */
     font-size: large; 
+    /* font-size:13pt; */
+    /* font-weight:100; */
 }
 #everything > .matt > p {
     margin-bottom: 20px;
 }
 .container-narrow {
+    /* max-width: 100ch; */
     max-width: 100ch;
 }
 #everything h1, #everything h2 {
@@ -208,6 +241,30 @@ h1, h2, h3, h4, h5 {
     margin-bottom:5px;
     text-align: center;
 }
+@media screen and (max-width: 850px){
+    .whenbig { display: none; }
+    .seal { margin-right: 10px !important; 
+            margin-top: 0px !important; }
+    .seal-present br { display: none; }
+    .seal-present { display: block; text-align: center; float:none;}
+    .seal-past {
+        shape-outside: inset(calc(100px) 0 0);
+        margin-top:100px!important;
+    }
+
+}
+@media screen and (max-width: 1000px){
+    .title {
+        margin-top: 180px;
+    }
+    .subtitle {
+        margin-bottom: 100px;
+    }
+    .navbar {
+        margin-bottom: 150px;
+    }
+}
+
 .portrait {
     text-align: center;
     position: relative;
@@ -230,6 +287,22 @@ h1, h2, h3, h4, h5 {
         text-align: left;
     }
 }
+.email-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+.email-list a {
+  display: contents; 
+}
+.email-list a::before {
+  content: attr(data-local); /* local part before @ */
+  text-align: right;
+  justify-self: end;
+}
+.email-list a::after {
+  content: attr(data-domain); /* @domain part */
+}
+
 /* for small screens, put them below (no line breaks) */
 @media screen and (max-width: 760px){
     .portrait > .icon-panel > br {
@@ -240,6 +313,11 @@ h1, h2, h3, h4, h5 {
     }
     .portrait > .icon-panel {
         position: static;
+    }
+}
+@media screen and (max-width: 600px) {
+    .nav-item > a > span {
+        display: none;
     }
 }
 .portrait > .icon-panel a {
@@ -260,7 +338,15 @@ h1, h2, h3, h4, h5 {
 }
 
 /* specific to  RESEARCH */
-
+.myname {
+    /* font-family: 'ABeeZee'; */
+    /* font-style: oblique; */
+    /* font-width: ; */
+}
+.talk-list {
+    --accent-color: lightsteelblue;
+    line-height: 1.15;
+}
 #everything .paperlist > li:not(:last-child) { 
     margin-bottom: 5mm;
 }
@@ -271,6 +357,9 @@ h1, h2, h3, h4, h5 {
 }
 .conference-type {
     --accent-color: #C7A;
+}
+.preprint-type {
+    --accent-color: #444;
 }
 .workshop-type {
     --accent-color:steelblue;
@@ -445,6 +534,8 @@ div.papertitle {
     margin: 0;
  }
 
+ .color-marker { height: 1px; }
+
  .plx-base {
      /*border: 5px dashed orange;
     background-color: rgba(255, 233, 51, 0.5);*/
@@ -493,18 +584,6 @@ div.papertitle {
  .float-right{
     float: right;
  }
- blockquote.right-quote {
-    border-left-width: 0px;
-    border-right: 3px solid var(--accent-color);
-    padding-right: 10px;
-    text-align: right;
-    color: color-mix(in srgb, rgb(var(--fg-color)) 60%, var(--accent-color));
-    font-style: italic;
+ .maxwidth-100ch {
+    max-width:100ch;
  }
- .abstract {
-    max-width: 80%;
-    margin-left:10%;
-    margin-right:10%;
-    text-align: justify;
-    margin-bottom: 10vh;
-}

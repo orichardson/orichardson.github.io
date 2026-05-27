@@ -11,7 +11,9 @@ colors:
     menu :   '#000000'
     nav :    '#4a4a4a'
     border : '#636363'
-    shadow : '#777777'
+    # shadow : '#777777'
+    # shadow : 'rgb(170, 255, 168)'
+    shadow : '#AAAAAA'
 glyph: flask
 order: 2
 redirect_from:
@@ -19,6 +21,7 @@ redirect_from:
 ---
 
 
+<!-- <div class="color-marker" data-bg-color="{{site.main_pages[1].colors.fg}}" data-fg-color="{{site.main_pages[1].colors.bg}}"></div> -->
 <!-- <h1> Research </h1> -->
 <p style="max-width:85ch;">
 <!-- I develop clean mathematical foundations for fallable agents.
@@ -77,6 +80,10 @@ Papers and Publications
             <span><i class="fa fa-file" aria-hidden="true"></i></span>
             workshop
         </div>
+        <div class="preprint-type legenditem">
+            <span><i class="fa fa-file" aria-hidden="true"></i></span>
+            preprint
+        </div>
         <br>
         <div class="conference-type legenditem">
             <span><i class="fa fa-file" aria-hidden="true"></i></span>
@@ -94,7 +101,7 @@ Papers and Publications
 
 <!-- <h3> Conference Papers </h3> -->
 <ul class='paperlist'>
-{% assign papers_sorted = site.papers | sort: "year" | reverse %}
+{% assign papers_sorted = site.papers | sort: "month" | sort: "year"| reverse %}
 {% for paper in papers_sorted %}
 {% if paper.content.size > 5 %} {% assign more = true %} {% else %} {% assign more = false %} {% endif %}
 {% if paper.hide %}{% else %}
@@ -123,9 +130,28 @@ Papers and Publications
     </div>
         <!-- <br/> -->
     <div class="paper-descr {% if more %}toggle-bbutton{% endif %}">
-        {{ paper.authors }}
+        <!-- {{ paper.authors }} -->
+        {% comment %}
+        {% endcomment %}
+        {% assign authors = paper.authors | replace: '\n', ' ' | replace: ", and ", " and " | replace: ", ", " and " | split: " and " %}
+        {% assign penultimate = authors.size | minus : 1 %}
+        {% for author in authors %}
+            {%- if author contains 'Oliver' and author contains 'Richardson' -%} 
+                <span class="myname">{{author}}</span>
+            {%- else -%}
+                {{ author }}
+            {%- endif -%}
+            {%- if forloop.index != authors.size and penultimate > 1-%}
+                ,
+            {%- endif -%}
+            {% if forloop.index == penultimate %}
+                and
+            {% endif %}
+        {% endfor %}
+        <!-- we'll fix it later -->
+        <!-- {{ paper.authors }} -->
         <br/>
-        {{ paper.journal }}{{ paper.conf }} {{paper.month}} {{ paper.year }} {{ paper.pubinfo }}
+        {{ paper.journal }}{{ paper.conf }}, {{paper.month}} {{ paper.year }} {{ paper.pubinfo }}
         <br/>
     </div>
     {% if more %}<div class="extra-content" style="margin-left:10px;font-size:initial;">
@@ -156,13 +182,12 @@ Papers and Publications
 <br>
 
 <!-- <h2> Position Papers and Blog Posts </h2> -->
-
-
 <!-- <h2> Various Other Talks </h2> -->
-<!-- <h2> Academic Talks </h2> -->
+<!-- <div class="color-marker" data-bg-color="{{site.main_pages[1].colors.fg}}" data-fg-color="{{site.main_pages[1].colors.bg}}"></div> -->
+
 <h2> Academic Talks </h2>
 
-<ul style="--accent-color: lightsteelblue;">
+<ul class="talk-list">
 {% assign talks_sorted = site.talks | sort: "date" | reverse %}
 {% for talk in talks_sorted %}
     <li> 

@@ -1,18 +1,51 @@
 ---
-display: Oliver Richardson
+display: <span style="color:deeppink">Oli</span>ver Richardson
 short: about
 colors:
     fg : '#000000'
     bg : '#FFFFFF'
     menu : '#BBBBBB'
-    nav : '#F8F8F8'
-    border : '#E7E7E7'
-    shadow : '#e7e7e7'
+    # nav : '#F8F8F8'
+    # nav : '#E8E8F8'
+    nav : '#E8E8E8'
+    # border : '#E7E7E7'
+    border : '#E5E5E5'
+    # shadow : '#e7e7e7'
+    # shadow : '#171717'
+    # shadow : '#49072d'
+    # shadow : '#4c4c4c'
+    shadow : '#8c8c8c'
 glyph: user
 order: 0
 # subtitle: include(subtitle-links.md)
 # subtitle: <a class="mono" href="mailto:oli@cs.cornell.edu">oli<span style="margin-left:5px;margin-right:5px;font-family:sans-serif;">@</span>cs.cornell.edu</a>
-subtitle: <a class="mono" href="mailto:oliver.richardson@mila.quebec">oliver.richardson<span style="margin-left:5px;margin-right:5px;font-family:Courier;">@</span>mila.quebec</a>
+# <span style="margin-left:5px;margin-right:5px;font-family:Courier;">@</span>
+subtitle: |
+    <div style="font-size:x-large;margin-bottom:-40px;">
+    <a class="mono" href="mailto:oliver.richardson@mila.quebec" style="">oliver.richardson<i class="fa-solid fa-at"></i>mila.quebec</a>
+    <br/>
+    <a class="mono" href="mailto:o.richardson@lawzero.org" style="margin-left:5ch;opacity:35%;">o.richardson<i class="fa-solid fa-at"></i>lawzero.org</a>
+    </div>
+    <!--<span style="font-size:smaller;margin-bottom:-40px; display:block;">
+    <a class="mono" href="mailto:o.richardson@lawzero.org" style="margin-left:8.5ch;">o.richardson<i class="fa-solid fa-at"></i>lawzero.org</a> 
+    <br/>
+    <span style="font-size:smaller">
+    <a class="mono"  style="margin-left:21.5ch;">oli<i class="fa-solid fa-at"></i>cs.cornell.edu</a>
+    </span>
+    </span>
+    -->
+# subtitle: |
+#     <div class="email-list">
+#     <a href="mailto:oliver.richardson@mila.quebec">
+#         <span class="local">oliver.richardson</span><span class="domain">@mila.quebec</span>
+#     </a>
+#     <a href="mailto:o.richardson@lawzero.org">
+#         <span class="local">o.richardson</span><span class="domain">@lawzero.org</span>
+#     </a>
+#     <a href="mailto:oli@cs.cornell.edu">
+#         <span class="local">oli</span><span class="domain">@cs.cornell.edu</span>
+#     </a>
+#     </div>
 # subtitle_file: emails.html
 content_class: container-narrow
 # special_css: /css/about.css
@@ -69,9 +102,11 @@ style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-widt
         <span class="icon-label">[CV.pdf]</span>
         </a>
 </div>
+{% comment %}
 <div class="emails-panel">
     {% include emails.html %}
 </div>
+{% endcomment %}
 </div>
 
 <!-- <div class="col-md-6 col-"> -->
@@ -82,13 +117,15 @@ style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-widt
 </div> -->
 
 
+
 <!-- **Bio.&nbsp;&nbsp;** -->
-I am a theorist with broad scientific training who likes to make beautiful things out of math and code.
+I am a theorist with broad scientific training who loves to make beautiful things out of math and code. 
 I develop mathematical and conceptual foundations for fallible agents, which help us better understand AI systems of all kinds.
 <!-- I also work on exotic probabilistic methods and AI safety.  -->
 <!-- Currently, I am a PhD candidate in Computer Science at Cornell University, advised by [Joe Halpern](http://www.cs.cornell.edu/home/halpern). -->
 My work combines 
-traditional machine learning, probabilistic graphical models, information theory, programming languages, category theory, microeconomics, causality, and logic.
+machine learning, probabilistic graphical models, information theory, programming languages, category theory, microeconomics, causality, and logic.
+<br class='whenbig'><span class=whenbig>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 See my <a onclick="event.preventDefault();$('.navtab-research>a').click();" href="{{ site.baseurl }}/research/">research page</a> for more information!
 {% comment %}
 <!-- I am a theorist, but love to write code. -->
@@ -108,7 +145,8 @@ As an undergraduate at the University of Utah,
     and applied machine learning (structured prediction, with [Vivek Srikumar]()). -->
 {% endcomment %}
 
-<div class="seal" style="margin-top:-10px">
+<!-- <div class="seal" style="margin-top:-10px;"> -->
+<div class="seal seal-present" style="margin-top:-60px; margin-right:-60px;">
     <!-- <a href="https://lawzero.org"><img src="{{ site.baseurl }}/images/l0-logo.jpg" style="width:4.2em;margin-top:4px"/></a>  -->
     <a href="https://mila.quebec"><img src="{{ site.baseurl }}/images/mila-logo.png" style="width:5.2em;margin-right:-0.5em"/></a>
     <!-- <br/> -->
@@ -118,35 +156,39 @@ As an undergraduate at the University of Utah,
     <br/>
     <!-- <a href="https://www.matsprogram.org/"><img src="{{ site.baseurl }}/images/MATS-logo.svg"  style="width:7em;margin-top:6px"/></a> -->
 </div>
-<div class="seal" style="clear:right">
+<div class="seal seal-past" style="clear:right; margin-right:-60px;">
     <a href="https://www.cs.cornell.edu/"><img src="{{ site.baseurl }}/images/cornell-seal.png" style="width:3.8em;margin-right:0.5em"/></a><br/>
     <a href="https://www.cam.ac.uk/"><img src="{{ site.baseurl }}/images/ucam.png" style="width:3.0em;margin-top:8px;margin-right:0.6em"/></a><br/>
     <a href="https://www.utah.edu"><img src="{{ site.baseurl }}/images/theu.png" style="width:3.7em;margin-top:5px;margin-right:0.6em"/></a>
 </div>
-I am a postdoctoral fellow at [l'Université de Montréal](https://umontreal.ca) and [Mila](https://mila.quebec/en)
+Currently, I am a postdoctoral fellow at [l'Université de Montréal](https://umontreal.ca) and [Mila](https://mila.quebec/en)
 <!-- Québec AI institute -->
 under [Yoshua Bengio](https://yoshuabengio.org/profile/), and also work part-time (35%) as a senior machine learning research scientist at [LawZero](https://lawzero.org).
 I mentor for
 <!-- [![MATS Program]({{site.baseurl}}/images/MATS-logo.svg)](https://www.matsprogram.org/) -->
 <!-- the [<img src="{{site.baseurl}}/images/MATS-logo.svg" style="height:1.2em;" /> Program](https://www.matsprogram.org/).  -->
 the [MATS Program](https://www.matsprogram.org/) in both roles.
-<!--  -->
-I received my PhD in Computer Science from Cornell University in 2024, where I was advised by the great [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
+I received my PhD in Computer Science from Cornell University in 2024, where I was advised by 
+[the great](https://www.bangsfuneralhome.com/obituaries/joseph-halpern) [Joe Halpern](http://www.cs.cornell.edu/home/halpern).
 Before that, I did an MPhil in CS at the University of Cambridge under [Mateja Jamnik](https://www.cl.cam.ac.uk/~mj201/).
 I earned three majors (Mathematics, Cell & Molecular Biology, and Computer Science) and three minors (Chemistry, Physics, Cognitive Science) as an undergraduate at the University of Utah, where I did research in pure math (tropical geometry, with [Aaron Bertram](https://www.math.utah.edu/~bertram/)) and applied machine learning (structured prediction for natural language, with [Vivek Srikumar](https://svivek.com/)).
 <!-- ;**-
 <small>(whereas now I do applied math and theoretical machine learning.)</small>
 -->
-In high school, I [made video games](https://gitlab.com/zaytuna) in my free time.
+Even before that, I [made video games](https://gitlab.com/zaytuna) in my free time.
 
 <!-- I also play many sports and improvise on the piano! -->
 I am 
 <!-- [married](orichardson.github.io/voli) -->
 married
-to the one and only [Varsha Kishore](https://varshakishore.github.io/).
+to the one and only 
+<!-- 100%-reasonable -->
+[Varsha Kishore](https://varshakishore.github.io/).
 <br>
 <!-- I like to sing and improvise on the piano (but not at the same time). -->
-I like to sing and improvise on the piano.
+<!-- I like to sing and improvise on the piano. -->
+I like to play sports and improvise on the piano.
+<!-- I improvise on the piano. -->
 
 <br>
 
