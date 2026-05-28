@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title id="bigthing">Pieces</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<!-- JQuery + JQuery UI (for animations) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+<!-- bootstrap and icons -->
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<!-- if in main pages, also want page-specific css -->
+
+<!-- <link rel="stylesheet" type="text/css" href="/css/pieces.css" /> -->
+<!-- <div class="special_css"> -->
+    
+<!-- </div> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!-- The below is for drawing arrows. Recommended by Gemini -->
+<script src="https://cdn.jsdelivr.net/npm/leader-line"></script> 
+
+
+
+
+<script src="/js/load_jekyll_collections.js"></script>
+<script src="/js/main.js"></script>
+<script>
+    window.page='pieces';
+</script><!-- BELOW: note the explicit styling based on server data. -->
+<!-- <body style='background-color: <%- params.tabs[page].colors.bg %>; color:<%- params.tabs[page].colors.fg %>' > -->
+<body>
+
+<!-- <body style='background-color: #4d0036; color:#ffd5f2'> -->
+	<div class="parallax">
+		<div class="plx-layer plx-base">
+
+			<!-- <div class="jumbotron container-fluid"> -->
+			<div class="jumbotron container">
+				<h1 class="title"><span class="wrap">oli.reflect;</span></h1>
+				<h3 class="subtitle">
+				
+					ideas in writing
+
+				
+				</h3>
+			</div>
+
+			<div id="" class="clearfix sticky-anchor">
+    <!-- <nav id="navigation" class="navbar navbar-default sticky"
+        style="opacity: 0.9;background-color: <%- params.tabs[page].colors.nav %>; border-color: <%- params.tabs[page].colors.border %>" > -->
+    <nav id="navigation" class="navbar navbar-default sticky">
+        <!-- <div class="container-fluid"> -->
+        <div class="container">
+            <ul id="nav-icon-list" class="nav navbar-nav">
+                
+                
+                
+                
+                    <li class="nav-item navtab-about" data-name="about">
+                        <!-- <a href="/main_pages/about.html"> -->
+                        <a href="/about">
+                        <!-- <span class="glyphicon glyphicon-user"></span> -->
+                        <i class="fa-solid fa-user"></i>
+                        <span class="text-capitalize"> about </span>
+                    </a></li>
+                
+                    <li class="nav-item navtab-research" data-name="research">
+                        <!-- <a href="/main_pages/research.html"> -->
+                        <a href="/research">
+                        <!-- <span class="glyphicon glyphicon-flask"></span> -->
+                        <i class="fa-solid fa-flask"></i>
+                        <span class="text-capitalize"> research </span>
+                    </a></li>
+                
+                    <li class="nav-item navtab-tools" data-name="tools">
+                        <!-- <a href="/main_pages/tools.html"> -->
+                        <a href="/tools">
+                        <!-- <span class="glyphicon glyphicon-cog"></span> -->
+                        <i class="fa-solid fa-cog"></i>
+                        <span class="text-capitalize"> tools </span>
+                    </a></li>
+                
+                    <li class="nav-item navtab-pieces" data-name="pieces">
+                        <!-- <a href="/main_pages/pieces.html"> -->
+                        <a href="/pieces">
+                        <!-- <span class="glyphicon glyphicon-comment"></span> -->
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="text-capitalize"> pieces </span>
+                    </a></li>
+                
+                
+                <!-- <li id="nav-cv" class="nav-item"><a href="#" style="color:#338;">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span class="hidden-xs">CV.pdf</span>
+                </a></li> -->
+                <!-- <% for(var tab in params.tabs) { %>
+                    <li id="nav-<%- tab %>" class="nav-item"><a href="#">
+                        <span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
+                        <span class="hidden-xs text-capitalize"> <%= tab %> </span>
+                    </a></li>
+                <% } %> -->
+            </ul>
+            <ul class="nav navbar-nav navbar-right"  style="margin-left:0px !important;">
+            <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+            <!-- <li><a href="#"><span class="glyphicon glyphicon-equalizer"></span></a></li> -->
+            </ul>
+        </div>
+        
+    </nav>
+</div>
+
+			<main class="page-content" style="flex:1">
+				<div id="wrapper" class="container">
+					<div id="everything" class="">
+						<h2 class="">Pieces
+</h2>
+<div class="smallgray float-right">[last updated]</div>
+<p><br />
+<!-- <ul> --></p>
+
+<h4>
+  <a class="post-link" href="/pieces/by-not-desiring.html">
+      Safe by Design, by not Desiring
+    </a>
+  
+  <span class="smallgray float-right">5 Feb, 2026</span></h4>
+<p>Outline of an approach towards safe(r) AI, based on the disinterested pursuit of truth.<br />
+Written with Damiano Fornasiere and others, for LawZero</p>
+
+<h4>
+  <a class="post-link" href="/pieces/catastrophic-risks.html">
+      Superintelligent Agents pose Catastrophic Risks: Can Scientist AI Offer a Safer Path?
+    </a>
+  
+  <span class="smallgray float-right">25 Feb, 2025</span></h4>
+<p>A review of the risks of deploying highly intelligent agents, an analysis of agency, and a rough sketch of some ideas for how one might approach the problem, which Bengio has branded “Scientist AI”, and has become the motivating force behind <a href="lawzero.org">LawZero</a>.
+Co-written with many others.
+<!-- </ul> --></p>
+
+<p><br /></p>
+
+
+					</div>
+				</div>
+			</main>
+
+			
+		</div>
+		<!---->
+		<div  class="plx-layer plx-deep">
+			<div id="tree-button-panel">
+				<!-- btn btn-secondary -->
+				<div class="toggle" id="buttons-tree-running" data-parity="0">
+					<button id="tree-ffwd" type="button" class="">
+						<i class="fas fa-fast-forward"></i> </button>
+					<button id="tree-remove" type="button" class="">
+						<i class="fa-solid fa-xmark"></i> </button>
+					<br/>
+					<button id="tree-pause" type="button" class=""> 
+						<i class="fa-solid fa-pause"></i> </button>
+				</div>
+				<div class="toggle" data-parity="1" style="display:none;">
+					<input id="tree-nostart-cookie" type="checkbox"></input>
+					<label for="tree-nostart-cookie" style="margin-right:10px;text-align:left;opacity:50%;">
+						save as cookie: <br/> no unsolicited vines!
+					</label>
+					<br/>
+					<button id="tree-play" type="button" class="">
+						<i class="fas fa-seedling"></i> </button>
+				</div>
+			</div>
+			<div id="background-wrapper"style="margin:0px!important;" >
+				<canvas id="background" resize="true"></canvas>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.18/paper-full.min.js"></script>
+	<script type="text/javascript" src="/js/gen/vines-wind.js"></script>
+	</body>
+</html>

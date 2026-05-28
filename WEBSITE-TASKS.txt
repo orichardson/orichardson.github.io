@@ -5,10 +5,10 @@ WEBSITE TASKS:
 	[ ] (for portfolio: screenshots of games)
  	[ ] make (better, unhidden) "games" page
  [ ] Teaching?
- [ ] Blog posts:
+ [ ] Blog posts / Essays:
+	[ ] LawZero
+	[ ] More recent thoughts on cognitive diversity
 	[ ] initial email to Yoshua
-	[ ] my definition of agency in Yoshua paper
-	[ ] 
  [ ] Ongoing projects
  [~] connect all of the links
 	> hypergraph editor, 
